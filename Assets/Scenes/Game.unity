@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 16f3a9bd03548eb4ea25235d77d5b63f, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 1370351450}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -283,7 +283,71 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5282b16e-f0d5-47f3-9f6c-f84872abe302
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/MAGIC-NS/stick]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5f6e13b6-bb34-4572-8c8d-94aea3c5ff65
+    m_ActionName: Player/Look[/Mouse/delta,/VirtualMouse/delta,/VirtualMouse1/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2330d27e-d4e8-4150-9447-18b4c9373e75
+    m_ActionName: Player/Fire[/Mouse/leftButton,/VirtualMouse/leftButton,/VirtualMouse1/leftButton,/MAGIC-NS/trigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e48156e1-80c5-42b3-97f7-303301f5af72
+    m_ActionName: UI/Navigate[/MAGIC-NS/stick/up,/MAGIC-NS/stick/down,/MAGIC-NS/stick/left,/MAGIC-NS/stick/right,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 67cc86a0-1aa0-4d85-b684-8aaa477a8c72
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3bdfd8ee-6931-4965-848c-71c01125b573
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 518190765a4bdc4478ed2182c008cfc2, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: dddc42fe-c473-4fa6-ab87-995870955839
+    m_ActionName: UI/Point[/Mouse/position,/VirtualMouse/position,/VirtualMouse1/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9a8348a7-c979-4619-8929-7c94010dbd21
+    m_ActionName: UI/Click[/Mouse/leftButton,/VirtualMouse/leftButton,/VirtualMouse1/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2372464f-49ac-4da8-86ba-856c0dee72db
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll,/VirtualMouse/scroll,/VirtualMouse1/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 213ccadd-98d1-486c-9df7-4c592086e731
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton,/VirtualMouse/middleButton,/VirtualMouse1/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e860cdb2-8d9a-47c6-9468-ba13184abc47
+    m_ActionName: UI/RightClick[/Mouse/rightButton,/VirtualMouse/rightButton,/VirtualMouse1/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 733f23dc-187a-46b2-a028-6ed4e2755f38
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 544acc4f-3749-447f-974b-5009e3fe8336
+    m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -358,8 +422,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: -7}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -36.879, y: -39.608}
+  m_SizeDelta: {x: 237.758, y: 95.217}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &696480248
 MonoBehaviour:
