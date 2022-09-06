@@ -1034,6 +1034,7 @@ GameObject:
   - component: {fileID: 1610963271}
   - component: {fileID: 1610963270}
   - component: {fileID: 1610963269}
+  - component: {fileID: 1610963273}
   m_Layer: 0
   m_Name: Seeker
   m_TagString: Untagged
@@ -1119,6 +1120,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1610963273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610963268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aabd478c61d04db468afce63649776d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 278075702}
 --- !u!1 &1925425703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,7 +1163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc93495b22610c4d9f0494e94f35807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onlyDisplayPathGizmos: 1
+  displayGridGizmos: 1
   unwalkableMask:
     serializedVersion: 2
     m_Bits: 64
@@ -1182,8 +1196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ac76df4d5ef434d89f8b7017099d61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seeker: {fileID: 1610963272}
-  target: {fileID: 278075702}
 --- !u!1 &1973547988
 GameObject:
   m_ObjectHideFlags: 0
