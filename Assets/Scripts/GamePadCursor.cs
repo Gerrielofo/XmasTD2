@@ -15,25 +15,28 @@ public class GamePadCursor : MonoBehaviour
     private RectTransform canvasRectTransform;
     [SerializeField]
     private float cursorSpeed = 1000;
+    [SerializeField]
+    private float padding = 15f;
 
     private bool previousMouseState;
     [SerializeField]
     private Mouse virtualMouse;
+    private Mouse currentMouse;
     private Camera mainCamera;
+
+    private string previousControlScheme = "";
+    private const string gamepadScheme = "Gamepad";
+    private const string mouseScheme = "Keyboard&Mouse";
 
     private void OnEnable()
     {
         mainCamera = Camera.main;
+        currentMouse = Mouse.current;
 
-        if(virtualMouse == null)
-        {
-            virtualMouse = (Mouse)InputSystem.AddDevice("VirtualMouse");
+        if(virtualMouse == null) virtualMouse = (Mouse)InputSystem.AddDevice("VirtualMouse");
 
-        }
-        else if (!virtualMouse.added)
-        {
-            InputSystem.AddDevice(virtualMouse);
-        }
+        else if (!virtualMouse.added) InputSystem.AddDevice(virtualMouse);
+        
 
         InputUser.PerformPairingWithDevice(virtualMouse, playerInput.user);
 
@@ -44,25 +47,23 @@ public class GamePadCursor : MonoBehaviour
         }
 
         InputSystem.onAfterUpdate += UpdateMotion;
+        playerInput.onControlsChanged += OnControlsChanged;
         Debug.Log("Subbed");
     }
 
     private void OnDisable()
     {
-        InputSystem.RemoveDevice(virtualMouse);
+        if(virtualMouse != null && virtualMouse.added) InputSystem.RemoveDevice(virtualMouse);
+
         InputSystem.onAfterUpdate -= UpdateMotion;
+        playerInput.onControlsChanged -= OnControlsChanged;
         Debug.Log("Unsubbed");
     }
     private void UpdateMotion()
     {
         //Debug.Log(Gamepad.current);
         //Debug.Log("jdfkalfjlkadjfkl");
-        if(virtualMouse == null || Gamepad.current == null)
-        { 
-            return;
-        }
-
-        
+        if(virtualMouse == null || Gamepad.current == null) return;
 
         Vector2 deltaValue = Gamepad.current.leftStick.ReadValue();
         //Debug.Log("Gamepad leftstick value = " + Gamepad.current.leftStick.ReadValue());
@@ -73,8 +74,8 @@ public class GamePadCursor : MonoBehaviour
         Vector2 newPosistion = currentposition + deltaValue;
         //Debug.Log(newPosistion);
 
-        newPosistion.x = Mathf.Clamp(newPosistion.x, 0, Screen.width);
-        newPosistion.y = Mathf.Clamp(newPosistion.y, 0, Screen.height);
+        newPosistion.x = Mathf.Clamp(newPosistion.x, padding, Screen.width - padding);
+        newPosistion.y = Mathf.Clamp(newPosistion.y, padding, Screen.height - padding);
 
 
         InputState.Change(virtualMouse.position, newPosistion);
@@ -82,26 +83,16 @@ public class GamePadCursor : MonoBehaviour
 
         
 
-        bool aButtonIsPressed = Gamepad.current.aButton.IsPressed();
-        if (previousMouseState != aButtonIsPressed && Gamepad.current.aButton.IsPressed())
-        {
-            Debug.Log("A button pressed");
-            virtualMouse.CopyState<MouseState>(out var mouseState);
-            mouseState.WithButton(MouseButton.Left, aButtonIsPressed);
-            InputState.Change(virtualMouse, mouseState);
-            previousMouseState = aButtonIsPressed;
-        }
+        //bool aButtonIsPressed = Gamepad.current.aButton.IsPressed();
+        //if (previousMouseState != aButtonIsPressed && Gamepad.current.aButton.IsPressed())
+        //{
+        //    Debug.Log("A button pressed");
+        //    virtualMouse.CopyState<MouseState>(out var mouseState);
+        //    mouseState.WithButton(MouseButton.Left, aButtonIsPressed);
+        //    InputState.Change(virtualMouse, mouseState);
+        //    previousMouseState = aButtonIsPressed;
+        //}
         
-        bool lTriggerIsPressed =  Gamepad.current.leftTrigger.IsPressed();
-        
-        if(previousMouseState != lTriggerIsPressed && Gamepad.current.leftTrigger.IsPressed())
-        {
-            Debug.Log("Left Trigger pressed");
-
-            previousMouseState = lTriggerIsPressed;
-        }
-
-        Debug.Log(previousMouseState);
         AnchorCursor(newPosistion);
 
     }
@@ -118,5 +109,25 @@ public class GamePadCursor : MonoBehaviour
         Debug.Log(context.ReadValue<Vector2>());
     }
 
+    private void OnControlsChanged(PlayerInput input)
+    {
+        if(playerInput.currentControlScheme == mouseScheme && previousControlScheme != mouseScheme)
+        {
+            cursorTransform.gameObject.SetActive(false);
+            Cursor.visible = true;
+            currentMouse.WarpCursorPosition(virtualMouse.position.ReadValue());
+            previousControlScheme = mouseScheme;
+
+        }
+        else if(playerInput.currentControlScheme == gamepadScheme && previousControlScheme != gamepadScheme)
+        {
+            cursorTransform.gameObject.SetActive(true);
+            Cursor.visible = false;
+            InputState.Change(virtualMouse.position, currentMouse.position.ReadValue());
+            AnchorCursor(currentMouse.position.ReadValue());
+            previousControlScheme = gamepadScheme;
+
+        }
+    }
 }
  
