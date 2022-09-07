@@ -81,7 +81,10 @@ public class GamePadCursor : MonoBehaviour
         InputState.Change(virtualMouse.position, newPosistion);
         InputState.Change(virtualMouse.delta, deltaValue);
 
-        
+        if(Gamepad.current.leftTrigger.ReadValue() >= 0.5)
+        {
+            
+        }
 
         //bool aButtonIsPressed = Gamepad.current.aButton.IsPressed();
         //if (previousMouseState != aButtonIsPressed && Gamepad.current.aButton.IsPressed())

@@ -575,15 +575,6 @@
             "id": "bef1e025-cdc2-400e-8b20-ad0938bdcc02",
             "actions": [
                 {
-                    "name": "Point",
-                    "type": "PassThrough",
-                    "id": "ea233cbc-19e8-4223-a57d-fbbb89ac509b",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
                     "name": "Click",
                     "type": "PassThrough",
                     "id": "26f579e7-b73d-49da-9326-ffd9d214dfc0",
@@ -591,53 +582,18 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "CloseShop",
+                    "type": "Button",
+                    "id": "77eb1ae4-5224-4010-af46-2aef1841ee43",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "b673bd9a-01ef-40d2-b22c-5681d27c4201",
-                    "path": "<Mouse>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Point",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "fd36f9bc-f85f-4028-a839-6f214b1efcdb",
-                    "path": "<Pen>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Point",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9db912d3-90c1-494d-9784-6edd6eaff489",
-                    "path": "<Touchscreen>/touch*/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touch",
-                    "action": "Point",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5d5938f8-8ea6-4e24-b1ae-6f934939d80a",
-                    "path": "<VirtualMouse>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad;Joystick",
-                    "action": "Point",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "",
                     "id": "42bea902-f8a1-4c94-a314-dca467e86518",
@@ -701,6 +657,17 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ab8b7c2a-56f4-4a56-8549-0361ff2a60e5",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "CloseShop",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
