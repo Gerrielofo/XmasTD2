@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -421,7 +421,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278075698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 2.51, z: -26.8}
+  m_LocalPosition: {x: -0, y: 2.51, z: -26.9}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -461,7 +461,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 278075702}
-  speed: 10
+  speed: 15
+  turnSpeed: 5
+  turnDst: 2
+  stoppingDst: 5
 --- !u!135 &457936653
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -676,7 +679,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 278075702}
-  speed: 10
+  speed: 20
+  turnSpeed: 8
+  turnDst: 2
+  stoppingDst: 5
 --- !u!135 &740014835
 SphereCollider:
   m_ObjectHideFlags: 0
