@@ -9,6 +9,9 @@ public class Turret : MonoBehaviour
 
     public string enemyTag = "Enemy";
 
+    public Transform partToRotate;
+    public float turnSpeed = 10;
+
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -35,14 +38,21 @@ public class Turret : MonoBehaviour
         {
             target = nearestEnemy.transform;
         }
+        else
+        {
+            target = null;
+        }
     }
 
     void Update()
     {
         if (target == null)
             return;
-
-
+        //target lock-on
+        Vector3 dir = target.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(dir);
+        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
+        partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
     }
 
     void OnDrawGizmosSelected()
