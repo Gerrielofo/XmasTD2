@@ -17,12 +17,16 @@ public class GamePadCursor : MonoBehaviour
     private float cursorSpeed = 1000;
     [SerializeField]
     private float padding = 15f;
+    [SerializeField]
+    private RectTransform testTransform;
 
     private bool previousMouseState;
     [SerializeField]
     private Mouse virtualMouse;
     private Mouse currentMouse;
     private Camera mainCamera;
+
+    float prevValue = 0;
 
     private string previousControlScheme = "";
     private const string gamepadScheme = "Gamepad";
@@ -81,9 +85,19 @@ public class GamePadCursor : MonoBehaviour
         InputState.Change(virtualMouse.position, newPosistion);
         InputState.Change(virtualMouse.delta, deltaValue);
 
-        if(Gamepad.current.leftTrigger.ReadValue() >= 0.5)
+        
+        if(prevValue != Gamepad.current.leftTrigger.ReadValue())
         {
-            
+            if (Gamepad.current.leftTrigger.ReadValue() >= 0.5)
+            {
+                testTransform.gameObject.SetActive(true);
+                Debug.Log("leftTrigger Pressed!");
+            }
+            else if (Gamepad.current.leftTrigger.ReadValue() <= 0.5)
+            {
+                testTransform.gameObject.SetActive(false);
+                Debug.Log("leftTrigger Released!");
+            }
         }
 
         //bool aButtonIsPressed = Gamepad.current.aButton.IsPressed();
@@ -95,7 +109,7 @@ public class GamePadCursor : MonoBehaviour
         //    InputState.Change(virtualMouse, mouseState);
         //    previousMouseState = aButtonIsPressed;
         //}
-        
+
         AnchorCursor(newPosistion);
 
     }
