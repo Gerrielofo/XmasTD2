@@ -44,7 +44,7 @@ public class ShopWheelController : MonoBehaviour
                 Debug.Log("Yeti selected");
                 break;
             case 0:
-                selectedItem.sprite = null;
+                selectedItem.sprite = noImage;
                 break;
         }
     }
