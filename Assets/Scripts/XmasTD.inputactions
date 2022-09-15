@@ -103,15 +103,6 @@
                     "processors": "",
                     "interactions": "Hold(duration=0.1,pressPoint=0.5)",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "Join",
-                    "type": "Button",
-                    "id": "9c2b9021-a774-416e-adf5-80de901a79eb",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -574,17 +565,6 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "OpenShop",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "d2d91238-0c0e-4627-9d4d-1e6559a14672",
-                    "path": "<Gamepad>/leftStickPress",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Join",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
