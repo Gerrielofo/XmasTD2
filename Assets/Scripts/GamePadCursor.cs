@@ -17,8 +17,6 @@ public class GamePadCursor : MonoBehaviour
     private float cursorSpeed = 1000;
     [SerializeField]
     private float padding = 15f;
-
-    private bool previousMouseState;
     [SerializeField]
     private Mouse virtualMouse;
     private Mouse currentMouse;
@@ -61,6 +59,7 @@ public class GamePadCursor : MonoBehaviour
     }
     private void UpdateMotion()
     {
+        /*
         //Debug.Log(Gamepad.current);
         //Debug.Log("jdfkalfjlkadjfkl");
         if(virtualMouse == null || Gamepad.current == null) return;
@@ -81,23 +80,8 @@ public class GamePadCursor : MonoBehaviour
         InputState.Change(virtualMouse.position, newPosistion);
         InputState.Change(virtualMouse.delta, deltaValue);
 
-        if(Gamepad.current.leftTrigger.ReadValue() >= 0.5)
-        {
-            
-        }
-
-        //bool aButtonIsPressed = Gamepad.current.aButton.IsPressed();
-        //if (previousMouseState != aButtonIsPressed && Gamepad.current.aButton.IsPressed())
-        //{
-        //    Debug.Log("A button pressed");
-        //    virtualMouse.CopyState<MouseState>(out var mouseState);
-        //    mouseState.WithButton(MouseButton.Left, aButtonIsPressed);
-        //    InputState.Change(virtualMouse, mouseState);
-        //    previousMouseState = aButtonIsPressed;
-        //}
-        
         AnchorCursor(newPosistion);
-
+        */
     }
 
     private void AnchorCursor(Vector2 position)
@@ -109,7 +93,11 @@ public class GamePadCursor : MonoBehaviour
 
     public void mouserAbc (InputAction.CallbackContext context )
     {
-        Debug.Log(context.ReadValue<Vector2>());
+        //Debug.Log(context);
+
+        Vector2 deltaValue = context.ReadValue<Vector2>();
+        //Debug.Log("Gamepad leftstick value = " + Gamepad.current.leftStick.ReadValue());
+        Debug.Log(deltaValue);
     }
 
     private void OnControlsChanged(PlayerInput input)
@@ -132,5 +120,6 @@ public class GamePadCursor : MonoBehaviour
 
         }
     }
+
 }
  
