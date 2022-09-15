@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Enemy : ScriptableObject
+[CreateAssetMenu(menuName = "EnemyData")]
+public class Enemy
 {
     public string name;
-    public int enemyID;
+    public GameObject enemyPrefab;
+    public int Health;
     public int ammount;
-    public float rate;
+    public int spawnRate;
+    public int speed;
 }
