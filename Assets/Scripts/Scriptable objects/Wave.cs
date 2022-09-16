@@ -15,18 +15,15 @@ public class WaveEditor : Editor
 {
     override public void OnInspectorGUI()
     {
-        Wave wave = new Wave();
+        base.OnInspectorGUI();
 
-        //wave.bossWave = GUILayout.Toggle(wave.bossWave, "Bosswave");
-
-        //if (wave.bossWave)
-        //    wave.bossAmmount = EditorGUILayout.IntSlider("Boss Ammount:", wave.bossAmmount, 1, 100);
+        Wave wave = new Wave();            
 
         wave.bossWave = EditorGUILayout.Toggle("Boss Wave", wave.bossWave);
 
         using (new EditorGUI.DisabledScope(wave.bossWave == false))
         {
-            wave.bossAmmount = EditorGUILayout.IntField("Jump Height", wave.bossAmmount);
+            wave.bossAmmount = EditorGUILayout.IntField("Boss Ammount", wave.bossAmmount);
         }
     }
 }

@@ -59,19 +59,19 @@ public class GamePadCursor : MonoBehaviour
     }
     private void UpdateMotion()
     {
-        /*
-        //Debug.Log(Gamepad.current);
-        //Debug.Log("jdfkalfjlkadjfkl");
+        
+        Debug.Log(Gamepad.current);
+        Debug.Log("jdfkalfjlkadjfkl");
         if(virtualMouse == null || Gamepad.current == null) return;
 
         Vector2 deltaValue = Gamepad.current.leftStick.ReadValue();
-        //Debug.Log("Gamepad leftstick value = " + Gamepad.current.leftStick.ReadValue());
+        Debug.Log("Gamepad leftstick value = " + Gamepad.current.leftStick.ReadValue());
         deltaValue *= cursorSpeed * Time.deltaTime;
-        //Debug.Log(deltaValue);
+        Debug.Log(deltaValue);
 
         Vector2 currentposition = virtualMouse.position.ReadValue();
         Vector2 newPosistion = currentposition + deltaValue;
-        //Debug.Log(newPosistion);
+        Debug.Log(newPosistion);
 
         newPosistion.x = Mathf.Clamp(newPosistion.x, padding, Screen.width - padding);
         newPosistion.y = Mathf.Clamp(newPosistion.y, padding, Screen.height - padding);
@@ -81,7 +81,7 @@ public class GamePadCursor : MonoBehaviour
         InputState.Change(virtualMouse.delta, deltaValue);
 
         AnchorCursor(newPosistion);
-        */
+        
     }
 
     private void AnchorCursor(Vector2 position)

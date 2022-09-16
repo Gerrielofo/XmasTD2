@@ -10,6 +10,6 @@ public class Enemy
     public GameObject enemyPrefab;
     public int Health;
     public int ammount;
-    public int spawnRate;
+    public float spawnRate;
     public int speed;
 }

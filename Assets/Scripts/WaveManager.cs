@@ -5,16 +5,15 @@ using UnityEngine;
 public class WaveManager : MonoBehaviour
 {
     public enum SpawnState { SPAWNING, WAITING, COUNTING, FINISHED };
-    private int currentWave = 0;
-    public Wave[] waves;
-
-    private int nextWave = 0;
-    private int numberOfLoops = 0;
+    public int currentWave = 0;
+    [SerializeField]
+    private SpawnState state = SpawnState.COUNTING;
     public float timeBetweenWaves = 5f;
     public float waveCountdown;
 
-    private SpawnState state = SpawnState.COUNTING;
+    public Wave[] waves;
 
+    private int nextWave = 0;
 
     void Start()
     {
@@ -35,7 +34,7 @@ public class WaveManager : MonoBehaviour
                 return;
             }
         }
-        if (waveCountdown <= 0)
+        if (waveCountdown <= 0 && state != SpawnState.FINISHED)
         {
             if (state != SpawnState.SPAWNING)
             {
@@ -44,7 +43,10 @@ public class WaveManager : MonoBehaviour
         }
         else
         {
-            waveCountdown -= Time.deltaTime;
+            if (state == SpawnState.COUNTING)
+            {
+                waveCountdown -= Time.deltaTime;
+            }
         }
     }
 
@@ -53,23 +55,15 @@ public class WaveManager : MonoBehaviour
         Debug.Log("Wave Completed");
 
         state = SpawnState.COUNTING;
-        waveCountdown = timeBetweenWaves;
-
-        if (nextWave + 1 > waves.Length - 1)
+        
+        if (nextWave + 1 == waves.Length)
         {
-            numberOfLoops++;
-            if (numberOfLoops < 4)
-            {
-                nextWave = 0;
-                Debug.Log("All waves Completed");
-            }
-            else
-            {
-                state = SpawnState.FINISHED;
-            }
+            Debug.Log("No more Waves to Spawn");
+            state = SpawnState.FINISHED;
         }
         else
         {
+            waveCountdown = timeBetweenWaves;
             nextWave++;
         }
     }
@@ -90,13 +84,21 @@ public class WaveManager : MonoBehaviour
     }
     IEnumerator SpawnWave(Wave _wave)
     {
-        Debug.Log("Spawning Wave: " + _wave.waveNumber);
+        currentWave = _wave.waveNumber;
+        Debug.Log("Spawning Wave : " + currentWave);
         state = SpawnState.SPAWNING;
 
         for (int i = 0; i < _wave.enemies.Length; i++)
         {
-            SpawnEnemy(_wave.enemies[i].enemyPrefab);
-            yield return new WaitForSeconds(1f / _wave.enemies[i].spawnRate);
+            int ammountSpawned = 0;
+            Debug.Log("Enemy number: " + (i + 1));
+            for( ammountSpawned = 0; ammountSpawned < _wave.enemies[i].ammount; ammountSpawned++)
+            {
+                Debug.Log("ammount of enemies spawned: " + (ammountSpawned + 1));
+                SpawnEnemy(_wave.enemies[i].enemyPrefab);
+                yield return new WaitForSeconds(1f / _wave.enemies[i].spawnRate);
+            }
+            
         }
 
         state = SpawnState.WAITING;
@@ -105,6 +107,6 @@ public class WaveManager : MonoBehaviour
 
     void SpawnEnemy(GameObject enemyPrefab)
     {
-        //waveManager.GetComponent<SendEnemies>().SendSlime(_slimeID);
+        Instantiate(enemyPrefab);
     }
 }

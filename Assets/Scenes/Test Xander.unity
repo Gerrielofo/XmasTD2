@@ -157,12 +157,39 @@ MonoBehaviour:
     bossWave: 0
     bossAmmount: 0
     enemies:
-    - name: 
-      enemyPrefab: {fileID: 0}
-      Health: 0
-      ammount: 0
-      spawnRate: 0
-      speed: 0
+    - name: Test
+      enemyPrefab: {fileID: 4371494693974198571, guid: 1559f6e94e475fa48850bf9bfda79131, type: 3}
+      Health: 20
+      ammount: 4
+      spawnRate: 200
+      speed: 6
+    - name: Test
+      enemyPrefab: {fileID: 4371494693974198571, guid: 1559f6e94e475fa48850bf9bfda79131, type: 3}
+      Health: 20
+      ammount: 5
+      spawnRate: 200
+      speed: 6
+  - waveNumber: 1
+    bossWave: 0
+    bossAmmount: 0
+    enemies:
+    - name: Test
+      enemyPrefab: {fileID: 4371494693974198571, guid: 1559f6e94e475fa48850bf9bfda79131, type: 3}
+      Health: 20
+      ammount: 4
+      spawnRate: 200
+      speed: 6
+  - waveNumber: 1
+    bossWave: 0
+    bossAmmount: 0
+    enemies:
+    - name: Test
+      enemyPrefab: {fileID: 4371494693974198571, guid: 1559f6e94e475fa48850bf9bfda79131, type: 3}
+      Health: 20
+      ammount: 4
+      spawnRate: 200
+      speed: 6
+  state: 2
   timeBetweenWaves: 5
   waveCountdown: 0
 --- !u!4 &247916038
