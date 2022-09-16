@@ -1,0 +1,38 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class TowerPlacement : MonoBehaviour
+{
+    public GameObject tower1;
+    public Camera cam;
+
+    void Start()
+    {
+        
+    }
+
+    void Update()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+
+            RaycastHit hit;
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                if(hit.transform.tag == "Turret")
+                {
+                    Debug.Log("Can't place here!");
+                }
+                else
+                {
+                    Instantiate(tower1, hit.point, Quaternion.identity);
+                }
+            }
+
+        }
+    }
+}
