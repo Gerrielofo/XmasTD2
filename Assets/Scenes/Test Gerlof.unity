@@ -721,6 +721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 893255855}
+  turret: {fileID: 0}
 --- !u!114 &541257365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2185,7 +2186,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4960654896250153376, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
       propertyPath: displayGridGizmos
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4960654896250153376, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
       propertyPath: maskWalkable.m_Bits
