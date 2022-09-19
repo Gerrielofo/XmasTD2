@@ -554,7 +554,7 @@ GameObject:
   - component: {fileID: 2864451560931648116}
   m_Layer: 0
   m_Name: SnowMan
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -605,7 +605,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 2.0093913
+  m_Radius: 2.2484508
   m_Height: 7.5565643
   m_Direction: 1
   m_Center: {x: 0, y: 3.2782822, z: 0}
