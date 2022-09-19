@@ -1378,6 +1378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5525647467134792125}
   - component: {fileID: 4818264731064654702}
+  - component: {fileID: 6713877043573418232}
   m_Layer: 0
   m_Name: Snowman
   m_TagString: Untagged
@@ -1482,6 +1483,26 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.13826108, y: 3.4056077, z: 0.14550209}
     m_Extent: {x: 1.940479, y: 3.5246491, z: 2.955876}
   m_DirtyAABB: 0
+--- !u!95 &6713877043573418232
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047915467434166746}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 306c1e87107ba9f4bbbd76dc91cedb87, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7233689569182728895
 GameObject:
   m_ObjectHideFlags: 0

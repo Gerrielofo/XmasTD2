@@ -31,18 +31,6 @@ public class ShopWheelController : MonoBehaviour
 
         switch (shopID)
         {
-            case 1: //Buy Reindeer
-                Debug.Log("Reindeer selected");
-            break;
-            case 2: //Buy Snowman
-                Debug.Log("SnowMan selected");
-                break;
-            case 3: //Buy Elves
-                Debug.Log("Elves selected");
-                break;
-            case 4: //Buy Yeti
-                Debug.Log("Yeti selected");
-                break;
             case 0:
                 selectedItem.sprite = noImage;
                 break;

@@ -3,7 +3,8 @@ guid: 15119f7645be77e439b6d4adb3dda21c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - snowmanPrefab: {fileID: 2457911885554961528, guid: a8eb96ce0a756e14a9f8be2c029b96bb, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

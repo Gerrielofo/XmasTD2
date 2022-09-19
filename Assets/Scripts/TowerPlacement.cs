@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 public class TowerPlacement : MonoBehaviour
 {
     public Camera cam;
-    public GameObject turret;
+    private GameObject turret;
+    public Vector3 posOffset;
+
+    public GameObject towerSelectUI;
 
     void Start()
     {
@@ -15,6 +19,13 @@ public class TowerPlacement : MonoBehaviour
 
     void Update()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+        if (BuildManager.instance.GetTurretToBuild() == null)
+        {
+            return;
+        }
+            
         if (Input.GetButtonDown("Fire1"))
         {
 
@@ -23,17 +34,26 @@ public class TowerPlacement : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                if(hit.transform.tag is "Turret" or "Track" or "Enemy")
+                if(hit.transform.tag is "Track" or "Enemy")
                 {
                     Debug.Log("Can't place here!");
                 }
                 else
                 {
                     GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
-                    turret = (GameObject)Instantiate(turretToBuild, hit.point, Quaternion.identity);
+                    turret = (GameObject)Instantiate(turretToBuild, hit.point + posOffset, Quaternion.identity);
+                    BuildManager.instance.DeselectTurrets();
+                }
+                if(hit.transform.tag is "Turret")
+                {
+                    if(towerSelectUI == isActiveAndEnabled)
+                    towerSelectUI.SetActive(true);
+                    else
+                    {
+                        towerSelectUI.SetActive(false);
+                    }
                 }
             }
-
         }
     }
 }
