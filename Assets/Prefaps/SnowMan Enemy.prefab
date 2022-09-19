@@ -553,7 +553,7 @@ GameObject:
   - component: {fileID: 6396222707194614014}
   - component: {fileID: 2864451560931648116}
   m_Layer: 0
-  m_Name: SnowMan
+  m_Name: SnowMan Enemy
   m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
