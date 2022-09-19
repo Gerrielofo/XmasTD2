@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 
 public class TowerPlacement : MonoBehaviour
 {
-    public GameObject tower1;
     public Camera cam;
 
     void Start()
@@ -23,13 +22,14 @@ public class TowerPlacement : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                if(hit.transform.tag == "Turret")
+                if(hit.transform.tag == "Turret" || hit.transform.tag == "Track")
                 {
                     Debug.Log("Can't place here!");
                 }
                 else
                 {
-                    Instantiate(tower1, hit.point, Quaternion.identity);
+                    GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
+                    Instantiate(turretToBuild, hit.point, Quaternion.identity);
                 }
             }
 

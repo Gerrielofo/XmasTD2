@@ -685,6 +685,7 @@ GameObject:
   m_Component:
   - component: {fileID: 541257363}
   - component: {fileID: 541257364}
+  - component: {fileID: 541257365}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -719,8 +720,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c75b0bcb1cbbaf42b726eddcc10f2f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tower1: {fileID: 8858595486737775234, guid: ae38e270cc6c13a42be2b5ceb472e2a0, type: 3}
   cam: {fileID: 893255855}
+--- !u!114 &541257365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541257361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15119f7645be77e439b6d4adb3dda21c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snowmanPrefab: {fileID: 2457911885554961528, guid: a8eb96ce0a756e14a9f8be2c029b96bb, type: 3}
 --- !u!1 &558219683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2171,6 +2184,10 @@ PrefabInstance:
     - target: {fileID: 4960654896250153391, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
       propertyPath: m_Name
       value: A*
+      objectReference: {fileID: 0}
+    - target: {fileID: 5194515734457761112, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
+      propertyPath: m_TagString
+      value: Track
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
