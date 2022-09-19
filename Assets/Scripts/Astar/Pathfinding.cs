@@ -14,8 +14,6 @@ public class Pathfinding : MonoBehaviour
 	}
 
 
-	
-
 	public void FindPath(PathRequest request, Action<PathResult> callback)
 	{
 
@@ -31,6 +29,7 @@ public class Pathfinding : MonoBehaviour
 			Heap<Node> openSet = new Heap<Node>(grid.MaxSize);
 			HashSet<Node> closedSet = new HashSet<Node>();
 			openSet.Add(startNode);
+
 
 			while (openSet.Count > 0)
 			{

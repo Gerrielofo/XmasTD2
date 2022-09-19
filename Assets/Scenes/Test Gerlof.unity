@@ -1050,6 +1050,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626240128}
   m_CullTransparentMesh: 1
+--- !u!1 &713878347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2921973320797190253, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
+  m_PrefabInstance: {fileID: 4960654894408745864}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &713878350
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713878347}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 306c1e87107ba9f4bbbd76dc91cedb87, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &775647850
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,6 +1720,31 @@ MonoBehaviour:
   m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
+--- !u!1 &1466056597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1342676548583115438, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
+  m_PrefabInstance: {fileID: 4960654894408745864}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1466056600
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466056597}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 306c1e87107ba9f4bbbd76dc91cedb87, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1786633702
 GameObject:
   m_ObjectHideFlags: 0
@@ -2135,7 +2185,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4960654896250153376, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
       propertyPath: displayGridGizmos
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960654896250153376, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
+      propertyPath: maskWalkable.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4960654896250153377, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
       propertyPath: m_RootOrder
@@ -2185,9 +2239,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: A*
       objectReference: {fileID: 0}
-    - target: {fileID: 5194515734457761112, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
-      propertyPath: m_TagString
-      value: Track
+    - target: {fileID: 6649731039727472328, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
+      propertyPath: turnDst
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378687646683102219, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
+      propertyPath: turnDst
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959267913511754987, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}

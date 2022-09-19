@@ -16,6 +16,7 @@ public class Unit : MonoBehaviour
 
     private void Start()
     {
+		target = GameObject.Find("Target").transform;
 		StartCoroutine(UpdatePath());
     }
     public void OnPathFound(Vector3[] waypoints, bool pathSuccessful)

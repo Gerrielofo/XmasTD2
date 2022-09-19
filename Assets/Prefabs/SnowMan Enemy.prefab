@@ -550,8 +550,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1096813706714685343}
-  - component: {fileID: 6396222707194614014}
   - component: {fileID: 2864451560931648116}
+  - component: {fileID: 3397275243804757436}
   m_Layer: 0
   m_Name: SnowMan Enemy
   m_TagString: Turret
@@ -572,29 +572,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6542607378732577788}
-  - {fileID: 8104769542854892196}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6396222707194614014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2457911885554961528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a820c4c4089554bb5b2fbfd3e95396, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 10
-  fireRate: 1
-  enemyTag: Enemy
-  partToRotate: {fileID: 1096813706714685343}
-  turnSpeed: 10
-  bulletPrefab: {fileID: 3443571648171160816, guid: 4cabb23499ab25f49bc57ed0e8a3bd1d, type: 3}
-  firePoint: {fileID: 8104769542854892196}
 --- !u!136 &2864451560931648116
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -609,6 +589,23 @@ CapsuleCollider:
   m_Height: 7.5565643
   m_Direction: 1
   m_Center: {x: 0, y: 3.2782822, z: 0}
+--- !u!114 &3397275243804757436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2457911885554961528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aabd478c61d04db468afce63649776d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 5
+  turnSpeed: 3
+  turnDst: 5
+  stoppingDst: 3
 --- !u!1 &2773036112264031181
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,37 +827,6 @@ Transform:
   - {fileID: 6928152631581072504}
   m_Father: {fileID: 3951865202105720534}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4353515082083735067
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8104769542854892196}
-  m_Layer: 0
-  m_Name: FirePoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8104769542854892196
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4353515082083735067}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.35, y: 4.1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1096813706714685343}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4470074858663812216
 GameObject:
