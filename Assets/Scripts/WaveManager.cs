@@ -6,7 +6,6 @@ public class WaveManager : MonoBehaviour
 {
     public enum SpawnState { SPAWNING, WAITING, COUNTING, FINISHED };
     public int currentWave = 0;
-    [SerializeField]
     private SpawnState state = SpawnState.COUNTING;
     public float timeBetweenWaves = 5f;
     public float waveCountdown;
