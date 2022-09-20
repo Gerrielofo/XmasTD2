@@ -18,15 +18,23 @@ public class BuildManager : MonoBehaviour
 
     [Header("XMas Turrets")]
     public GameObject reindeerPrefab;
+    public GameObject reindeerBlueprintPrefab;
     public GameObject snowmanPrefab;
+    public GameObject snowmanBlueprintPrefab;
     public GameObject elvePrefab;
+    public GameObject elveBlueprintPrefab;
     public GameObject yetiPrefab;
+    public GameObject yetiBlueprintPrefab;
 
     [Header("Halloween Turrets")]
     public GameObject ghostPrefab;
+    public GameObject ghostBlueprintPrefab;
     public GameObject witchPrefab;
+    public GameObject witchBlueprintPrefab;
     public GameObject skeletonPrefab;
+    public GameObject skeletonBlueprintPrefab;
     public GameObject grimReaperPrefab;
+    public GameObject grimReaperBlueprintPrefab;
 
     private void Start()
     {
@@ -34,57 +42,80 @@ public class BuildManager : MonoBehaviour
     }
 
     private GameObject turretToBuild;
-    
+    private GameObject turretBlueprint;
 
     public GameObject GetTurretToBuild()
     {
         return turretToBuild;
     }
+
+    public GameObject GetTurretBlueprint()
+    {
+        return turretBlueprint;
+    }
     public void DeselectTurrets()
     {
         turretToBuild = null;
+        turretBlueprint = null;
     }
+
     public void SelectReinDeer()
     {
-        turretToBuild = reindeerPrefab;
+        GetComponent<TowerPlacement>().InitTowerPlacement(reindeerPrefab, reindeerBlueprintPrefab);
+        //turretToBuild = reindeerPrefab;
+        //turretBlueprint = reindeerBlueprintPrefab;
         Debug.Log("Reindeer selected!");
     }
 
     public void SelectSnowman()
     {
-        turretToBuild = snowmanPrefab;
+        GetComponent<TowerPlacement>().InitTowerPlacement(snowmanPrefab, snowmanBlueprintPrefab);
+        //turretToBuild = snowmanPrefab;
+        //turretBlueprint = snowmanBlueprintPrefab;
         Debug.Log("Snowman selected!");
     }
 
     public void SelectElves()
     {
-        turretToBuild = elvePrefab;
+        GetComponent<TowerPlacement>().InitTowerPlacement(elvePrefab, elveBlueprintPrefab);
+        //turretToBuild = elvePrefab;
+        //turretBlueprint = elveBlueprintPrefab;
         Debug.Log("Elve selected!");
     }
 
     public void SelectYeti()
     {
-        turretToBuild = yetiPrefab;
+        GetComponent<TowerPlacement>().InitTowerPlacement(yetiPrefab, yetiBlueprintPrefab);
+        //turretToBuild = yetiPrefab;
+        //turretBlueprint = yetiBlueprintPrefab;
         Debug.Log("Yeti selected!");
     }
     public void SelectGhost()
     {
-        turretToBuild = ghostPrefab;
+        GetComponent<TowerPlacement>().InitTowerPlacement(ghostPrefab, ghostBlueprintPrefab);
+        //turretToBuild = ghostPrefab;
+        //turretBlueprint = ghostBlueprintPrefab;
         Debug.Log("Ghost selected!");
     }
     public void SelectWitch()
     {
-        turretToBuild = witchPrefab;
+        GetComponent<TowerPlacement>().InitTowerPlacement(witchPrefab, witchBlueprintPrefab);
+        //turretToBuild = witchPrefab;
+        //turretBlueprint = witchBlueprintPrefab;
         Debug.Log("Witch selected!");
     }
     public void SelectSkeleton()
     {
-        turretToBuild = skeletonPrefab;
+        GetComponent<TowerPlacement>().InitTowerPlacement(skeletonPrefab, skeletonBlueprintPrefab);
+        //turretToBuild = skeletonPrefab;
+        //turretBlueprint = skeletonBlueprintPrefab;
         Debug.Log("Skeleton selected!");
     }
     public void SelectGrimReaper()
     {
-        turretToBuild = grimReaperPrefab;
+        GetComponent<TowerPlacement>().InitTowerPlacement(grimReaperPrefab, grimReaperBlueprintPrefab);
+        //turretToBuild = grimReaperPrefab;
+        //turretBlueprint = grimReaperBlueprintPrefab;
         Debug.Log("Grim Reaper selected!");
     }
 }

@@ -6,54 +6,66 @@ using UnityEngine.EventSystems;
 
 public class TowerPlacement : MonoBehaviour
 {
-    public Camera cam;
-    private GameObject turret;
     public Vector3 posOffset;
-
-    public GameObject towerSelectUI;
-
-    void Start()
-    {
-        
-    }
+    private GameObject blueprintToUse;
+    private GameObject towerToBuild;
+    bool canBuild = false;
+    public Camera cam;
 
     void Update()
     {
+        if (canBuild)
+        {
+            CheckIfCanBuild();
+        }
+    }
+
+    public void InitTowerPlacement(GameObject newTowerToBuild, GameObject newBluePrintToUse)
+    {
+        towerToBuild = newTowerToBuild;
+        SpawnBlueprint(newBluePrintToUse);
+        canBuild = true;
+    }
+    void SpawnBlueprint(GameObject newBluePrintToUse)
+    {
+        blueprintToUse = Instantiate(newBluePrintToUse, transform.position, Quaternion.identity);
+    }
+
+    void CheckIfCanBuild()
+    {
         if (EventSystem.current.IsPointerOverGameObject())
-            return;
-        if (BuildManager.instance.GetTurretToBuild() == null)
         {
             return;
         }
-            
-        if (Input.GetButtonDown("Fire1"))
+        RaycastHit hit;
+        Ray r = cam.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(r, out hit, Mathf.Infinity))
         {
-
-            RaycastHit hit;
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out hit))
+            if (hit.transform.tag == "Buildable")
             {
-                if(hit.transform.tag is "Track" or "Enemy")
-                {
-                    Debug.Log("Can't place here!");
-                }
-                else
-                {
-                    GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
-                    turret = (GameObject)Instantiate(turretToBuild, hit.point + posOffset, Quaternion.identity);
-                    BuildManager.instance.DeselectTurrets();
-                }
-                if(hit.transform.tag is "Turret")
-                {
-                    if(towerSelectUI == isActiveAndEnabled)
-                    towerSelectUI.SetActive(true);
-                    else
+                BlueprintFollowMouse(hit.point + posOffset);
+                Debug.Log(hit.point);
+                if(hit.transform.tag == "Buildable"){
+                    if (Input.GetButtonUp("Fire1"))
                     {
-                        towerSelectUI.SetActive(false);
+                        PlaceTower(hit.point);
                     }
                 }
             }
         }
+    }
+
+    void BlueprintFollowMouse(Vector3 pos)
+    {
+        blueprintToUse.transform.position = pos;
+    }
+
+    void PlaceTower(Vector3 pos)
+    {
+        //Kill the blue print, instantiate the tower here.
+        Destroy(blueprintToUse);
+        Instantiate(towerToBuild, pos + posOffset, Quaternion.identity);
+        BuildManager.instance.DeselectTurrets();
+        canBuild = false;
     }
 }
