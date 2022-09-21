@@ -5,10 +5,9 @@ using UnityEngine;
 [System.Serializable]
 public class Enemy
 {
+    [Header("Enemy Info")]
     public string name;
     public GameObject enemyPrefab;
-    public int Health;
     public int ammount;
     public float spawnRate;
-    public int speed;
 }

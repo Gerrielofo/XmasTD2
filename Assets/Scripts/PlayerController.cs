@@ -10,9 +10,10 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        //Debug.Log(movementInput);
         transform.Translate(new Vector3(movementInput.x, movementInput.y, 0) * cursorSpeed * Time.deltaTime);
-        Debug.Log("Moving!");
     }
 
-    public void OnMove(InputAction.CallbackContext ctx) => movementInput = ctx.ReadValue<Vector2>();
+    public void onMove(InputAction.CallbackContext ctx) => movementInput = ctx.ReadValue<Vector2>();
+
 }
