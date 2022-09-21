@@ -62,60 +62,44 @@ public class BuildManager : MonoBehaviour
     public void SelectReinDeer()
     {
         GetComponent<TowerPlacement>().InitTowerPlacement(reindeerPrefab, reindeerBlueprintPrefab);
-        //turretToBuild = reindeerPrefab;
-        //turretBlueprint = reindeerBlueprintPrefab;
         Debug.Log("Reindeer selected!");
     }
 
     public void SelectSnowman()
     {
         GetComponent<TowerPlacement>().InitTowerPlacement(snowmanPrefab, snowmanBlueprintPrefab);
-        //turretToBuild = snowmanPrefab;
-        //turretBlueprint = snowmanBlueprintPrefab;
         Debug.Log("Snowman selected!");
     }
 
     public void SelectElves()
     {
         GetComponent<TowerPlacement>().InitTowerPlacement(elvePrefab, elveBlueprintPrefab);
-        //turretToBuild = elvePrefab;
-        //turretBlueprint = elveBlueprintPrefab;
         Debug.Log("Elve selected!");
     }
 
     public void SelectYeti()
     {
         GetComponent<TowerPlacement>().InitTowerPlacement(yetiPrefab, yetiBlueprintPrefab);
-        //turretToBuild = yetiPrefab;
-        //turretBlueprint = yetiBlueprintPrefab;
         Debug.Log("Yeti selected!");
     }
     public void SelectGhost()
     {
         GetComponent<TowerPlacement>().InitTowerPlacement(ghostPrefab, ghostBlueprintPrefab);
-        //turretToBuild = ghostPrefab;
-        //turretBlueprint = ghostBlueprintPrefab;
         Debug.Log("Ghost selected!");
     }
     public void SelectWitch()
     {
         GetComponent<TowerPlacement>().InitTowerPlacement(witchPrefab, witchBlueprintPrefab);
-        //turretToBuild = witchPrefab;
-        //turretBlueprint = witchBlueprintPrefab;
         Debug.Log("Witch selected!");
     }
     public void SelectSkeleton()
     {
         GetComponent<TowerPlacement>().InitTowerPlacement(skeletonPrefab, skeletonBlueprintPrefab);
-        //turretToBuild = skeletonPrefab;
-        //turretBlueprint = skeletonBlueprintPrefab;
         Debug.Log("Skeleton selected!");
     }
     public void SelectGrimReaper()
     {
         GetComponent<TowerPlacement>().InitTowerPlacement(grimReaperPrefab, grimReaperBlueprintPrefab);
-        //turretToBuild = grimReaperPrefab;
-        //turretBlueprint = grimReaperBlueprintPrefab;
         Debug.Log("Grim Reaper selected!");
     }
 }

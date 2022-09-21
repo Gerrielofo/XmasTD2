@@ -11,6 +11,8 @@ public class TowerPlacement : MonoBehaviour
     private GameObject towerToBuild;
     bool canBuild = false;
     public Camera cam;
+    public Color blueprintMaterial;
+    public GameObject childMat;
 
     void Update()
     {
@@ -41,16 +43,23 @@ public class TowerPlacement : MonoBehaviour
         Ray r = cam.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(r, out hit, Mathf.Infinity))
         {
+            blueprintToUse.transform.GetChild(0).GetComponent<SkinnedMeshRenderer>().material.color = blueprintMaterial;
+
+            BlueprintFollowMouse(hit.point + posOffset);
+            if(hit.transform.tag == "Track")
+            {
+                blueprintMaterial = Color.red;
+                blueprintMaterial.a = 0.5f;
+                return;
+            }
             if (hit.transform.tag == "Buildable")
             {
-                BlueprintFollowMouse(hit.point + posOffset);
-                Debug.Log(hit.point);
-                if(hit.transform.tag == "Buildable"){
-                    if (Input.GetButtonUp("Fire1"))
-                    {
-                        PlaceTower(hit.point);
-                    }
-                }
+                blueprintMaterial = Color.white;
+                blueprintMaterial.a = 0.5f;
+                if (Input.GetButtonUp("Fire1"))
+                {
+                    PlaceTower(hit.point);
+                }                
             }
         }
     }

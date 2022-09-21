@@ -21,6 +21,7 @@ public class Turret : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
 
+    //public SkinnedMeshRenderer highlight;
 
     void Start()
     {
@@ -90,4 +91,14 @@ public class Turret : MonoBehaviour
         Gizmos.color = Color.black;
         Gizmos.DrawWireSphere(transform.position, range);
     }
+
+    //public void ShowRed()
+    //{
+    //    highlight.material.color = Color.red;
+    //}
+
+    //public void ReverseRed()
+    //{
+    //    highlight.material.color = Color.white;
+    //}
 }

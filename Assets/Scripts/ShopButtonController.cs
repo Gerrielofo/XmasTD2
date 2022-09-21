@@ -38,14 +38,14 @@ public class ShopButtonController : MonoBehaviour
     {
         selected = false;
         selectedItem.sprite = null;
-        ShopWheelController.shopID = 0;
+        ShopWheelController.shopID = 0; 
     }
 
     public void HoverEnter()
     {
         itemText.text = itemName;
         buttonColor = Color.gray;
-        buttonColor.a = 1f / 2;
+        buttonColor.a = 0.5f;
     }
 
     public void HoverExit()
