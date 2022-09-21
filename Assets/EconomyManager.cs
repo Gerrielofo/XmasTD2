@@ -5,6 +5,8 @@ using TMPro;
 
 public class EconomyManager : MonoBehaviour
 {
+    [Header("References")]
+    public WaveManager waveManager;
     [Header("Starting Ammounts")]
     public float startingMoney;
     public float startingEco;
@@ -21,8 +23,7 @@ public class EconomyManager : MonoBehaviour
     [Header("Countdown variables")]
     public float economyCountdown;
     public float timeBetweenEco;
-    [Header("References")]
-    public WaveManager waveManager;
+    
     
     private void Start()
     {
@@ -43,8 +44,11 @@ public class EconomyManager : MonoBehaviour
             economyCountdown = timeBetweenEco;
             moneyP1 += ecoP1;
             P1EcoDisplay.text = ecoP1.ToString();
-            moneyP2 += ecoP2;
             P1MoneyDisplay.text = moneyP1.ToString();
+            moneyP2 += ecoP2;
+            P2EcoDisplay.text = ecoP2.ToString();
+            P2MoneyDisplay.text = moneyP2.ToString();
+
         }
     }
 
