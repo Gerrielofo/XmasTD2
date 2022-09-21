@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
+    [Header("References")]
+    public EconomyManager economyManager;
     public enum SpawnState { SPAWNING, WAITING, COUNTING, FINISHED };
-    public int currentWave = 0;
     private SpawnState state = SpawnState.COUNTING;
+    [Header("Wave Info")]
+    public int currentWave = 0;
     public float timeBetweenWaves = 5f;
-    public float waveCountdown;
-
+    public float nextWaveCountdown;
     public Wave[] waves;
-
     private int nextWave = 0;
 
     void Start()
     {
-        waveCountdown = timeBetweenWaves;
+        nextWaveCountdown = timeBetweenWaves;
     }
 
     private void Update()
@@ -26,14 +27,14 @@ public class WaveManager : MonoBehaviour
         {
             if (!EnemyIsAlive())
             {
-                WaveCompleted();
+                WaveCompleted(waves[currentWave]);
             }
             else
             {
                 return;
             }
         }
-        if (waveCountdown <= 0 && state != SpawnState.FINISHED)
+        if (nextWaveCountdown <= 0 && state != SpawnState.FINISHED)
         {
             if (state != SpawnState.SPAWNING)
             {
@@ -44,12 +45,12 @@ public class WaveManager : MonoBehaviour
         {
             if (state == SpawnState.COUNTING)
             {
-                waveCountdown -= Time.deltaTime;
+                nextWaveCountdown -= Time.deltaTime;
             }
         }
     }
 
-    void WaveCompleted()
+    void WaveCompleted(Wave _wave)
     {
         Debug.Log("Wave Completed");
 
@@ -62,7 +63,11 @@ public class WaveManager : MonoBehaviour
         }
         else
         {
-            waveCountdown = timeBetweenWaves;
+            economyManager.ecoP1 += _wave.waveReward;
+            economyManager.ecoP2 += _wave.waveReward;
+            Debug.Log("eco p1: " + economyManager.ecoP1);
+            Debug.Log("eco p2: " + economyManager.ecoP2);
+            nextWaveCountdown = timeBetweenWaves;
             nextWave++;
         }
     }
