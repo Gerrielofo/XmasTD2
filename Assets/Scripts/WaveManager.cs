@@ -8,6 +8,11 @@ public class WaveManager : MonoBehaviour
     public EconomyManager economyManager;
     public enum SpawnState { SPAWNING, WAITING, COUNTING, FINISHED };
     private SpawnState state = SpawnState.COUNTING;
+    public enum SendState { NATURAL, PLAYER};
+    private SendState cause;
+    [Header("Spawn Locations")]
+    public Transform naturalSpawn;
+    public Transform playerSpawn;
     [Header("Wave Info")]
     public int currentWave = 0;
     public float timeBetweenWaves = 5f;
@@ -99,6 +104,7 @@ public class WaveManager : MonoBehaviour
             for( ammountSpawned = 0; ammountSpawned < _wave.enemies[i].ammount; ammountSpawned++)
             {
                 Debug.Log("ammount of enemies spawned: " + (ammountSpawned + 1));
+                cause = SendState.NATURAL;
                 SpawnEnemy(_wave.enemies[i].enemyPrefab);
                 yield return new WaitForSeconds(1f / _wave.enemies[i].spawnRate);
             }
@@ -111,6 +117,14 @@ public class WaveManager : MonoBehaviour
 
     void SpawnEnemy(GameObject enemyPrefab)
     {
-        Instantiate(enemyPrefab);
+        if(cause == SendState.NATURAL)
+        {
+            Instantiate(enemyPrefab, naturalSpawn.position, Quaternion.identity);
+        }
+        if(cause == SendState.PLAYER)
+        {
+            Instantiate(enemyPrefab, playerSpawn.position, Quaternion.identity);
+        }
+        
     }
 }
