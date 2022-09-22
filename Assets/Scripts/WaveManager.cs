@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,10 @@ public class WaveManager : MonoBehaviour
     public float nextWaveCountdown;
     public Wave[] waves;
     private int nextWave = 0;
+    [Header("Enemy Prefab Arrays")]
+    public Enemy[] halloween;
+    public Enemy[] christmas;
+
 
     void Start()
     {
@@ -105,7 +110,7 @@ public class WaveManager : MonoBehaviour
             {
                 Debug.Log("ammount of enemies spawned: " + (ammountSpawned + 1));
                 cause = SendState.NATURAL;
-                SpawnEnemy(_wave.enemies[i].enemyPrefab);
+                SpawnEnemy(_wave.enemies[i].enemyPrefab, 1);
                 yield return new WaitForSeconds(1f / _wave.enemies[i].spawnRate);
             }
             
@@ -115,16 +120,98 @@ public class WaveManager : MonoBehaviour
         yield break;
     }
 
-    void SpawnEnemy(GameObject enemyPrefab)
+    void SpawnEnemy(GameObject enemyPrefab, int _ammount)
     {
+
         if(cause == SendState.NATURAL)
         {
             Instantiate(enemyPrefab, naturalSpawn.position, Quaternion.identity);
         }
         if(cause == SendState.PLAYER)
         {
-            Instantiate(enemyPrefab, playerSpawn.position, Quaternion.identity);
+            for(int a = 0; a < _ammount; a++)
+            {
+                Instantiate(enemyPrefab, playerSpawn.position, Quaternion.identity);
+            }
+            
         }
         
+    }
+
+
+    public void SendEnemy(int EnemyID)
+    {
+        int playerID = 1;
+        int ammount;
+        GameObject _enemyPrefab;
+        cause = SendState.PLAYER;
+        switch(EnemyID)
+        {
+            default:
+                if (playerID == 1)
+                {
+                    _enemyPrefab = halloween[EnemyID].enemyPrefab;
+                    ammount = halloween[EnemyID].ammount;
+                }
+                else
+                {
+                    _enemyPrefab = christmas[EnemyID].enemyPrefab;
+                    ammount = christmas[EnemyID].ammount;
+                }
+                break;
+
+            case 0:
+                if (playerID == 1)
+                {
+                    _enemyPrefab = halloween[EnemyID].enemyPrefab;
+                    ammount = halloween[EnemyID].ammount;
+                }
+                else
+                {
+                    _enemyPrefab = christmas[EnemyID].enemyPrefab;
+                    ammount = christmas[EnemyID].ammount;
+                }
+                break;
+
+            case 1:
+                if (playerID == 1)
+                {
+                    _enemyPrefab = halloween[EnemyID].enemyPrefab;
+                    ammount = halloween[EnemyID].ammount;
+                }
+                else
+                {
+                    _enemyPrefab = christmas[EnemyID].enemyPrefab;
+                    ammount = christmas[EnemyID].ammount;
+                }
+                break;
+
+            case 2:
+                if (playerID == 1)
+                {
+                    _enemyPrefab = halloween[EnemyID].enemyPrefab;
+                    ammount = halloween[EnemyID].ammount;
+                }
+                else
+                {
+                    _enemyPrefab = christmas[EnemyID].enemyPrefab;
+                    ammount = christmas[EnemyID].ammount;
+                }
+                break;
+
+            case 3:
+                if (playerID == 1)
+                {
+                    _enemyPrefab = halloween[EnemyID].enemyPrefab;
+                    ammount = halloween[EnemyID].ammount;
+                }
+                else
+                {
+                    _enemyPrefab = christmas[EnemyID].enemyPrefab;
+                    ammount = christmas[EnemyID].ammount;
+                }
+                break;
+        }
+        SpawnEnemy(_enemyPrefab,ammount);
     }
 }

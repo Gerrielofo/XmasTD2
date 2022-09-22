@@ -22,15 +22,15 @@ public class PlayerInstance : MonoBehaviour
         if (playerCount == 1)
         {
             gameObject.layer = 10;
-            economyManager.P1EcoDisplay = gameObject.transform.GetChild(3).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
-            economyManager.P1MoneyDisplay = gameObject.transform.GetChild(2).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P1EcoDisplay = gameObject.transform.GetChild(4).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P1MoneyDisplay = gameObject.transform.GetChild(3).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
             playerMask = LayerMask.GetMask("Player1");
         }
         else
         {
             gameObject.layer = 11;
-            economyManager.P2EcoDisplay = gameObject.transform.GetChild(3).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
-            economyManager.P2MoneyDisplay = gameObject.transform.GetChild(2).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P2EcoDisplay = gameObject.transform.GetChild(4).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P2MoneyDisplay = gameObject.transform.GetChild(3).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
             playerMask = LayerMask.GetMask("Player2");
         }
 
