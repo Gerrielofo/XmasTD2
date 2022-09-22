@@ -8,9 +8,7 @@ public class ShopWheelController : MonoBehaviour
 {
     public GameObject shopWheel;
     public bool wantShopWheel;
-    public Image selectedItem;
-    public Sprite noImage;
-    public static int shopID;
+
     
     void Update()
     {
@@ -28,12 +26,5 @@ public class ShopWheelController : MonoBehaviour
             shopWheel.SetActive(true);
         else
             shopWheel.SetActive(false);
-
-        switch (shopID)
-        {
-            case 0:
-                selectedItem.sprite = noImage;
-                break;
-        }
     }
 }

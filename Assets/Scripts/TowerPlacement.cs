@@ -71,7 +71,6 @@ public class TowerPlacement : MonoBehaviour
 
     void PlaceTower(Vector3 pos)
     {
-        //Kill the blue print, instantiate the tower here.
         Destroy(blueprintToUse);
         Instantiate(towerToBuild, pos + posOffset, Quaternion.identity);
         BuildManager.instance.DeselectTurrets();
