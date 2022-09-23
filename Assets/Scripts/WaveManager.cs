@@ -31,6 +31,10 @@ public class WaveManager : MonoBehaviour
         nextWaveCountdown = timeBetweenWaves;
     }
 
+    public void SendEnemy(int kaas, int peper)
+    {
+
+    }
     private void Update()
     {
 
