@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -528,7 +528,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &145585241
 GameObject:
@@ -1613,7 +1613,7 @@ MonoBehaviour:
   posOffset: {x: 0, y: 0, z: 0}
   cam: {fileID: 893255855}
   blueprintMaterial: {r: 0, g: 0, b: 0, a: 0}
-  childMat: {fileID: 0}
+  buildEffect: {fileID: 1735020053299400289, guid: 70a9f419ea163a14885b6768daefca60, type: 3}
 --- !u!114 &541257365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3848,7 +3848,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5113778886216304289, guid: af71a142b5327fc4fbaeb94d5a19757c, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5113778886216304289, guid: af71a142b5327fc4fbaeb94d5a19757c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4115,6 +4115,26 @@ PrefabInstance:
     - target: {fileID: 5194515734457761112, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
       propertyPath: m_Name
       value: Path
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649731039727472328, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
+      propertyPath: turnDst
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649731039727472328, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
+      propertyPath: turnSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649731039727472328, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
+      propertyPath: stoppingDst
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378687646683102219, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
+      propertyPath: turnDst
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378687646683102219, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}
+      propertyPath: stoppingDst
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3821f255737d274f84982d0a9dbac5f, type: 3}

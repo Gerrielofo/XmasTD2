@@ -90,13 +90,4 @@ public class Turret : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 
-    //public void ShowRed()
-    //{
-    //    highlight.material.color = Color.red;
-    //}
-
-    //public void ReverseRed()
-    //{
-    //    highlight.material.color = Color.white;
-    //}
 }
