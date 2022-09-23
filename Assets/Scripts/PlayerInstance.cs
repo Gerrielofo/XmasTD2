@@ -24,23 +24,21 @@ public class PlayerInstance : MonoBehaviour
         if (playerCount == 1)
         {
             gameObject.layer = 10;
-            economyManager.P1EcoDisplay = gameObject.transform.GetChild(1).GetChild(4).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
-            economyManager.P1MoneyDisplay = gameObject.transform.GetChild(1).GetChild(3).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P1EcoDisplay = gameObject.transform.GetChild(3).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P1MoneyDisplay = gameObject.transform.GetChild(2).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
             playerMask = LayerMask.GetMask("Player1");
-
-            waveManager.naturalSpawns[playerCount - 1] = gameObject.transform.GetChild(0).GetChild(0);
-            waveManager.playerSpawns[playerCount - 1] = gameObject.transform.GetChild(0).GetChild(1);
+            
+            camera.rect = new Rect(0, 0, 0.5f, 1f);
             
         }
         else
         {
             gameObject.layer = 11;
-            economyManager.P2EcoDisplay = gameObject.transform.GetChild(1).GetChild(4).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
-            economyManager.P2MoneyDisplay = gameObject.transform.GetChild(1).GetChild(4).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P2EcoDisplay = gameObject.transform.GetChild(3).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P2MoneyDisplay = gameObject.transform.GetChild(2).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
             playerMask = LayerMask.GetMask("Player2");
 
-            waveManager.naturalSpawns[playerCount -1] = gameObject.transform.GetChild(0).GetChild(0);
-            waveManager.playerSpawns[playerCount -1] = gameObject.transform.GetChild(0).GetChild(1);
+            camera.rect = new Rect(0.5f, 0, 0.5f, 1f);
         }
 
         LayerMask newMask = playerMask | previousMask;
