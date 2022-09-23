@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(movementInput);
+        //Debug.Log(movementInput);
         transform.Translate(new Vector3(movementInput.x, movementInput.y, 0) * cursorSpeed * Time.deltaTime);
 
         if(Keyboard.current.qKey.ReadValue() > 0)

@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -13,6 +14,7 @@ public class PlayerInstance : MonoBehaviour
     {
         PlayerInputManager inputManager = GameObject.Find("PlayerManager").GetComponent<PlayerInputManager>();
         EconomyManager economyManager = GameObject.Find("EconomyManager").GetComponent<EconomyManager>();
+        WaveManager waveManager = GameObject.Find("WaveManager").GetComponent<WaveManager>();
         int playerCount = inputManager.playerCount;
         Debug.Log(playerCount);
 
@@ -22,16 +24,23 @@ public class PlayerInstance : MonoBehaviour
         if (playerCount == 1)
         {
             gameObject.layer = 10;
-            economyManager.P1EcoDisplay = gameObject.transform.GetChild(4).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
-            economyManager.P1MoneyDisplay = gameObject.transform.GetChild(3).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P1EcoDisplay = gameObject.transform.GetChild(1).GetChild(4).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P1MoneyDisplay = gameObject.transform.GetChild(1).GetChild(3).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
             playerMask = LayerMask.GetMask("Player1");
+
+            waveManager.naturalSpawns[playerCount - 1] = gameObject.transform.GetChild(0).GetChild(0);
+            waveManager.playerSpawns[playerCount - 1] = gameObject.transform.GetChild(0).GetChild(1);
+            
         }
         else
         {
             gameObject.layer = 11;
-            economyManager.P2EcoDisplay = gameObject.transform.GetChild(4).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
-            economyManager.P2MoneyDisplay = gameObject.transform.GetChild(3).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P2EcoDisplay = gameObject.transform.GetChild(1).GetChild(4).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P2MoneyDisplay = gameObject.transform.GetChild(1).GetChild(4).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
             playerMask = LayerMask.GetMask("Player2");
+
+            waveManager.naturalSpawns[playerCount -1] = gameObject.transform.GetChild(0).GetChild(0);
+            waveManager.playerSpawns[playerCount -1] = gameObject.transform.GetChild(0).GetChild(1);
         }
 
         LayerMask newMask = playerMask | previousMask;

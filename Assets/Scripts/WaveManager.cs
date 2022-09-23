@@ -8,21 +8,22 @@ public class WaveManager : MonoBehaviour
     [Header("References")]
     public EconomyManager economyManager;
     public enum SpawnState { SPAWNING, WAITING, COUNTING, FINISHED };
-    private SpawnState state = SpawnState.COUNTING;
     public enum SendState { NATURAL, PLAYER};
-    private SendState cause;
+    [Header("Enemy Arrays")]
+    public SendState cause;
+    public Enemy[] halloween;
+    public Enemy[] christmas;
     [Header("Spawn Locations")]
-    public Transform naturalSpawn;
-    public Transform playerSpawn;
+    public Transform[] naturalSpawns;
+    public Transform[] playerSpawns;
     [Header("Wave Info")]
+    public SpawnState state = SpawnState.COUNTING;
     public int currentWave = 0;
     public float timeBetweenWaves = 5f;
     public float nextWaveCountdown;
     public Wave[] waves;
     private int nextWave = 0;
-    [Header("Enemy Prefab Arrays")]
-    public Enemy[] halloween;
-    public Enemy[] christmas;
+
 
 
     void Start()
@@ -120,98 +121,25 @@ public class WaveManager : MonoBehaviour
         yield break;
     }
 
-    void SpawnEnemy(GameObject enemyPrefab, int _ammount)
+    public void SpawnEnemy(GameObject enemyPrefab, int _ammount)
     {
 
         if(cause == SendState.NATURAL)
         {
-            Instantiate(enemyPrefab, naturalSpawn.position, Quaternion.identity);
-        }
-        if(cause == SendState.PLAYER)
-        {
-            for(int a = 0; a < _ammount; a++)
+            for (int s = 0; s < naturalSpawns.Length + 1; s++)
             {
-                Instantiate(enemyPrefab, playerSpawn.position, Quaternion.identity);
-            }
-            
+                Instantiate(enemyPrefab, naturalSpawns[s].position, Quaternion.identity);
+            }   
         }
-        
-    }
-
-
-    public void SendEnemy(int EnemyID)
-    {
-        int playerID = 1;
-        int ammount;
-        GameObject _enemyPrefab;
-        cause = SendState.PLAYER;
-        switch(EnemyID)
+        if (cause == SendState.PLAYER)
         {
-            default:
-                if (playerID == 1)
+            for (int a = 0; a < _ammount; a++)
+            {
+                for (int s = 0; s < naturalSpawns.Length + 1; s++)
                 {
-                    _enemyPrefab = halloween[EnemyID].enemyPrefab;
-                    ammount = halloween[EnemyID].ammount;
+                    Instantiate(enemyPrefab, playerSpawns[s].position, Quaternion.identity);
                 }
-                else
-                {
-                    _enemyPrefab = christmas[EnemyID].enemyPrefab;
-                    ammount = christmas[EnemyID].ammount;
-                }
-                break;
-
-            case 0:
-                if (playerID == 1)
-                {
-                    _enemyPrefab = halloween[EnemyID].enemyPrefab;
-                    ammount = halloween[EnemyID].ammount;
-                }
-                else
-                {
-                    _enemyPrefab = christmas[EnemyID].enemyPrefab;
-                    ammount = christmas[EnemyID].ammount;
-                }
-                break;
-
-            case 1:
-                if (playerID == 1)
-                {
-                    _enemyPrefab = halloween[EnemyID].enemyPrefab;
-                    ammount = halloween[EnemyID].ammount;
-                }
-                else
-                {
-                    _enemyPrefab = christmas[EnemyID].enemyPrefab;
-                    ammount = christmas[EnemyID].ammount;
-                }
-                break;
-
-            case 2:
-                if (playerID == 1)
-                {
-                    _enemyPrefab = halloween[EnemyID].enemyPrefab;
-                    ammount = halloween[EnemyID].ammount;
-                }
-                else
-                {
-                    _enemyPrefab = christmas[EnemyID].enemyPrefab;
-                    ammount = christmas[EnemyID].ammount;
-                }
-                break;
-
-            case 3:
-                if (playerID == 1)
-                {
-                    _enemyPrefab = halloween[EnemyID].enemyPrefab;
-                    ammount = halloween[EnemyID].ammount;
-                }
-                else
-                {
-                    _enemyPrefab = christmas[EnemyID].enemyPrefab;
-                    ammount = christmas[EnemyID].ammount;
-                }
-                break;
+            }
         }
-        SpawnEnemy(_enemyPrefab,ammount);
     }
 }
