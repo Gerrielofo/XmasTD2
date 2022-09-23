@@ -21,8 +21,6 @@ public class Turret : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
 
-    //public SkinnedMeshRenderer highlight;
-
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -61,7 +59,7 @@ public class Turret : MonoBehaviour
 
         if (target == null)
             return;
-        //target lock-on
+
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
@@ -92,13 +90,4 @@ public class Turret : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 
-    //public void ShowRed()
-    //{
-    //    highlight.material.color = Color.red;
-    //}
-
-    //public void ReverseRed()
-    //{
-    //    highlight.material.color = Color.white;
-    //}
 }

@@ -7,12 +7,16 @@ using UnityEngine.EventSystems;
 public class TowerPlacement : MonoBehaviour
 {
     public Vector3 posOffset;
+
     private GameObject blueprintToUse;
     private GameObject towerToBuild;
-    bool canBuild = false;
+    
+    bool canBuild = false;   
     public Camera cam;
+    
     public Color blueprintMaterial;
-    public GameObject childMat;
+    
+    public GameObject buildEffect;
 
     void Update()
     {
@@ -71,9 +75,10 @@ public class TowerPlacement : MonoBehaviour
 
     void PlaceTower(Vector3 pos)
     {
-        //Kill the blue print, instantiate the tower here.
         Destroy(blueprintToUse);
         Instantiate(towerToBuild, pos + posOffset, Quaternion.identity);
+        GameObject placeEffect = (GameObject)Instantiate(buildEffect, pos + posOffset, Quaternion.identity);
+        Destroy(placeEffect, 1f);
         BuildManager.instance.DeselectTurrets();
         canBuild = false;
     }

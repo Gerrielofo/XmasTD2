@@ -603,9 +603,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 5
-  turnSpeed: 3
-  turnDst: 5
-  stoppingDst: 3
+  turnSpeed: 5
+  turnDst: 0
+  stoppingDst: 1
 --- !u!1 &2773036112264031181
 GameObject:
   m_ObjectHideFlags: 0
