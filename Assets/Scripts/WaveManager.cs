@@ -18,7 +18,7 @@ public class WaveManager : MonoBehaviour
     public Transform[] playerSpawns;
     [Header("Wave Info")]
     public SpawnState state = SpawnState.COUNTING;
-    public int currentWave = 0;
+    public static int currentWave = 0;
     public float timeBetweenWaves = 5f;
     public float nextWaveCountdown;
     public Wave[] waves;
