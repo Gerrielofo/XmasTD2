@@ -24,8 +24,8 @@ public class PlayerInstance : MonoBehaviour
         if (playerCount == 1)
         {
             gameObject.layer = 10;
-            economyManager.P1EcoDisplay = gameObject.transform.GetChild(3).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
-            economyManager.P1MoneyDisplay = gameObject.transform.GetChild(2).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P1EcoDisplay = gameObject.transform.GetChild(1).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P1MoneyDisplay = gameObject.transform.GetChild(0).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
             playerMask = LayerMask.GetMask("Player1");
             
             camera.rect = new Rect(0, 0, 0.5f, 1f);
@@ -34,8 +34,8 @@ public class PlayerInstance : MonoBehaviour
         else
         {
             gameObject.layer = 11;
-            economyManager.P2EcoDisplay = gameObject.transform.GetChild(3).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
-            economyManager.P2MoneyDisplay = gameObject.transform.GetChild(2).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P2EcoDisplay = gameObject.transform.GetChild(1).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P2MoneyDisplay = gameObject.transform.GetChild(0).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
             playerMask = LayerMask.GetMask("Player2");
 
             camera.rect = new Rect(0.5f, 0, 0.5f, 1f);
