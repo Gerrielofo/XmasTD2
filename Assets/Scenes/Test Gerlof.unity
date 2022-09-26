@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 23101369}
   - component: {fileID: 23101368}
   m_Layer: 5
-  m_Name: ShopButtonElves
+  m_Name: ShopButtonSkeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -322,9 +322,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 122634865}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
-        m_MethodName: SelectElves
+        m_MethodName: SelectSkeleton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -517,6 +517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 122634866}
   - component: {fileID: 122634865}
+  - component: {fileID: 122634867}
   m_Layer: 0
   m_Name: BuildManager
   m_TagString: Untagged
@@ -544,14 +545,14 @@ MonoBehaviour:
   elveBlueprintPrefab: {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
   yetiPrefab: {fileID: 2457911885554961528, guid: a8eb96ce0a756e14a9f8be2c029b96bb, type: 3}
   yetiBlueprintPrefab: {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
-  ghostPrefab: {fileID: 2457911885554961528, guid: a8eb96ce0a756e14a9f8be2c029b96bb, type: 3}
-  ghostBlueprintPrefab: {fileID: 2457911885554961528, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
-  witchPrefab: {fileID: 2457911885554961528, guid: a8eb96ce0a756e14a9f8be2c029b96bb, type: 3}
-  witchBlueprintPrefab: {fileID: 2457911885554961528, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
-  skeletonPrefab: {fileID: 2457911885554961528, guid: a8eb96ce0a756e14a9f8be2c029b96bb, type: 3}
-  skeletonBlueprintPrefab: {fileID: 2457911885554961528, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
-  grimReaperPrefab: {fileID: 2457911885554961528, guid: a8eb96ce0a756e14a9f8be2c029b96bb, type: 3}
-  grimReaperBlueprintPrefab: {fileID: 2457911885554961528, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
+  ghostPrefab: {fileID: 6577582918330532072, guid: 8481ddb53ebe9ca4e8688379997db8c1, type: 3}
+  ghostBlueprintPrefab: {fileID: 6577582918330532072, guid: c80bf872db0515b4295d8710817ecfca, type: 3}
+  witchPrefab: {fileID: 6577582918330532072, guid: 8481ddb53ebe9ca4e8688379997db8c1, type: 3}
+  witchBlueprintPrefab: {fileID: 6577582918330532072, guid: c80bf872db0515b4295d8710817ecfca, type: 3}
+  skeletonPrefab: {fileID: 6577582918330532072, guid: 8481ddb53ebe9ca4e8688379997db8c1, type: 3}
+  skeletonBlueprintPrefab: {fileID: 6577582918330532072, guid: c80bf872db0515b4295d8710817ecfca, type: 3}
+  grimReaperPrefab: {fileID: 6577582918330532072, guid: 8481ddb53ebe9ca4e8688379997db8c1, type: 3}
+  grimReaperBlueprintPrefab: {fileID: 6577582918330532072, guid: c80bf872db0515b4295d8710817ecfca, type: 3}
 --- !u!4 &122634866
 Transform:
   m_ObjectHideFlags: 0
@@ -567,6 +568,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &122634867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122634864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c75b0bcb1cbbaf42b726eddcc10f2f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posOffset: {x: 0, y: 0, z: 0}
+  cam: {fileID: 893255855}
+  blueprintMaterial: {r: 0, g: 0, b: 0, a: 0}
+  buildEffect: {fileID: 1735020053299400289, guid: 70a9f419ea163a14885b6768daefca60, type: 3}
 --- !u!1 &145585241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,7 +1094,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 122634865}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
         m_MethodName: SelectSnowman
         m_Mode: 1
@@ -1295,7 +1312,7 @@ GameObject:
   - component: {fileID: 473209841}
   - component: {fileID: 473209840}
   m_Layer: 5
-  m_Name: ShopButtonYeti
+  m_Name: ShopButtonGrimReaper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1478,9 +1495,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 122634865}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
-        m_MethodName: SelectYeti
+        m_MethodName: SelectGrimReaper
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1618,7 +1635,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 541257363}
-  - component: {fileID: 541257364}
   - component: {fileID: 541257366}
   - component: {fileID: 541257365}
   m_Layer: 0
@@ -1643,22 +1659,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &541257364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 541257361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c75b0bcb1cbbaf42b726eddcc10f2f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  posOffset: {x: 0, y: 0, z: 0}
-  cam: {fileID: 893255855}
-  blueprintMaterial: {r: 0, g: 0, b: 0, a: 0}
-  buildEffect: {fileID: 1735020053299400289, guid: 70a9f419ea163a14885b6768daefca60, type: 3}
 --- !u!114 &541257365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2096,7 +2096,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 122634865}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
         m_MethodName: SelectElves
         m_Mode: 1
@@ -2274,7 +2274,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 122634865}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
         m_MethodName: SelectReinDeer
         m_Mode: 1
@@ -2570,7 +2570,7 @@ GameObject:
   - component: {fileID: 912432615}
   - component: {fileID: 912432614}
   m_Layer: 5
-  m_Name: ShopButtonSnowMan
+  m_Name: ShopButtonWitch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2753,9 +2753,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 122634865}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
-        m_MethodName: SelectSnowman
+        m_MethodName: SelectWitch
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3106,7 +3106,7 @@ GameObject:
   - component: {fileID: 1469149208}
   - component: {fileID: 1469149207}
   m_Layer: 5
-  m_Name: ShopButtonReindeer
+  m_Name: ShopButtonGhost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3289,9 +3289,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 122634865}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
-        m_MethodName: SelectReinDeer
+        m_MethodName: SelectGhost
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3789,7 +3789,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 122634865}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
         m_MethodName: SelectYeti
         m_Mode: 1
@@ -4089,7 +4089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc93495b22610c4d9f0494e94f35807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayGridGizmos: 0
+  displayGridGizmos: 1
   maskWalkable:
     serializedVersion: 2
     m_Bits: 0
@@ -4319,6 +4319,12 @@ MonoBehaviour:
   turnSpeed: 5
   turnDst: 2
   stoppingDst: 5
+  enemy:
+    name: 
+    enemyPrefab: {fileID: 0}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
 --- !u!135 &1243092280742564741
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4564,14 +4570,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnowMan Enemy (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 3397275243804757436, guid: 5f3bdbcb71895cd4e96cdc6a81de07ff, type: 3}
-      propertyPath: speed
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3397275243804757436, guid: 5f3bdbcb71895cd4e96cdc6a81de07ff, type: 3}
-      propertyPath: turnSpeed
-      value: 50
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f3bdbcb71895cd4e96cdc6a81de07ff, type: 3}
 --- !u!1 &2126033302194889304
@@ -4655,10 +4653,6 @@ PrefabInstance:
     - target: {fileID: 2457911885554961528, guid: 5f3bdbcb71895cd4e96cdc6a81de07ff, type: 3}
       propertyPath: m_Name
       value: SnowMan Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 3397275243804757436, guid: 5f3bdbcb71895cd4e96cdc6a81de07ff, type: 3}
-      propertyPath: turnDst
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f3bdbcb71895cd4e96cdc6a81de07ff, type: 3}

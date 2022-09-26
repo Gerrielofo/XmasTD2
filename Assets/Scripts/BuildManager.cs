@@ -36,11 +36,6 @@ public class BuildManager : MonoBehaviour
     public GameObject grimReaperPrefab;
     public GameObject grimReaperBlueprintPrefab;
 
-    private void Start()
-    {
-        
-    }
-
     private GameObject turretToBuild;
     private GameObject turretBlueprint;
 

@@ -50,12 +50,6 @@ public class TowerPlacement : MonoBehaviour
             blueprintToUse.transform.GetChild(0).GetComponent<SkinnedMeshRenderer>().material.color = blueprintMaterial;
 
             BlueprintFollowMouse(hit.point + posOffset);
-            if(hit.transform.tag == "Track")
-            {
-                blueprintMaterial = Color.red;
-                blueprintMaterial.a = 0.5f;
-                return;
-            }
             if (hit.transform.tag == "Buildable")
             {
                 blueprintMaterial = Color.white;
@@ -64,6 +58,12 @@ public class TowerPlacement : MonoBehaviour
                 {
                     PlaceTower(hit.point);
                 }                
+            }
+            else
+            {
+                blueprintMaterial = Color.red;
+                blueprintMaterial.a = 0.5f;
+                return;
             }
         }
     }

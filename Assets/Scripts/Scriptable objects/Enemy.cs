@@ -14,6 +14,6 @@ public class Enemy
 
     public void EndPath()
     {
-        PlayerStats.Lives -= damage;
+        PlayerStats.player1Lives -= damage;
     }
 }

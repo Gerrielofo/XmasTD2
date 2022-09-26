@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        livesText.text = "Lives: " + PlayerStats.Lives;
+        livesText.text = "Lives: " + PlayerStats.player1Lives;
         roundText.text = "Round " + WaveManager.currentWave;
 
     }

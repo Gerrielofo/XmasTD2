@@ -606,6 +606,12 @@ MonoBehaviour:
   turnSpeed: 5
   turnDst: 0
   stoppingDst: 1
+  enemy:
+    name: 
+    enemyPrefab: {fileID: 0}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
 --- !u!1 &2773036112264031181
 GameObject:
   m_ObjectHideFlags: 0
