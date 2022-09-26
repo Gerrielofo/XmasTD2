@@ -12,6 +12,8 @@ public class Unit : MonoBehaviour
 	public float turnDst = 0;
 	public float stoppingDst = 1;
 
+	public Enemy enemy;
+
 	Path path;
 
     private void Start()
@@ -45,7 +47,7 @@ public class Unit : MonoBehaviour
         {
 			if (Vector3.Distance(transform.position, target.position) <= 1f)
 			{
-				Destroy(gameObject);
+				EndPath();
 			}
 
 			yield return new WaitForSeconds(minPathUpdateTime);
@@ -99,6 +101,12 @@ public class Unit : MonoBehaviour
 			yield return null;
 
 		}
+	}
+
+	void EndPath()
+    {
+		enemy.EndPath();
+		Destroy(gameObject);
 	}
 
 	public void OnDrawGizmos()

@@ -10,4 +10,10 @@ public class Enemy
     public GameObject enemyPrefab;
     public int ammount;
     public float spawnRate;
+    public int damage;
+
+    public void EndPath()
+    {
+        PlayerStats.Lives -= damage;
+    }
 }
