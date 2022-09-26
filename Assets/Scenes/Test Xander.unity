@@ -164,43 +164,53 @@ MonoBehaviour:
     enemyPrefab: {fileID: 2457911885554961528, guid: 5f3bdbcb71895cd4e96cdc6a81de07ff, type: 3}
     ammount: 0
     spawnRate: 0
+    damage: 0
   - name: 
     enemyPrefab: {fileID: 0}
     ammount: 0
     spawnRate: 0
+    damage: 0
   - name: 
     enemyPrefab: {fileID: 0}
     ammount: 0
     spawnRate: 0
+    damage: 0
   - name: 
     enemyPrefab: {fileID: 0}
     ammount: 0
     spawnRate: 0
+    damage: 0
   - name: 
     enemyPrefab: {fileID: 0}
     ammount: 0
     spawnRate: 0
+    damage: 0
   christmas:
   - name: 
     enemyPrefab: {fileID: 2469527278825913563, guid: 18007c334f95c7a4884b481617357a66, type: 3}
     ammount: 0
     spawnRate: 0
+    damage: 0
   - name: 
     enemyPrefab: {fileID: 0}
     ammount: 0
     spawnRate: 0
+    damage: 0
   - name: 
     enemyPrefab: {fileID: 0}
     ammount: 0
     spawnRate: 0
+    damage: 0
   - name: 
     enemyPrefab: {fileID: 0}
     ammount: 0
     spawnRate: 0
+    damage: 0
   - name: 
     enemyPrefab: {fileID: 0}
     ammount: 0
     spawnRate: 0
+    damage: 0
   naturalSpawns:
   - {fileID: 284491393605902172}
   - {fileID: 859039001}
@@ -220,6 +230,7 @@ MonoBehaviour:
       enemyPrefab: {fileID: 2457911885554961528, guid: 5f3bdbcb71895cd4e96cdc6a81de07ff, type: 3}
       ammount: 3
       spawnRate: 1
+      damage: 0
 --- !u!4 &247916038
 Transform:
   m_ObjectHideFlags: 0
@@ -287,6 +298,12 @@ MonoBehaviour:
   turnSpeed: 5
   turnDst: 2
   stoppingDst: 5
+  enemy:
+    name: 
+    enemyPrefab: {fileID: 0}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
 --- !u!135 &308509723
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1011,7 +1028,7 @@ Transform:
   m_GameObject: {fileID: 1030867404}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.9060119, y: -2, z: 4.9}
-  m_LocalScale: {x: 50, y: 1, z: 80}
+  m_LocalScale: {x: 70, y: 1, z: 90}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 636330967}
@@ -2385,8 +2402,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8797542515989208747}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9060119, y: -2, z: 4.9}
-  m_LocalScale: {x: 50, y: 1, z: 80}
+  m_LocalPosition: {x: 0.90601, y: -2, z: 4.9}
+  m_LocalScale: {x: 70, y: 1, z: 90}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8797542517768139907}
@@ -2479,6 +2496,12 @@ MonoBehaviour:
   turnSpeed: 5
   turnDst: 2
   stoppingDst: 5
+  enemy:
+    name: 
+    enemyPrefab: {fileID: 0}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
 --- !u!135 &8797542515998658983
 SphereCollider:
   m_ObjectHideFlags: 0
