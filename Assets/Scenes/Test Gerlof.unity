@@ -1278,7 +1278,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e02e076171228ac4b807efff2545f18b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3240a526a1528074793a393811abbc7a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3072,7 +3072,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f78f6e2b449ce4c4aaf4b5f151b1f3bb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01a89f8cbc468284499df9c8d2af7a83, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4314,6 +4314,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aabd478c61d04db468afce63649776d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
+  deathEffect: {fileID: 0}
   target: {fileID: 1243092280653923774}
   speed: 15
   turnSpeed: 5

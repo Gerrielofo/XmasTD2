@@ -6,6 +6,9 @@ public class Unit : MonoBehaviour
 	const float minPathUpdateTime = .2f;
 	const float pathUpdateMoveThreshold = .5f;
 
+	public int health = 100;
+	public GameObject deathEffect;
+
 	public Transform target;
 	public float speed = 10;
 	public float turnSpeed = 5;
@@ -103,6 +106,21 @@ public class Unit : MonoBehaviour
 		}
 	}
 
+	public void TakeDamage(int dmg)
+    {
+		health -= dmg;
+		if(health <= 0)
+        {
+			Die();
+        }
+    }
+
+	void Die()
+    {
+		GameObject _deathEffect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
+		Destroy(_deathEffect, 1f);
+		Destroy(gameObject);
+    }
 	void EndPath()
     {
 		enemy.EndPath();
