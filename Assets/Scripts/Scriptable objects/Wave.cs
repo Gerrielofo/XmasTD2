@@ -6,7 +6,7 @@ public class Wave
 {
     [Header("Wave Info")]
     public int waveNumber;
-    public float waveReward;
+    public int waveReward;
     [Header("Boss Stuff")]
     public bool bossWave;
     public int bossAmmount;
