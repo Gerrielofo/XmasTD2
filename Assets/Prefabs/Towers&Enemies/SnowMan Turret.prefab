@@ -604,10 +604,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 2.2484508
+  m_Radius: 2.866435
   m_Height: 7.5565643
   m_Direction: 1
-  m_Center: {x: 0, y: 3.2782822, z: 0}
+  m_Center: {x: 0.088260174, y: 3.2782822, z: 0}
 --- !u!1 &2773036112264031181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,8 +1492,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 8550925445419255599}
   m_AABB:
-    m_Center: {x: -0.13826108, y: 3.4056077, z: 0.14550209}
-    m_Extent: {x: 1.940479, y: 3.5246491, z: 2.955876}
+    m_Center: {x: -0.13826108, y: 3.4056077, z: 0.05185628}
+    m_Extent: {x: 2.862231, y: 3.5246491, z: 2.8622305}
   m_DirtyAABB: 0
 --- !u!1 &7233689569182728895
 GameObject:

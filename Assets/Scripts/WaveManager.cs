@@ -130,7 +130,7 @@ public class WaveManager : MonoBehaviour
 
         if(cause == SendState.NATURAL)
         {
-            for (int s = 0; s <= naturalSpawns.Length; s++)
+            for (int s = 0; s < naturalSpawns.Length; s++)
             {
                 Instantiate(enemyPrefab, naturalSpawns[s].position, Quaternion.identity);
             }   
@@ -139,7 +139,7 @@ public class WaveManager : MonoBehaviour
         {
             for (int a = 0; a < _ammount; a++)
             {
-                for (int s = 0; s <= naturalSpawns.Length; s++)
+                for (int s = 0; s < naturalSpawns.Length; s++)
                 {
                     Instantiate(enemyPrefab, playerSpawns[s].position, Quaternion.identity);
                 }

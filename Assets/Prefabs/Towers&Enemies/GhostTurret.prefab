@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 84516b6698dc29c409237a1a589610dc, type: 2}
+  - {fileID: 2100000, guid: 900007bb4413a0948a4819ef88d0bbba, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,7 +114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7980083348794843308}
   m_Layer: 0
-  m_Name: GhostBP
+  m_Name: GhostTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -10,7 +10,7 @@ public class Enemy
     public GameObject enemyPrefab;
     public int ammount;
     public float spawnRate;
-    public int damage;
+    public int damage = 1;
 
     public void EndPath()
     {

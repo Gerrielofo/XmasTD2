@@ -38,6 +38,12 @@ public class BuildManager : MonoBehaviour
 
     private GameObject turretToBuild;
     private GameObject turretBlueprint;
+    private int towerCost;
+
+    public int tower1Cost = 100;
+    public int tower2Cost = 200;
+    public int tower3Cost = 250;
+    public int tower4Cost = 400;
 
     public GameObject GetTurretToBuild()
     {
@@ -56,45 +62,45 @@ public class BuildManager : MonoBehaviour
 
     public void SelectReinDeer()
     {
-        GetComponent<TowerPlacement>().InitTowerPlacement(reindeerPrefab, reindeerBlueprintPrefab);
+        GetComponent<TowerPlacement>().InitTowerPlacement(reindeerPrefab, reindeerBlueprintPrefab, tower1Cost);
         Debug.Log("Reindeer selected!");
     }
 
     public void SelectSnowman()
     {
-        GetComponent<TowerPlacement>().InitTowerPlacement(snowmanPrefab, snowmanBlueprintPrefab);
+        GetComponent<TowerPlacement>().InitTowerPlacement(snowmanPrefab, snowmanBlueprintPrefab, tower2Cost);
         Debug.Log("Snowman selected!");
     }
 
     public void SelectElves()
     {
-        GetComponent<TowerPlacement>().InitTowerPlacement(elvePrefab, elveBlueprintPrefab);
+        GetComponent<TowerPlacement>().InitTowerPlacement(elvePrefab, elveBlueprintPrefab, tower3Cost);
         Debug.Log("Elve selected!");
     }
 
     public void SelectYeti()
     {
-        GetComponent<TowerPlacement>().InitTowerPlacement(yetiPrefab, yetiBlueprintPrefab);
+        GetComponent<TowerPlacement>().InitTowerPlacement(yetiPrefab, yetiBlueprintPrefab, tower4Cost);
         Debug.Log("Yeti selected!");
     }
     public void SelectGhost()
     {
-        GetComponent<TowerPlacement>().InitTowerPlacement(ghostPrefab, ghostBlueprintPrefab);
+        GetComponent<TowerPlacement>().InitTowerPlacement(ghostPrefab, ghostBlueprintPrefab, tower1Cost);
         Debug.Log("Ghost selected!");
     }
     public void SelectWitch()
     {
-        GetComponent<TowerPlacement>().InitTowerPlacement(witchPrefab, witchBlueprintPrefab);
+        GetComponent<TowerPlacement>().InitTowerPlacement(witchPrefab, witchBlueprintPrefab, tower2Cost);
         Debug.Log("Witch selected!");
     }
     public void SelectSkeleton()
     {
-        GetComponent<TowerPlacement>().InitTowerPlacement(skeletonPrefab, skeletonBlueprintPrefab);
+        GetComponent<TowerPlacement>().InitTowerPlacement(skeletonPrefab, skeletonBlueprintPrefab, tower3Cost);
         Debug.Log("Skeleton selected!");
     }
     public void SelectGrimReaper()
     {
-        GetComponent<TowerPlacement>().InitTowerPlacement(grimReaperPrefab, grimReaperBlueprintPrefab);
+        GetComponent<TowerPlacement>().InitTowerPlacement(grimReaperPrefab, grimReaperBlueprintPrefab.gameObject, tower4Cost);
         Debug.Log("Grim Reaper selected!");
     }
 }
