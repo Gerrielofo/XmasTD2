@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 111
+  controlID: 127
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 112
+  controlID: 128
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 82
+  controlID: 18
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 83
+  controlID: 87
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -341,22 +341,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 71
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Scenes
   m_LastFoldersGridSize: 71
   m_LastProjectPath: C:\Users\boyka\OneDrive\Documenten\GitHub\XmasTD2\XmasTD2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 19}
-    m_SelectedIDs: 8a700000
-    m_LastClickedID: 28810
-    m_ExpandedIDs: 00000000887000008a70000000ca9a3bffffff7f
+    m_SelectedIDs: 466f0000
+    m_LastClickedID: 28486
+    m_ExpandedIDs: 00000000206f0000226f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -384,7 +384,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000887000008a700000
+    m_ExpandedIDs: 00000000206f0000226f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -436,7 +436,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 84.599976}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 71
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 160
+    m_CachedPref: 179
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
@@ -512,9 +512,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c2770000ca770000c4770000c8770000c6770000
+      m_SelectedIDs: 466f0000
       m_LastClickedID: 0
-      m_ExpandedIDs: e8f8ffff
+      m_ExpandedIDs: 2cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -787,7 +787,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 2.38692, y: -13.429796, z: -7.319084}
     speed: 2
-    m_Value: {x: 2.777455, y: -85.24838, z: 76.66923}
+    m_Value: {x: 2.38692, y: -13.429796, z: -7.319084}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -836,11 +836,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.32700986, y: 0.52400607, z: -0.22763851, w: -0.7527897}
     speed: 2
-    m_Value: {x: -0.40312696, y: -0.009276471, z: 0.004197444, w: -0.9152249}
+    m_Value: {x: -0.32700986, y: 0.524006, z: -0.22763851, w: -0.7527897}
   m_Size:
     m_Target: 45.8926
     speed: 2
-    m_Value: 73.74362
+    m_Value: 45.8926
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -950,7 +950,7 @@ MonoBehaviour:
       width: 1447.8275
       height: 506.4984
     m_MinimalGUI: 1
-  m_defaultScale: 0.3402778
+  m_defaultScale: 0.36458334
   m_LastWindowPixelSize: {x: 1050.5, y: 393.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
