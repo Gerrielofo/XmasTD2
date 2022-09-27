@@ -36,29 +36,10 @@ public class BuildManager : MonoBehaviour
     public GameObject grimReaperPrefab;
     public GameObject grimReaperBlueprintPrefab;
 
-    private GameObject turretToBuild;
-    private GameObject turretBlueprint;
-    private int towerCost;
-
     public int tower1Cost = 100;
     public int tower2Cost = 200;
     public int tower3Cost = 250;
     public int tower4Cost = 400;
-
-    public GameObject GetTurretToBuild()
-    {
-        return turretToBuild;
-    }
-
-    public GameObject GetTurretBlueprint()
-    {
-        return turretBlueprint;
-    }
-    public void DeselectTurrets()
-    {
-        turretToBuild = null;
-        turretBlueprint = null;
-    }
 
     public void SelectReinDeer()
     {
@@ -100,7 +81,7 @@ public class BuildManager : MonoBehaviour
     }
     public void SelectGrimReaper()
     {
-        GetComponent<TowerPlacement>().InitTowerPlacement(grimReaperPrefab, grimReaperBlueprintPrefab.gameObject, tower4Cost);
+        GetComponent<TowerPlacement>().InitTowerPlacement(grimReaperPrefab, grimReaperBlueprintPrefab, tower4Cost);
         Debug.Log("Grim Reaper selected!");
     }
 }

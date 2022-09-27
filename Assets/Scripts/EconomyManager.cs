@@ -42,17 +42,17 @@ public class EconomyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        P1MoneyDisplay.text = "Money: " + PlayerStats.player1Money;
+        P2MoneyDisplay.text = "Money: " + PlayerStats.player2Money;
         economyCountdown -= Time.deltaTime;
         if(economyCountdown <= 0)
         {// Player 1 money
             PlayerStats.player1Money += ecoP1;
-            P1EcoDisplay.text = "Eco: " + ecoP1;
-            P1MoneyDisplay.text = "Money: " + PlayerStats.player1Money;
+            P1EcoDisplay.text = "Eco: " + ecoP1;            
          // Player 2 money
             PlayerStats.player2Money += ecoP2;
             P2EcoDisplay.text = "Eco: " + ecoP2;
-            P2MoneyDisplay.text = "Money: " + PlayerStats.player2Money;
-
+            
             economyCountdown = timeBetweenEco;
         }
     }

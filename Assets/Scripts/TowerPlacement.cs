@@ -27,9 +27,10 @@ public class TowerPlacement : MonoBehaviour
         }
     }
 
-    public void InitTowerPlacement(GameObject newTowerToBuild, GameObject newBluePrintToUse, int _towerCost)
+    public void InitTowerPlacement(GameObject newTowerToBuild, GameObject newBluePrintToUse, int newTowerCost)
     {
-        towerCost = _towerCost;
+        towerCost = newTowerCost;
+        //Debug.Log(towerCost);
         towerToBuild = newTowerToBuild;
         SpawnBlueprint(newBluePrintToUse);
         canBuild = true;
@@ -72,6 +73,7 @@ public class TowerPlacement : MonoBehaviour
                     {
                         PlaceTower(hit.point);
                         PlayerStats.player1Money -= towerCost;
+                        PlayerStats.player2Money -= towerCost;
                         Debug.Log(PlayerStats.player1Money + " money left");
                     }
                     else
@@ -100,7 +102,6 @@ public class TowerPlacement : MonoBehaviour
         Instantiate(towerToBuild, pos + posOffset, Quaternion.identity);
         GameObject placeEffect = (GameObject)Instantiate(buildEffect, pos + posOffset, Quaternion.identity);
         Destroy(placeEffect, 1f);
-        BuildManager.instance.DeselectTurrets();
         canBuild = false;
     }
 }
