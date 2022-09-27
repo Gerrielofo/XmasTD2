@@ -6,81 +6,82 @@ using UnityEngine;
 public class SendEnemies : MonoBehaviour
 {
     public WaveManager waveManager;
-
-    int playerID = 1;
     int ammount;
+    public int enemyID;
     GameObject _enemyPrefab;
 
     private void Awake()
     {
         waveManager = GameObject.Find("WaveManager").GetComponent<WaveManager>();
     }
-    public void SendEnemy(int EnemyID)
+    public void SendEnemy(int _enemyID, int _playerID)
     {
-        switch (EnemyID)
+        _enemyID = gameObject.GetComponent<SendEnemies>().enemyID;
+
+        switch (_enemyID)
         {
             default:
-                if (playerID == 1)
+                if (_playerID == 1)
                 {
-                    _enemyPrefab = waveManager.halloween[EnemyID].enemyPrefab;
-                    ammount = waveManager.halloween[EnemyID].ammount;
+                    _enemyPrefab = waveManager.halloween[_enemyID].enemyPrefab;
+                    ammount = waveManager.halloween[_enemyID].ammount;
                 }
                 else
                 {
-                    _enemyPrefab = waveManager.christmas[EnemyID].enemyPrefab;
-                    ammount = waveManager.christmas[EnemyID].ammount;
+                    _enemyPrefab = waveManager.christmas[_enemyID].enemyPrefab;
+                    ammount = waveManager.christmas[_enemyID].ammount;
                 }
                 break;
 
             case 0:
-                if (playerID == 1)
+                if (_playerID == 1)
                 {
-                    _enemyPrefab = waveManager.halloween[EnemyID].enemyPrefab;
-                    ammount = waveManager.halloween[EnemyID].ammount;
+                    _enemyPrefab = waveManager.halloween[_enemyID].enemyPrefab;
+                    ammount = waveManager.halloween[_enemyID].ammount;
                 }
                 else
                 {
-                    _enemyPrefab = waveManager.christmas[EnemyID].enemyPrefab;
-                    ammount = waveManager.christmas[EnemyID].ammount;
+                    _enemyPrefab = waveManager.christmas[_enemyID].enemyPrefab;
+                    ammount = waveManager.christmas[_enemyID].ammount;
                 }
                 break;
 
             case 1:
-                if (playerID == 1)
+                if (_playerID == 1)
                 {
-                    _enemyPrefab = waveManager.halloween[EnemyID].enemyPrefab;
-                    ammount = waveManager.halloween[EnemyID].ammount;
+                    _enemyPrefab = waveManager.halloween[_enemyID].enemyPrefab;
+                    ammount = waveManager.halloween[_enemyID].ammount;
                 }
                 else
                 {
-                    _enemyPrefab = waveManager.christmas[EnemyID].enemyPrefab;
-                    ammount = waveManager.christmas[EnemyID].ammount;
+                    _enemyPrefab = waveManager.christmas[_enemyID].enemyPrefab;
+                    ammount = waveManager.christmas[_enemyID].ammount;
                 }
                 break;
 
             case 2:
-                if (playerID == 1)
+                if (_playerID == 1)
                 {
-                    _enemyPrefab = waveManager.halloween[EnemyID].enemyPrefab;
-                    ammount = waveManager.halloween[EnemyID].ammount;
+                    _enemyPrefab = waveManager.halloween[_enemyID].enemyPrefab;
+                    ammount = waveManager.halloween[_enemyID].ammount;
                 }
                 else
                 {
-                    _enemyPrefab = waveManager.christmas[EnemyID].enemyPrefab;
-                    ammount = waveManager.christmas[EnemyID].ammount;
+                    _enemyPrefab = waveManager.christmas[_enemyID].enemyPrefab;
+                    ammount = waveManager.christmas[_enemyID].ammount;
                 }
                 break;
 
             case 3:
-                if (playerID == 1)
+                if (_playerID == 1)
                 {
-                    _enemyPrefab = waveManager.halloween[EnemyID].enemyPrefab;
-                    ammount = waveManager.halloween[EnemyID].ammount;
+                    _enemyPrefab = waveManager.halloween[_enemyID].enemyPrefab;
+                    ammount = waveManager.halloween[_enemyID].ammount;
                 }
                 else
                 {
-                    _enemyPrefab = waveManager.christmas[EnemyID].enemyPrefab;
-                    ammount = waveManager.christmas[EnemyID].ammount;
+                    _enemyPrefab = waveManager.christmas[_enemyID].enemyPrefab;
+                    ammount = waveManager.christmas[_enemyID].ammount;
                 }
                 break;
         }

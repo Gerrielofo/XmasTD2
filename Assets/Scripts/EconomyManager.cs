@@ -56,9 +56,4 @@ public class EconomyManager : MonoBehaviour
             economyCountdown = timeBetweenEco;
         }
     }
-
-    public void AddEco(float _ammount, int playerID)
-    {
-
-    }
 }
