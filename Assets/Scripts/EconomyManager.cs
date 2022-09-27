@@ -51,9 +51,4 @@ public class EconomyManager : MonoBehaviour
 
         }
     }
-
-    public void AddEco(float _ammount, int playerID)
-    {
-
-    }
 }
