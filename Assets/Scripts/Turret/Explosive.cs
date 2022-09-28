@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Explosive : MonoBehaviour
 {
+    //For throwable explosives (grenade)
     public GameObject explosionEffect;
     bool hasExploded;
     
@@ -40,7 +41,6 @@ public class Explosive : MonoBehaviour
                 Damage(collider.transform);
             }
         }
-
         Destroy(gameObject);
     }
 
