@@ -153,13 +153,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15119f7645be77e439b6d4adb3dda21c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reindeerPrefab: {fileID: 2457911885554961528, guid: a8eb96ce0a756e14a9f8be2c029b96bb, type: 3}
+  reindeerPrefab: {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
   reindeerBlueprintPrefab: {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
-  snowmanPrefab: {fileID: 2457911885554961528, guid: a8eb96ce0a756e14a9f8be2c029b96bb, type: 3}
+  snowmanPrefab: {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
   snowmanBlueprintPrefab: {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
-  elvePrefab: {fileID: 2457911885554961528, guid: a8eb96ce0a756e14a9f8be2c029b96bb, type: 3}
+  elvePrefab: {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
   elveBlueprintPrefab: {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
-  yetiPrefab: {fileID: 2457911885554961528, guid: a8eb96ce0a756e14a9f8be2c029b96bb, type: 3}
+  yetiPrefab: {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
   yetiBlueprintPrefab: {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
   ghostPrefab: {fileID: 6577582918330532072, guid: 8481ddb53ebe9ca4e8688379997db8c1, type: 3}
   ghostBlueprintPrefab: {fileID: 6577582918330532072, guid: c80bf872db0515b4295d8710817ecfca, type: 3}
@@ -452,7 +452,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1146334601
 MonoBehaviour:
@@ -609,7 +609,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1712070513 stripped
 MonoBehaviour:
@@ -726,7 +726,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &1973547991
 MonoBehaviour:
@@ -812,7 +812,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &468880643860038541
 MeshRenderer:
@@ -903,7 +903,7 @@ Transform:
   - {fileID: 1243092280653923774}
   - {fileID: 1243092280783477901}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1243092280080397986
 MonoBehaviour:
@@ -1052,7 +1052,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243092280653923770}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.04, y: -0.16, z: -27.05}
+  m_LocalPosition: {x: 0.04, y: -0.16, z: -28.4}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1323,7 +1323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2074284334454034245, guid: 325676ed221081a48bd94e415bd4ea89, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2074284334454034245, guid: 325676ed221081a48bd94e415bd4ea89, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1459,7 +1459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4531259478048078977, guid: 6f32294873e9b204ea9da24c7bae5491, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4531259478048078977, guid: 6f32294873e9b204ea9da24c7bae5491, type: 3}
       propertyPath: m_AnchorMax.x

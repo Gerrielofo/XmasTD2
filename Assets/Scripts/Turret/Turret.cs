@@ -9,7 +9,7 @@ public class Turret : MonoBehaviour
     [Header("Attributes")]
     public float range = 10f;
     public float fireRate = 1f;
-    private float fireCountdown = 0f;
+    public float fireCountdown = 0f;
 
     [Header("Unity Setup Fields")]
 
@@ -21,8 +21,11 @@ public class Turret : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
 
+    private Animator anim;
+
     void Start()
     {
+        anim = transform.GetComponent<Animator>();
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
 
@@ -65,7 +68,7 @@ public class Turret : MonoBehaviour
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 
-        if(fireCountdown <= 0)
+        if(fireCountdown <= 0 && target != null)
         {
             Shoot();
             fireCountdown = 1f / fireRate;
@@ -75,6 +78,7 @@ public class Turret : MonoBehaviour
 
     void Shoot()
     {
+        anim.SetTrigger("doAttack");
         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
 
