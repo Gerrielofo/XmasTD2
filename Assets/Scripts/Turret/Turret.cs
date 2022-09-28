@@ -9,7 +9,7 @@ public class Turret : MonoBehaviour
     [Header("Attributes")]
     public float range = 10f;
     public float fireRate = 1f;
-    private float fireCountdown = 0f;
+    public float fireCountdown = 0f;
 
     [Header("Unity Setup Fields")]
 
@@ -20,6 +20,8 @@ public class Turret : MonoBehaviour
 
     public GameObject bulletPrefab;
     public Transform firePoint;
+
+    public Animator anim;
 
     void Start()
     {
@@ -67,6 +69,7 @@ public class Turret : MonoBehaviour
 
         if(fireCountdown <= 0)
         {
+            anim.Play("Attack");
             Shoot();
             fireCountdown = 1f / fireRate;
         }
