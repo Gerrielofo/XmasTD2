@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8615527353865529565}
   - component: {fileID: 5797389680685095959}
   - component: {fileID: 5167285270124160163}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5437123769677102530}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -113,7 +113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7980083348794843308}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GhostEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}

@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,8 +7,8 @@ using UnityEngine;
 public class Enemy
 {
     [Header("Enemy Info")]
-    public string name;
-    public GameObject enemyPrefab;
+    public GameObject prefab;
+    
     public int ammount;
     public float spawnRate;
     public int damage = 1;

@@ -8,6 +8,8 @@ using UnityEngine.InputSystem;
 public class PlayerInstance : MonoBehaviour
 {
     public Camera camera;
+    public GameObject christmasShop;
+    public GameObject halloweenShop;
 
     // Start is called before the first frame update
     void Start()
@@ -18,14 +20,16 @@ public class PlayerInstance : MonoBehaviour
         int playerCount = inputManager.playerCount;
         Debug.Log(playerCount);
 
+
         LayerMask previousMask = camera.cullingMask;
         LayerMask playerMask;
 
         if (playerCount == 1)
         {
             gameObject.layer = 10;
-            economyManager.P1EcoDisplay = gameObject.transform.GetChild(1).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
-            economyManager.P1MoneyDisplay = gameObject.transform.GetChild(0).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P1EcoDisplay = gameObject.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P1MoneyDisplay = gameObject.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            gameObject.GetComponent<ShopWheelController>().shopWheel = christmasShop;
             playerMask = LayerMask.GetMask("Player1");
             
             camera.rect = new Rect(0, 0, 0.5f, 1f);
@@ -34,8 +38,9 @@ public class PlayerInstance : MonoBehaviour
         else
         {
             gameObject.layer = 11;
-            economyManager.P2EcoDisplay = gameObject.transform.GetChild(1).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
-            economyManager.P2MoneyDisplay = gameObject.transform.GetChild(0).GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P2EcoDisplay = gameObject.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>();
+            economyManager.P2MoneyDisplay = gameObject.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+            gameObject.GetComponent<ShopWheelController>().shopWheel = halloweenShop;
             playerMask = LayerMask.GetMask("Player2");
 
             camera.rect = new Rect(0.5f, 0, 0.5f, 1f);
