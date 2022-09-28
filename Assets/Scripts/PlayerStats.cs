@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public static int Lives;
+    public static int player1Lives;
+    public static int player2Lives;
     public int startLives;
-    // Start is called before the first frame update
+    public static int player1Money;
+    public static int player2Money;
+    public int startMoney;
+
+    public int money;
+
     void Start()
     {
-        Lives = startLives;
+        player1Lives = startLives;
+        player2Lives = startLives;
+
+        player1Money = startMoney;
+        player2Money = startMoney;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        money = player1Money;
     }
 }

@@ -6,11 +6,16 @@ public class Unit : MonoBehaviour
 	const float minPathUpdateTime = .2f;
 	const float pathUpdateMoveThreshold = .5f;
 
+	public int health = 100;
+	public GameObject deathEffect;
+
 	public Transform target;
 	public float speed = 10;
-	public float turnSpeed = 3;
-	public float turnDst = 5;
-	public float stoppingDst = 10;
+	public float turnSpeed = 5;
+	public float turnDst = 0;
+	public float stoppingDst = 1;
+
+	public Enemy enemy;
 
 	Path path;
 
@@ -19,12 +24,13 @@ public class Unit : MonoBehaviour
 		target = GameObject.Find("Target").transform;
 		StartCoroutine(UpdatePath());
     }
+
     public void OnPathFound(Vector3[] waypoints, bool pathSuccessful)
 	{
 		if (pathSuccessful)
 		{
 			path = new Path(waypoints, transform.position, turnDst, stoppingDst);
-
+			
 			StopCoroutine("FollowPath");
 			StartCoroutine("FollowPath");
 		}
@@ -42,6 +48,11 @@ public class Unit : MonoBehaviour
 
         while (true)
         {
+			if (Vector3.Distance(transform.position, target.position) <= 1f)
+			{
+				EndPath();
+			}
+
 			yield return new WaitForSeconds(minPathUpdateTime);
 			if((target.position - targetPosOld).sqrMagnitude > sqrMoveThreshold)
             {
@@ -61,6 +72,7 @@ public class Unit : MonoBehaviour
 
 		while (followingPath)
 		{
+			
 			Vector2 pos2D = new Vector2(transform.position.x, transform.position.z);
             while (path.turnBoundries[pathIndex].HasCrossedLine(pos2D))
             {
@@ -84,7 +96,6 @@ public class Unit : MonoBehaviour
 						followingPath = false;
                     }
 				}
-				
 				Quaternion targetRotation = Quaternion.LookRotation(path.lookPoints[pathIndex] - transform.position);
 				transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
 				transform.Translate(Vector3.forward * Time.deltaTime * speed * speedPercent, Space.Self);
@@ -93,6 +104,27 @@ public class Unit : MonoBehaviour
 			yield return null;
 
 		}
+	}
+
+	public void TakeDamage(int dmg)
+    {
+		health -= dmg;
+		if(health <= 0)
+        {
+			Die();
+        }
+    }
+
+	void Die()
+    {
+		GameObject _deathEffect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
+		Destroy(_deathEffect, 1f);
+		Destroy(gameObject);
+    }
+	void EndPath()
+    {
+		enemy.EndPath();
+		Destroy(gameObject);
 	}
 
 	public void OnDrawGizmos()
