@@ -2,11 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class WaveManager : MonoBehaviour
 {
     [Header("References")]
+    
     public EconomyManager economyManager;
+    PlayerInputManager inputManager;
     public enum SpawnState { SPAWNING, WAITING, COUNTING, FINISHED };
     public enum SendState { NATURAL, PLAYER};
     [Header("Enemy Arrays")]
@@ -28,11 +31,11 @@ public class WaveManager : MonoBehaviour
 
     void Start()
     {
+        inputManager = GameObject.Find("PlayerManager").GetComponent<PlayerInputManager>();
         nextWaveCountdown = timeBetweenWaves;
     }
     private void Update()
     {
-
         if (state == SpawnState.WAITING)
         {
             if (!EnemyIsAlive())
@@ -53,7 +56,7 @@ public class WaveManager : MonoBehaviour
         }
         else
         {
-            if (state == SpawnState.COUNTING)
+            if (state == SpawnState.COUNTING && inputManager.playerCount == 2)
             {
                 nextWaveCountdown -= Time.deltaTime;
             }

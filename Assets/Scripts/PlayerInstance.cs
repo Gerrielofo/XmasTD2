@@ -20,6 +20,7 @@ public class PlayerInstance : MonoBehaviour
         int playerCount = inputManager.playerCount;
         Debug.Log(playerCount);
 
+
         LayerMask previousMask = camera.cullingMask;
         LayerMask playerMask;
 

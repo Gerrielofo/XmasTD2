@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 using UnityEngine;
 using TMPro;
 
@@ -7,6 +8,7 @@ public class EconomyManager : MonoBehaviour
 {
     [Header("References")]
     public WaveManager waveManager;
+    public PlayerInputManager inputManager;
     [Header("Starting Ammounts")]
     public int startingMoney;
     public int startingEco;
@@ -25,35 +27,44 @@ public class EconomyManager : MonoBehaviour
     
     private void Start()
     {
-        PlayerStats.player1Money = startingMoney;
-        PlayerStats.player2Money = startingMoney;
-        ecoP1 = startingEco;
-        ecoP2 = startingEco;
+        inputManager = GameObject.Find("PlayerManager").GetComponent<PlayerInputManager>();
 
-        P1EcoDisplay.text = "Eco: " + ecoP1;
-        P1MoneyDisplay.text = "Money: " + PlayerStats.player1Money;
+        if(inputManager.playerCount == 2)
+        {
+            PlayerStats.player1Money = startingMoney;
+            PlayerStats.player2Money = startingMoney;
+            ecoP1 = startingEco;
+            ecoP2 = startingEco;
 
-        P2EcoDisplay.text = "Eco: " + ecoP2;
-        P2MoneyDisplay.text = "Money: " + PlayerStats.player2Money;
+            P1EcoDisplay.text = "Eco: " + ecoP1;
+            P1MoneyDisplay.text = "Money: " + PlayerStats.player1Money;
 
-        economyCountdown = timeBetweenEco;
+            P2EcoDisplay.text = "Eco: " + ecoP2;
+            P2MoneyDisplay.text = "Money: " + PlayerStats.player2Money;
+
+            economyCountdown = timeBetweenEco;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        P1MoneyDisplay.text = "Money: " + PlayerStats.player1Money;
-        P2MoneyDisplay.text = "Money: " + PlayerStats.player2Money;
-        economyCountdown -= Time.deltaTime;
-        if(economyCountdown <= 0)
-        {// Player 1 money
-            PlayerStats.player1Money += ecoP1;
-            P1EcoDisplay.text = "Eco: " + ecoP1;            
-         // Player 2 money
-            PlayerStats.player2Money += ecoP2;
-            P2EcoDisplay.text = "Eco: " + ecoP2;
-            
-            economyCountdown = timeBetweenEco;
+        if(inputManager.playerCount == 2)
+        {
+            P1MoneyDisplay.text = "Money: " + PlayerStats.player1Money;
+            P2MoneyDisplay.text = "Money: " + PlayerStats.player2Money;
+            economyCountdown -= Time.deltaTime;
+            if (economyCountdown <= 0)
+            {// Player 1 money
+                PlayerStats.player1Money += ecoP1;
+                P1EcoDisplay.text = "Eco: " + ecoP1;
+                // Player 2 money
+                PlayerStats.player2Money += ecoP2;
+                P2EcoDisplay.text = "Eco: " + ecoP2;
+
+                economyCountdown = timeBetweenEco;
+            }
         }
+        
     }
 }
