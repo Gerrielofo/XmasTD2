@@ -30,7 +30,6 @@ public class TowerPlacement : MonoBehaviour
     public void InitTowerPlacement(GameObject newTowerToBuild, GameObject newBluePrintToUse, int newTowerCost)
     {
         towerCost = newTowerCost;
-        //Debug.Log(towerCost);
         towerToBuild = newTowerToBuild;
         SpawnBlueprint(newBluePrintToUse);
         canBuild = true;
@@ -71,13 +70,14 @@ public class TowerPlacement : MonoBehaviour
                 {
                     if(PlayerStats.player1Money > towerCost)
                     {
+                        blueprintMaterial = Color.white;
+                        blueprintMaterial.a = 0.5f;
                         PlaceTower(hit.point);
-                        PlayerStats.player1Money -= towerCost;
-                        PlayerStats.player2Money -= towerCost;
-                        Debug.Log(PlayerStats.player1Money + " money left");
                     }
                     else
                     {
+                        blueprintMaterial = Color.red;
+                        blueprintMaterial.a = 0.5f;
                         Debug.Log("Not Enough Money!");
                     }
                 }                
@@ -98,6 +98,9 @@ public class TowerPlacement : MonoBehaviour
 
     void PlaceTower(Vector3 pos)
     {
+        PlayerStats.player1Money -= towerCost;
+        PlayerStats.player2Money -= towerCost;
+        Debug.Log(PlayerStats.player1Money + " money left.");
         Destroy(blueprintToUse);
         Instantiate(towerToBuild, pos + posOffset, Quaternion.identity);
         GameObject placeEffect = (GameObject)Instantiate(buildEffect, pos + posOffset, Quaternion.identity);
