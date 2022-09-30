@@ -10,12 +10,13 @@ public class Unit : MonoBehaviour
 	public GameObject deathEffect;
 
 	public Transform target;
-	public float speed = 10;
+	public float startSpeed = 5;
+	private float speed = 10;
 	public float turnSpeed = 5;
 	public float turnDst = 0;
 	public float stoppingDst = 1;
 
-	public Enemy enemy;
+	private Enemy enemy;
 
 	Path path;
 
@@ -61,6 +62,20 @@ public class Unit : MonoBehaviour
 			}
 			
 		}
+    }
+
+	public void Slow(float slowPct, float slowTime)
+    {
+		float _slowTime = slowTime;
+		_slowTime -= Time.deltaTime;
+		if(_slowTime > 0)
+        {
+			speed *= slowPct;
+        }
+        else
+        {
+			speed = startSpeed;
+        }
     }
 
 	IEnumerator FollowPath()

@@ -14,12 +14,13 @@ public class Turret : MonoBehaviour
     [Header("Unity Setup Fields")]
 
     public string enemyTag = "Enemy";
-
+   
     public Transform partToRotate;
     public float turnSpeed = 10;
 
     public GameObject bulletPrefab;
     public Transform firePoint;
+
 
     private Animator anim;
 
@@ -63,10 +64,7 @@ public class Turret : MonoBehaviour
         if (target == null)
             return;
 
-        Vector3 dir = target.position - transform.position;
-        Quaternion lookRotation = Quaternion.LookRotation(dir);
-        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
-        partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+        LockOnTarget();
 
         if(fireCountdown <= 0 && target != null)
         {
@@ -76,6 +74,13 @@ public class Turret : MonoBehaviour
         
     }
 
+    void LockOnTarget()
+    {
+        Vector3 dir = target.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(dir);
+        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
+        partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+    }
     void Shoot()
     {
         anim.SetTrigger("doAttack");

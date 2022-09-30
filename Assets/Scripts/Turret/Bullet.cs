@@ -6,10 +6,16 @@ public class Bullet : MonoBehaviour
 {
     private Transform target;
 
+    [Header("Bullet stats")]
     public int damage = 40;
     public float speed = 60f;
     public float explosionRadius = 0f;
     public GameObject impactEffect;
+
+    [Header("Slow Attack")]
+    public bool doSlow = false;
+    public float slowPct = .7f;
+    public float slowTime = 2f;
 
     public void Seek(Transform _target)
     {
@@ -69,9 +75,20 @@ public class Bullet : MonoBehaviour
         Unit u = enemy.GetComponent<Unit>();
         if(u != null)
         {
+            if (doSlow)
+            {
+                SlowEnemy(enemy);
+            }
             u.TakeDamage(damage);
         }
     }
+
+    void SlowEnemy(Transform enemy)
+    {
+        Unit u = enemy.GetComponent<Unit>();
+        u.Slow(slowPct, slowTime);
+    }
+
 
     private void OnDrawGizmos()
     {
