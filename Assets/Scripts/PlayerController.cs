@@ -46,7 +46,10 @@ public class PlayerController : MonoBehaviour
                         int _ammount = target.GetComponent<SendEnemies>().ammount;
                         target.GetComponent<SendEnemies>().SendEnemy(_enemyID, _playerID, _ammount);
                     }
-                    //else if(target.GetComponent<>)
+                    //else if ()
+                    //{
+
+                    //}
                 }
             }
             Transform shopWheel = gameObject.transform.GetComponentInParent<ShopWheelController>().shopWheel;

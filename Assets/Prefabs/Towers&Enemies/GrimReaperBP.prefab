@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 353554139771033806}
   - component: {fileID: 8707205304826383056}
   m_Layer: 0
-  m_Name: Grim Reaper Lv1
+  m_Name: GrimReaperBP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126958948996055668}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01a820c4c4089554bb5b2fbfd3e95396, type: 3}
   m_Name: 
@@ -2348,7 +2348,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a249bb234fa8a1b44a322c5a7e2b376a, type: 2}
+  - {fileID: 2100000, guid: 66049294bbbefeb4ab1c2510be29cd19, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
