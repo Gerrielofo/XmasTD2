@@ -43,14 +43,13 @@ public class PlayerInstance : MonoBehaviour
         }
         else if(playerCount == 2)
         {
-            gameObject.layer = 11;
             economyManager.P2MoneyDisplay = gameObject.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
-            economyManager.P2EcoDisplay = gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+            economyManager.P2EcoDisplay = gameObject.transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>();
 
             uIManager.livesTextP2 = gameObject.transform.GetChild(0).GetChild(2).GetComponent<TextMeshProUGUI>();
             uIManager.roundTextP2 = gameObject.transform.GetChild(0).GetChild(3).GetComponent<TextMeshProUGUI>();
 
-            gameObject.transform.GetComponent<ShopWheelController>().shopWheel = gameObject.transform.GetChild(0).GetChild(4).GetChild(1);
+            gameObject.transform.GetComponent<ShopWheelController>().shopWheel = gameObject.transform.GetChild(0).GetChild(4).GetChild(0);
             playerMask = LayerMask.GetMask("Player2");
 
             camera.rect = new Rect(0.5f, 0, 0.5f, 1f);
