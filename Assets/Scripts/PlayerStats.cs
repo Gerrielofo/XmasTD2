@@ -18,9 +18,4 @@ public class PlayerStats : MonoBehaviour
         player1Lives = startLives;
         player2Lives = startLives;
     }
-
-    private void Update()
-    {
-        money = player1Money;
-    }
 }

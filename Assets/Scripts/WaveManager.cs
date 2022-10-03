@@ -36,31 +36,35 @@ public class WaveManager : MonoBehaviour
     }
     private void Update()
     {
-        if (state == SpawnState.WAITING)
+        if(inputManager.playerCount == 2)
         {
-            if (!EnemyIsAlive())
+            if (state == SpawnState.WAITING)
             {
-                WaveCompleted(waves[currentWave]);
+                if (!EnemyIsAlive())
+                {
+                    WaveCompleted(waves[currentWave]);
+                }
+                else
+                {
+                    return;
+                }
+            }
+            if (nextWaveCountdown <= 0 && state != SpawnState.FINISHED)
+            {
+                if (state != SpawnState.SPAWNING)
+                {
+                    StartCoroutine(SpawnWave(waves[nextWave]));
+                }
             }
             else
             {
-                return;
+                if (state == SpawnState.COUNTING && inputManager.playerCount == 2)
+                {
+                    nextWaveCountdown -= Time.deltaTime;
+                }
             }
         }
-        if (nextWaveCountdown <= 0 && state != SpawnState.FINISHED)
-        {
-            if (state != SpawnState.SPAWNING)
-            {
-                StartCoroutine(SpawnWave(waves[nextWave]));
-            }
-        }
-        else
-        {
-            if (state == SpawnState.COUNTING && inputManager.playerCount == 2)
-            {
-                nextWaveCountdown -= Time.deltaTime;
-            }
-        }
+       
     }
 
     void WaveCompleted(Wave _wave)
