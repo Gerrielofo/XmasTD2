@@ -49,7 +49,7 @@ public class PlayerInstance : MonoBehaviour
             uIManager.livesTextP2 = gameObject.transform.GetChild(0).GetChild(2).GetComponent<TextMeshProUGUI>();
             uIManager.roundTextP2 = gameObject.transform.GetChild(0).GetChild(3).GetComponent<TextMeshProUGUI>();
 
-            gameObject.transform.GetComponent<ShopWheelController>().shopWheel = gameObject.transform.GetChild(0).GetChild(4).GetChild(0);
+            gameObject.transform.GetComponent<ShopWheelController>().shopWheel = gameObject.transform.GetChild(0).GetChild(4).GetChild(1);
             playerMask = LayerMask.GetMask("Player2");
 
             camera.rect = new Rect(0.5f, 0, 0.5f, 1f);
