@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -29,7 +30,7 @@ public class PlayerInstance : MonoBehaviour
             gameObject.layer = 10;
             economyManager.P1EcoDisplay = gameObject.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>();
             economyManager.P1MoneyDisplay = gameObject.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
-            gameObject.GetComponent<ShopWheelController>().shopWheel = christmasShop;
+            gameObject.transform.GetComponent<ShopWheelController>().shopWheel = gameObject.transform.GetChild(5).GetChild(0);
             playerMask = LayerMask.GetMask("Player1");
             
             camera.rect = new Rect(0, 0, 0.5f, 1f);
@@ -40,7 +41,7 @@ public class PlayerInstance : MonoBehaviour
             gameObject.layer = 11;
             economyManager.P2EcoDisplay = gameObject.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>();
             economyManager.P2MoneyDisplay = gameObject.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
-            gameObject.GetComponent<ShopWheelController>().shopWheel = halloweenShop;
+            gameObject.transform.GetComponent<ShopWheelController>().shopWheel = gameObject.transform.GetChild(5).GetChild(1);
             playerMask = LayerMask.GetMask("Player2");
 
             camera.rect = new Rect(0.5f, 0, 0.5f, 1f);
