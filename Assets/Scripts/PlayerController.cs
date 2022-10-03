@@ -31,25 +31,36 @@ public class PlayerController : MonoBehaviour
                 if (Physics.Raycast(transform.position, transform.forward, out hit, 1000f))
                 {
                     GameObject target = hit.transform.gameObject;
-                    if(target.GetComponent<SendEnemies>())
+                    int _playerID = 0;
+                    if (target.GetComponent<SendEnemies>())
                     {
                         int _enemyID = target.GetComponent<SendEnemies>().enemyID;
-                        int _playerID = 0;
-                        if(target.layer == 10)
+                        
+                        if (target.layer == 10)
                         {
                             _playerID = 1;
                         }
-                        else if(target.layer == 11)
+                        else if (target.layer == 11)
                         {
                             _playerID = 2;
                         }
                         int _ammount = target.GetComponent<SendEnemies>().ammount;
                         target.GetComponent<SendEnemies>().SendEnemy(_enemyID, _playerID, _ammount);
                     }
-                    //else if ()
-                    //{
-
-                    //}
+                    else if (target.GetComponent<TowerID>())
+                    {
+                        int _towerID = target.GetComponent<TowerID>().towerID;
+                        int _towerCost = target.GetComponent<TowerID>().cost;
+                        if (target.layer == 10)
+                        {
+                            _playerID = 1;
+                        }
+                        else if (target.layer == 11)
+                        {
+                            _playerID = 2;
+                        }
+                        target.GetComponent<TowerID>().ChangeTower(_towerID, _towerCost, _playerID);
+                    }
                 }
             }
             Transform shopWheel = gameObject.transform.GetComponentInParent<ShopWheelController>().shopWheel;
