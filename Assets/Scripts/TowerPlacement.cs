@@ -13,7 +13,7 @@ public class TowerPlacement : MonoBehaviour
     private int towerCost;
 
     bool canBuild = false;   
-    public Camera cam;
+    public GameObject playerCursor;
     
     public Color blueprintMaterial;
     
@@ -47,8 +47,7 @@ public class TowerPlacement : MonoBehaviour
             return;
         }
         RaycastHit hit;
-        Ray r = cam.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(r, out hit, Mathf.Infinity))
+        if (Physics.Raycast(playerCursor.transform.position,playerCursor.transform.forward, out hit, Mathf.Infinity))
         {
             if (blueprintToUse.transform.GetChild(0).GetComponent<SkinnedMeshRenderer>())
             {
