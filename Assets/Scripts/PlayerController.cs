@@ -59,6 +59,9 @@ public class PlayerController : MonoBehaviour
                         {
                             _playerID = 2;
                         }
+                        Debug.Log(_playerID);
+                        Debug.Log(_towerID);
+                        Debug.Log(_towerCost);
                         target.GetComponent<TowerID>().ChangeTower(_towerID, _towerCost, _playerID);
                     }
                 }

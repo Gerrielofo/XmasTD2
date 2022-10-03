@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 92800722}
   - component: {fileID: 92800721}
   - component: {fileID: 92800723}
+  - component: {fileID: 92800724}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -188,6 +189,20 @@ MonoBehaviour:
   roundTextP1: {fileID: 0}
   roundTextP2: {fileID: 0}
   playerInputManager: {fileID: 615613443}
+--- !u!114 &92800724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92800720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14801edb0b5d7e44a97d577678622e35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1JoinScreen: {fileID: 1868134147}
+  player2JoinScreen: {fileID: 221242698}
 --- !u!1 &201581822
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,36 +386,36 @@ MonoBehaviour:
   economyManager: {fileID: 1035508201}
   cause: 0
   halloween:
-  - prefab: {fileID: 0}
+  - prefab: {fileID: 997083150613982144, guid: ea55caa13506dae4390f3d0383b3da42, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 0}
+  - prefab: {fileID: 997083150613982144, guid: ea55caa13506dae4390f3d0383b3da42, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 0}
+  - prefab: {fileID: 997083150613982144, guid: ea55caa13506dae4390f3d0383b3da42, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 0}
+  - prefab: {fileID: 997083150613982144, guid: ea55caa13506dae4390f3d0383b3da42, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
   christmas:
-  - prefab: {fileID: 0}
+  - prefab: {fileID: 2457911885554961528, guid: 5f3bdbcb71895cd4e96cdc6a81de07ff, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 0}
+  - prefab: {fileID: 2457911885554961528, guid: 5f3bdbcb71895cd4e96cdc6a81de07ff, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 0}
+  - prefab: {fileID: 2457911885554961528, guid: 5f3bdbcb71895cd4e96cdc6a81de07ff, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 0}
+  - prefab: {fileID: 2457911885554961528, guid: 5f3bdbcb71895cd4e96cdc6a81de07ff, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
@@ -419,9 +434,9 @@ MonoBehaviour:
     bossWave: 0
     bossAmmount: 0
     enemies:
-    - prefab: {fileID: 7329782218765392887, guid: b39e15275c8e7214d8357931709bbeab, type: 3}
+    - prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
       ammount: 3
-      spawnRate: 1
+      spawnRate: 0.95
       damage: 1
 --- !u!4 &247916038
 Transform:
@@ -1419,22 +1434,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15119f7645be77e439b6d4adb3dda21c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reindeerPrefab: {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
-  reindeerBlueprintPrefab: {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
-  snowmanPrefab: {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
-  snowmanBlueprintPrefab: {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
-  elvePrefab: {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
-  elveBlueprintPrefab: {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
-  yetiPrefab: {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
-  yetiBlueprintPrefab: {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
-  ghostPrefab: {fileID: 6577582918330532072, guid: 8481ddb53ebe9ca4e8688379997db8c1, type: 3}
-  ghostBlueprintPrefab: {fileID: 6577582918330532072, guid: c80bf872db0515b4295d8710817ecfca, type: 3}
-  witchPrefab: {fileID: 6577582918330532072, guid: 8481ddb53ebe9ca4e8688379997db8c1, type: 3}
-  witchBlueprintPrefab: {fileID: 6577582918330532072, guid: c80bf872db0515b4295d8710817ecfca, type: 3}
-  skeletonPrefab: {fileID: 6577582918330532072, guid: 8481ddb53ebe9ca4e8688379997db8c1, type: 3}
-  skeletonBlueprintPrefab: {fileID: 6577582918330532072, guid: c80bf872db0515b4295d8710817ecfca, type: 3}
-  grimReaperPrefab: {fileID: 6577582918330532072, guid: 8481ddb53ebe9ca4e8688379997db8c1, type: 3}
-  grimReaperBlueprintPrefab: {fileID: 6577582918330532072, guid: c80bf872db0515b4295d8710817ecfca, type: 3}
+  towerPrefabsXmas:
+  - {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
+  - {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
+  - {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
+  - {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
+  towerBlueprintXmas:
+  - {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
+  - {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
+  - {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
+  - {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
+  towerPrefabsHalloween:
+  - {fileID: 1126958948996055668, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
+  - {fileID: 1126958948996055668, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
+  - {fileID: 1126958948996055668, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
+  - {fileID: 1126958948996055668, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
+  towerBlueprintHalloween:
+  - {fileID: 1126958948996055668, guid: 2d9c6a828db1b094baee8d54e8caa883, type: 3}
+  - {fileID: 1126958948996055668, guid: 2d9c6a828db1b094baee8d54e8caa883, type: 3}
+  - {fileID: 1126958948996055668, guid: 2d9c6a828db1b094baee8d54e8caa883, type: 3}
+  - {fileID: 1126958948996055668, guid: 2d9c6a828db1b094baee8d54e8caa883, type: 3}
   tower1Cost: 100
   tower2Cost: 200
   tower3Cost: 250

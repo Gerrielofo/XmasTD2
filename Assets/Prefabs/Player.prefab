@@ -512,6 +512,7 @@ GameObject:
   - component: {fileID: 71717958525002963}
   - component: {fileID: 8299006389710956208}
   - component: {fileID: 957762959278542404}
+  - component: {fileID: 3980730901453139813}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -638,6 +639,19 @@ MonoBehaviour:
   cost: 400
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
+--- !u!65 &3980730901453139813
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199631416402270174}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 185.64421, y: 179.10515, z: 30.692595}
+  m_Center: {x: 0, y: -5.9843426, z: -15.0069475}
 --- !u!1 &1277781342045333764
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,6 +800,7 @@ GameObject:
   - component: {fileID: 7704156552764863390}
   - component: {fileID: 1039383732523917902}
   - component: {fileID: 405109076964194384}
+  - component: {fileID: 7953894035148918042}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -912,6 +927,19 @@ MonoBehaviour:
   cost: 250
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
+--- !u!65 &7953894035148918042
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567137106164047940}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 185.64421, y: 179.10515, z: 30.692595}
+  m_Center: {x: 0, y: -5.9843426, z: -15.0069475}
 --- !u!1 &1643526709159255988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1620,6 +1648,7 @@ GameObject:
   - component: {fileID: 8649024681908352898}
   - component: {fileID: 3756098550503028032}
   - component: {fileID: 6137603156040585414}
+  - component: {fileID: 5541430494645030505}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -1746,6 +1775,19 @@ MonoBehaviour:
   cost: 250
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
+--- !u!65 &5541430494645030505
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2978334649115321663}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 185.64421, y: 179.10515, z: 30.692595}
+  m_Center: {x: 0, y: -5.9843426, z: -15.0069475}
 --- !u!1 &3146632471775426057
 GameObject:
   m_ObjectHideFlags: 0
@@ -3084,6 +3126,7 @@ GameObject:
   - component: {fileID: 1712478180057122573}
   - component: {fileID: 6254555578042649495}
   - component: {fileID: 2425872613971505029}
+  - component: {fileID: 2470017388318775892}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -3210,6 +3253,19 @@ MonoBehaviour:
   cost: 400
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
+--- !u!65 &2470017388318775892
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6043729076130633752}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 185.64421, y: 179.10515, z: 30.692595}
+  m_Center: {x: 0, y: -5.9843426, z: -15.0069475}
 --- !u!1 &6650559682454090253
 GameObject:
   m_ObjectHideFlags: 0
@@ -3628,6 +3684,7 @@ GameObject:
   - component: {fileID: 2413506048264371913}
   - component: {fileID: 3127830845207490907}
   - component: {fileID: 5504497248921913527}
+  - component: {fileID: 5136137553585761662}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3754,6 +3811,19 @@ MonoBehaviour:
   cost: 100
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
+--- !u!65 &5136137553585761662
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7922390136454468933}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 185.64421, y: 179.10515, z: 30.692595}
+  m_Center: {x: 0, y: -5.9843426, z: -15.0069475}
 --- !u!1 &8388042071346533078
 GameObject:
   m_ObjectHideFlags: 0
@@ -3767,6 +3837,7 @@ GameObject:
   - component: {fileID: 4561829455704082721}
   - component: {fileID: 1093929471702250512}
   - component: {fileID: 8691703783555671220}
+  - component: {fileID: 8389749440165999850}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3893,6 +3964,19 @@ MonoBehaviour:
   cost: 100
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
+--- !u!65 &8389749440165999850
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8388042071346533078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 185.64421, y: 179.10515, z: 30.692595}
+  m_Center: {x: 0, y: -5.9843426, z: -15.0069475}
 --- !u!1 &8783598457226449503
 GameObject:
   m_ObjectHideFlags: 0
@@ -3906,6 +3990,7 @@ GameObject:
   - component: {fileID: 718576785224477997}
   - component: {fileID: 5224287503341776397}
   - component: {fileID: 201446137370550176}
+  - component: {fileID: 7606109658785565608}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -4032,6 +4117,19 @@ MonoBehaviour:
   cost: 200
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
+--- !u!65 &7606109658785565608
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8783598457226449503}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 185.64421, y: 179.10515, z: 30.692595}
+  m_Center: {x: 0, y: -5.9843426, z: -15.0069475}
 --- !u!1 &8805747155899141417
 GameObject:
   m_ObjectHideFlags: 0
@@ -4315,6 +4413,7 @@ GameObject:
   - component: {fileID: 4875447517589869228}
   - component: {fileID: 6799103867542370776}
   - component: {fileID: 2255135076871265258}
+  - component: {fileID: 1999792392099433263}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -4441,6 +4540,19 @@ MonoBehaviour:
   cost: 200
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
+--- !u!65 &1999792392099433263
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970115252594279428}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 185.64421, y: 179.10515, z: 30.692595}
+  m_Center: {x: 0, y: -5.9843426, z: -15.0069475}
 --- !u!1 &9074591358054219079
 GameObject:
   m_ObjectHideFlags: 0
