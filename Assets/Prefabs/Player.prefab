@@ -223,6 +223,8 @@ GameObject:
   - component: {fileID: 7114371745216569825}
   - component: {fileID: 5612442944558215547}
   - component: {fileID: 8651988906367256155}
+  - component: {fileID: 1576382106574607448}
+  - component: {fileID: 2712869589276969819}
   m_Layer: 5
   m_Name: SendEnemy4
   m_TagString: Untagged
@@ -244,7 +246,7 @@ RectTransform:
   m_Children:
   - {fileID: 6598748087669306779}
   m_Father: {fileID: 3062178094140834538}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -333,6 +335,34 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1576382106574607448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663150820242643949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 380d953adb296fa4d9c975d5a5d066c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveManager: {fileID: 0}
+  enemyID: 3
+  ammount: 5
+--- !u!65 &2712869589276969819
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663150820242643949}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 185.64421, y: 179.10515, z: 30.692595}
+  m_Center: {x: 0, y: -5.9843426, z: -15.0069475}
 --- !u!1 &715675653857655016
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,6 +889,8 @@ GameObject:
   - component: {fileID: 2271673791297247101}
   - component: {fileID: 3662438426560180146}
   - component: {fileID: 1849816182145355763}
+  - component: {fileID: 3237849149447070220}
+  - component: {fileID: 79483099777251566}
   m_Layer: 5
   m_Name: SendEnemy2
   m_TagString: Untagged
@@ -880,7 +912,7 @@ RectTransform:
   m_Children:
   - {fileID: 7951929756023423828}
   m_Father: {fileID: 3062178094140834538}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -969,6 +1001,34 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3237849149447070220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643526709159255988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 380d953adb296fa4d9c975d5a5d066c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveManager: {fileID: 0}
+  enemyID: 1
+  ammount: 2
+--- !u!65 &79483099777251566
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643526709159255988}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 185.64421, y: 179.10515, z: 30.692595}
+  m_Center: {x: 0, y: -5.9843426, z: -15.0069475}
 --- !u!1 &1855637988740209747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,11 +1064,11 @@ RectTransform:
   - {fileID: 8483684238673009089}
   - {fileID: 7546075416597652817}
   - {fileID: 3202284751634977277}
-  - {fileID: 3361093198774553484}
   - {fileID: 6746526200155371190}
   - {fileID: 4381475530818440718}
   - {fileID: 7193903393345104510}
   - {fileID: 3709813944160826227}
+  - {fileID: 3361093198774553484}
   m_Father: {fileID: 252681612918907210}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1067,6 +1127,8 @@ GameObject:
   - component: {fileID: 4027711742069105192}
   - component: {fileID: 396974664301675930}
   - component: {fileID: 505289434622343034}
+  - component: {fileID: 1301175305802924131}
+  - component: {fileID: 4683993691323934455}
   m_Layer: 5
   m_Name: SendEnemy
   m_TagString: Untagged
@@ -1088,7 +1150,7 @@ RectTransform:
   m_Children:
   - {fileID: 1772297832970405107}
   m_Father: {fileID: 3062178094140834538}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1177,6 +1239,34 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1301175305802924131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001310221379719480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 380d953adb296fa4d9c975d5a5d066c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveManager: {fileID: 0}
+  enemyID: 0
+  ammount: 2
+--- !u!65 &4683993691323934455
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001310221379719480}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 185.64421, y: 179.10515, z: 30.692595}
+  m_Center: {x: 0, y: -5.9843426, z: -15.0069475}
 --- !u!1 &2338142469593548505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,16 +1855,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3361093198774553491}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4.9609838}
+  m_LocalPosition: {x: 0, y: 0, z: -55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3062178094140834538}
-  m_RootOrder: 5
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46.83844, y: -2.4053955}
+  m_AnchoredPosition: {x: -867, y: -2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3361093198774553480
@@ -2786,6 +2876,8 @@ GameObject:
   - component: {fileID: 6970565115299532463}
   - component: {fileID: 2394111556446979461}
   - component: {fileID: 2986432900704325265}
+  - component: {fileID: 190882160236859949}
+  - component: {fileID: 4931015043392198338}
   m_Layer: 5
   m_Name: SendEnemy3
   m_TagString: Untagged
@@ -2807,7 +2899,7 @@ RectTransform:
   m_Children:
   - {fileID: 1254248328959117646}
   m_Father: {fileID: 3062178094140834538}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2896,6 +2988,34 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &190882160236859949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5700289952229838677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 380d953adb296fa4d9c975d5a5d066c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveManager: {fileID: 0}
+  enemyID: 2
+  ammount: 1
+--- !u!65 &4931015043392198338
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5700289952229838677}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 185.64421, y: 179.10515, z: 30.692595}
+  m_Center: {x: 0, y: -5.9843426, z: -15.0069475}
 --- !u!1 &6043729076130633752
 GameObject:
   m_ObjectHideFlags: 0

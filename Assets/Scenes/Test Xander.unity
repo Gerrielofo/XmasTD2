@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -219,8 +219,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   economyManager: {fileID: 1035508201}
   cause: 0
-  halloween: []
-  christmas: []
+  halloween:
+  - prefab: {fileID: 0}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
+  - prefab: {fileID: 0}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
+  - prefab: {fileID: 0}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
+  - prefab: {fileID: 0}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
+  christmas:
+  - prefab: {fileID: 0}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
+  - prefab: {fileID: 0}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
+  - prefab: {fileID: 0}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
+  - prefab: {fileID: 0}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
   naturalSpawns:
   - {fileID: 284491393605902172}
   - {fileID: 859039001}

@@ -5,6 +5,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class PlayerInstance : MonoBehaviour
 {
@@ -29,6 +30,13 @@ public class PlayerInstance : MonoBehaviour
         if (playerCount == 1)
         {
             gameObject.layer = 10;
+            var children = gameObject.GetComponentsInChildren<Transform>(includeInactive: true);
+            foreach (var child in children)
+            {
+                //Debug.Log(child.name);
+                child.gameObject.layer = 10;
+            }
+
             economyManager.P1MoneyDisplay = gameObject.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
             economyManager.P1EcoDisplay = gameObject.transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>();
 
@@ -43,6 +51,14 @@ public class PlayerInstance : MonoBehaviour
         }
         else if(playerCount == 2)
         {
+            gameObject.layer = 11;
+            var children = gameObject.GetComponentsInChildren<Transform>(includeInactive: true);
+            foreach (var child in children)
+            {
+                //Debug.Log(child.name);
+                child.gameObject.layer = 11;
+            }
+
             economyManager.P2MoneyDisplay = gameObject.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
             economyManager.P2EcoDisplay = gameObject.transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>();
 

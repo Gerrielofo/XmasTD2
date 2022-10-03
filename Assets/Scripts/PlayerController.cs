@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public ShopWheelController shopWheelController;
     bool shopStatus;
     public PlayerInputManager inputManager;
+    Transform shopWheel;
 
     private void Awake()
     {
@@ -26,11 +27,26 @@ public class PlayerController : MonoBehaviour
             transform.Translate(new Vector3(movementInput.x, movementInput.y, 0) * cursorSpeed * Time.deltaTime);
             if (clickInput > 0.5f)
             {
-                RaycastHit hit;
+                RaycastHit hit;                
                 if (Physics.Raycast(transform.position, transform.forward, out hit, 1000f))
                 {
-                    Debug.Log(hit.collider);
-
+                    GameObject target = hit.transform.gameObject;
+                    if(target.GetComponent<SendEnemies>())
+                    {
+                        int _enemyID = target.GetComponent<SendEnemies>().enemyID;
+                        int _playerID = 0;
+                        if(target.layer == 10)
+                        {
+                            _playerID = 1;
+                        }
+                        else if(target.layer == 11)
+                        {
+                            _playerID = 2;
+                        }
+                        int _ammount = target.GetComponent<SendEnemies>().ammount;
+                        target.GetComponent<SendEnemies>().SendEnemy(_enemyID, _playerID, _ammount);
+                    }
+                    //else if(target.GetComponent<>)
                 }
             }
             Transform shopWheel = gameObject.transform.GetComponentInParent<ShopWheelController>().shopWheel;
