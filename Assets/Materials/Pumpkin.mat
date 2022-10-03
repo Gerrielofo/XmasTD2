@@ -26,11 +26,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 8a53dbf0ed4ad354f9f7c1b54f7fee52, type: 3}
+        m_Texture: {fileID: 2800000, guid: 72c29c521134f3f4cbc53571b2a61b3b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 5807ce73725050a41a7a1b25a87d0736, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2d6b03ef36ebce54984e271ba176818c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -50,19 +50,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 8a53dbf0ed4ad354f9f7c1b54f7fee52, type: 3}
+        m_Texture: {fileID: 2800000, guid: 72c29c521134f3f4cbc53571b2a61b3b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: dd8a3bb11ffb52c4989de39822440988, type: 3}
+        m_Texture: {fileID: 2800000, guid: 148de64855563ec4a9378f3d9abfdd3e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 723ecdf8e6e046a41a656b34b05a7293, type: 3}
+        m_Texture: {fileID: 2800000, guid: 706d9b33dcb4e1749ba4ad3da23c4741, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: f511cc308e9770c4dad5ac22a2c3e461, type: 3}
+        m_Texture: {fileID: 2800000, guid: ce97718e21bdb9440a895dc46013c834, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -115,7 +115,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &4488301022395596133
+--- !u!114 &6942486102918417858
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
