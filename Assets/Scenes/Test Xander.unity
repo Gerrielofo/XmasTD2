@@ -287,15 +287,10 @@ MonoBehaviour:
   health: 100
   deathEffect: {fileID: 0}
   target: {fileID: 808304309}
-  speed: 15
+  startSpeed: 5
   turnSpeed: 5
   turnDst: 2
   stoppingDst: 5
-  enemy:
-    prefab: {fileID: 0}
-    ammount: 0
-    spawnRate: 0
-    damage: 0
 --- !u!135 &308509723
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -946,6 +941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveManager: {fileID: 247916037}
+  inputManager: {fileID: 0}
   startingMoney: 250
   startingEco: 50
   ecoP1: 0
@@ -1361,15 +1357,10 @@ MonoBehaviour:
   health: 100
   deathEffect: {fileID: 0}
   target: {fileID: 8797542516118751132}
-  speed: 15
+  startSpeed: 5
   turnSpeed: 5
   turnDst: 2
   stoppingDst: 5
-  enemy:
-    prefab: {fileID: 0}
-    ammount: 0
-    spawnRate: 0
-    damage: 0
 --- !u!135 &8797542515998658983
 SphereCollider:
   m_ObjectHideFlags: 0
