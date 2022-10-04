@@ -46,7 +46,7 @@ public class EconomyManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if(inputManager.playerCount == 2)

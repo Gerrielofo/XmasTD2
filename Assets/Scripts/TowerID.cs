@@ -9,11 +9,10 @@ public class TowerID : MonoBehaviour
     public GameObject towerPrefab;
     public GameObject towerBlueprint;
 
-    // Start is called before the first frame update
     public void ChangeTower(int _towerID, int _towerCost, int _playerID)
     {
-        var buildManager = GetComponent<BuildManager>();
-        var towerPlacement = GetComponent<TowerPlacement>();
+        BuildManager buildManager = GetComponent<BuildManager>();
+        TowerPlacement towerPlacement = GetComponent<TowerPlacement>();
         if (_playerID == 1)
         {
             switch (_towerID)
