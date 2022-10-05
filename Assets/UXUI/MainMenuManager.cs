@@ -17,7 +17,7 @@ public class MainMenuManager : MonoBehaviour
     private bool wantGameinfo = false;
     public void StartGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Test Xander");
     }
     public void ToggleSettings()
     {
