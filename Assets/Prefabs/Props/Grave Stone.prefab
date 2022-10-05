@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4268762934073936276}
   - component: {fileID: 905903920094365233}
   - component: {fileID: 3131863872005944059}
+  - component: {fileID: 2988490412596122409}
   m_Layer: 0
   m_Name: Grave Stone
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2988490412596122409
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3492086214719476526}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1785084, y: 5.178044, z: 3.745217}
+  m_Center: {x: 0, y: 2.590409, z: 0}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8616017779562615683}
   - component: {fileID: 4629107849413827622}
   - component: {fileID: 7483032433430391020}
+  - component: {fileID: 1514936478161003629}
   m_Layer: 0
   m_Name: Skeletonheadscoffin
   m_TagString: Untagged
@@ -85,6 +86,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1514936478161003629
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8996483593798142265}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.81465, y: 1.9354391, z: 6.692358}
+  m_Center: {x: -0.6684828, y: 0.89899266, z: 0.63180405}
 --- !u!1001 &7509227984453393133
 PrefabInstance:
   m_ObjectHideFlags: 0

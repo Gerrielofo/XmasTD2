@@ -6,25 +6,18 @@ using UnityEngine.InputSystem;
 
 public class ShopWheelController : MonoBehaviour
 {
-    public GameObject shopWheel;
+    public Transform shopWheel;
     public bool wantShopWheel;
 
-    
-    void Update()
-    {
-        if (Keyboard.current.tabKey.ReadValue() == 1)
-        {
-            wantShopWheel = true;
 
-        }
-        else
-        {
-            wantShopWheel = false;
-        }
+    public void ToggleShop(bool _wantShopWheel)
+    {
+
+        print("toggled shop");
 
         if (wantShopWheel == true)
-            shopWheel.SetActive(true);
+            shopWheel.gameObject.SetActive(true);
         else
-            shopWheel.SetActive(false);
+            shopWheel.gameObject.SetActive(false);
     }
 }
