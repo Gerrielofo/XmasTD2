@@ -11,13 +11,14 @@ public class MainMenuManager : MonoBehaviour
     public GameObject settings;
     public GameObject exit;
     public GameObject gameInfo;
-    
+
+    public string sceneName;
     private bool wantSettings = false;
     private bool wantExit = false;
     private bool wantGameinfo = false;
     public void StartGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(sceneName);
     }
     public void ToggleSettings()
     {
