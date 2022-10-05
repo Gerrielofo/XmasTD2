@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class SinglePlayerScript : MonoBehaviour
 {
     public float cursorSpeed = 5;
     private Vector2 movementInput;
@@ -14,14 +14,9 @@ public class PlayerController : MonoBehaviour
     public PlayerInputManager inputManager;
     Transform shopWheel;
 
-    private void Awake()
-    {
-        inputManager = GameObject.Find("PlayerManager").GetComponent<PlayerInputManager>();
-    }
+    
     private void Update()
     {
-        if(inputManager.playerCount == 2)
-        {
             //Debug.Log(movementInput);
 
             transform.Translate(new Vector3(movementInput.x, movementInput.y, 0) * cursorSpeed * Time.deltaTime);
@@ -40,10 +35,6 @@ public class PlayerController : MonoBehaviour
                         {
                             _playerID = 1;
                         }
-                        else if (target.layer == 11)
-                        {
-                            _playerID = 2;
-                        }
                         int _ammount = target.GetComponent<SendEnemies>().ammount;
                         target.GetComponent<SendEnemies>().SendEnemy(_enemyID, _playerID, _ammount);
                     }
@@ -54,10 +45,6 @@ public class PlayerController : MonoBehaviour
                         if (target.layer == 10)
                         {
                             _playerID = 1;
-                        }
-                        else if (target.layer == 11)
-                        {
-                            _playerID = 2;
                         }
                         Debug.Log(_playerID);
                         Debug.Log(_towerID);
@@ -80,7 +67,7 @@ public class PlayerController : MonoBehaviour
                 shopWheel.gameObject.SetActive(false);
                 shopStatus = true;
             }
-        }
+        
     }
 
     public void onMove(InputAction.CallbackContext ctx) => movementInput = ctx.ReadValue<Vector2>();
