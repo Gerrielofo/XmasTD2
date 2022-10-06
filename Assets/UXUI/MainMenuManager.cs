@@ -11,15 +11,50 @@ public class MainMenuManager : MonoBehaviour
     public GameObject settings;
     public GameObject exit;
     public GameObject gameInfo;
+    public GameObject modeSelect;
+    public GameObject connectScreen;
+    public GameObject tutorialScreen;
 
-    public string sceneName;
+    public string gameName;
+    public string tutorialName;
     private bool wantSettings = false;
     private bool wantExit = false;
     private bool wantGameinfo = false;
+    private bool wantPlay = false;
+    private bool wantConnect = false;
+    private bool wantTuturial = false;
+
     public void StartGame()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(gameName);
     }
+
+    public void StartTutorial()
+    {
+        SceneManager.LoadScene(tutorialName);
+    }
+
+    public void TogglePlay()
+    {
+        modeSelect.SetActive(!wantPlay);
+        menuButtons.SetActive(wantPlay);
+        wantPlay = !wantPlay;
+    }
+
+    public void ToggleTuturial()
+    {
+        tutorialScreen.SetActive(!wantTuturial);
+        modeSelect.SetActive(wantTuturial);
+        wantTuturial = !wantTuturial;
+    }
+
+    public void ToggleConnect()
+    {
+        connectScreen.SetActive(!wantConnect);
+        modeSelect.SetActive(wantConnect);
+        wantConnect = !wantConnect;
+    }
+
     public void ToggleSettings()
     {
         settings.SetActive(!wantSettings);
