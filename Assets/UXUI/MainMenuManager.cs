@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    public GameObject backgroundBlur;
+
     public GameObject menuButtons;
     public GameObject settings;
     public GameObject exit;
@@ -38,6 +40,7 @@ public class MainMenuManager : MonoBehaviour
     {
         modeSelect.SetActive(!wantPlay);
         menuButtons.SetActive(wantPlay);
+        backgroundBlur.SetActive(!wantPlay);
         wantPlay = !wantPlay;
     }
 
@@ -59,6 +62,7 @@ public class MainMenuManager : MonoBehaviour
     {
         settings.SetActive(!wantSettings);
         menuButtons.SetActive(wantSettings);
+        backgroundBlur.SetActive(!wantSettings);
         wantSettings = !wantSettings;
     }
 
@@ -66,6 +70,7 @@ public class MainMenuManager : MonoBehaviour
     {
         exit.SetActive(!wantExit);
         menuButtons.SetActive(wantExit);
+        backgroundBlur.SetActive(!wantExit);
         wantExit = !wantExit;
     }
 
