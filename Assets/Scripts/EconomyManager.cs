@@ -9,6 +9,8 @@ public class EconomyManager : MonoBehaviour
     [Header("References")]
     public WaveManager waveManager;
     public PlayerInputManager inputManager;
+    public GameObject multiPlayerPrefab;
+    public GameObject singlePlayerPrefab;
     [Header("Starting Ammounts")]
     public int startingMoney;
     public int startingEco;
@@ -28,22 +30,43 @@ public class EconomyManager : MonoBehaviour
     private void Start()
     {
         inputManager = GameObject.Find("PlayerManager").GetComponent<PlayerInputManager>();
-
-        if(inputManager.playerCount == 2)
+        if(inputManager.playerPrefab == multiPlayerPrefab)
         {
-            PlayerStats.player1Money = startingMoney;
-            PlayerStats.player2Money = startingMoney;
-            ecoP1 = startingEco;
-            ecoP2 = startingEco;
+            if (inputManager.playerCount == 2)
+            {
+                PlayerStats.player1Money = startingMoney;
+                PlayerStats.player2Money = startingMoney;
+                ecoP1 = startingEco;
+                ecoP2 = startingEco;
 
-            P1EcoDisplay.text = "Eco: " + ecoP1;
-            P1MoneyDisplay.text = "Money: " + PlayerStats.player1Money;
+                P1EcoDisplay.text = "Eco: " + ecoP1;
+                P1MoneyDisplay.text = "Money: " + PlayerStats.player1Money;
 
-            P2EcoDisplay.text = "Eco: " + ecoP2;
-            P2MoneyDisplay.text = "Money: " + PlayerStats.player2Money;
+                P2EcoDisplay.text = "Eco: " + ecoP2;
+                P2MoneyDisplay.text = "Money: " + PlayerStats.player2Money;
 
-            economyCountdown = timeBetweenEco;
+                economyCountdown = timeBetweenEco;
+            }
         }
+        else
+        {
+            if (inputManager.playerCount == 1)
+            {
+                PlayerStats.player1Money = startingMoney;
+                PlayerStats.player2Money = startingMoney;
+                ecoP1 = startingEco;
+                ecoP2 = startingEco;
+
+                P1EcoDisplay.text = "Eco: " + ecoP1;
+                P1MoneyDisplay.text = "Money: " + PlayerStats.player1Money;
+
+                P2EcoDisplay.text = "Eco: " + ecoP2;
+                P2MoneyDisplay.text = "Money: " + PlayerStats.player2Money;
+
+                economyCountdown = timeBetweenEco;
+            }
+        }
+        
     }
 
 

@@ -12,14 +12,13 @@ public class SinglePlayerScript : MonoBehaviour
     public ShopWheelController shopWheelController;
     bool shopStatus;
     public PlayerInputManager inputManager;
-    Transform shopWheel;
 
     
     private void Update()
     {
-            //Debug.Log(movementInput);
+        //Debug.Log(movementInput);
 
-            transform.Translate(new Vector3(movementInput.x, movementInput.y, 0) * cursorSpeed * Time.deltaTime);
+        transform.Translate(new Vector3(movementInput.x, movementInput.y, 0) * cursorSpeed * Time.deltaTime);
             if (clickInput > 0.5f)
             {
                 RaycastHit hit;                
@@ -53,18 +52,16 @@ public class SinglePlayerScript : MonoBehaviour
                     }
                 }
             }
-            Transform shopWheel = gameObject.transform.GetComponentInParent<ShopWheelController>().shopWheel;
+            var shopWheel = gameObject.transform.GetComponentInParent<ShopWheelController>();
 
-            if (shopInput > 0.5f && shopStatus == true)
+            if (shopInput < 0.5f && shopStatus == true)
             {
-                print("shop true");
-                shopWheel.gameObject.SetActive(true);
+                shopWheel.ToggleShop(true);
                 shopStatus = false;
             }
-            else if (shopInput < 0.5f && shopStatus == false)
+            else if (shopInput > 0.5f && shopStatus == false)
             {
-                print("shop false");
-                shopWheel.gameObject.SetActive(false);
+                shopWheel.ToggleShop(false);
                 shopStatus = true;
             }
         

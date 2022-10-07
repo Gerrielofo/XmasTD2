@@ -55,14 +55,4 @@ public class SendEnemies : MonoBehaviour
         waveManager.cause = WaveManager.SendState.PLAYER;
         waveManager.GetComponent<WaveManager>().SpawnEnemy(enemyPrefab, ammount);
     }
-
-
-    //private void PrefabChangeXmas(int prefabID)
-    //{
-    //    enemyPrefab = waveManager.christmas[prefabID].prefab;
-    //}
-    //private void PrefabChangeHalloween(int prefabID)
-    //{
-    //    enemyPrefab = waveManager.halloween[prefabID].prefab;
-    //}
 }

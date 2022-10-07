@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementInput;
     private float clickInput;
     private float shopInput;
-    int enemyID;
     private Camera camera;
     public ShopWheelController shopWheelController;
     bool shopStatus;
@@ -66,7 +65,7 @@ public class PlayerController : MonoBehaviour
                     }
                 }
             }
-            Transform shopWheel = gameObject.transform.GetComponentInParent<ShopWheelController>().shopWheel;
+            shopWheel = gameObject.transform.GetComponentInParent<ShopWheelController>().shopWheel;
 
             if (shopInput > 0.5f && shopStatus == true)
             {

@@ -8,11 +8,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: b8f88053a2a88a34f90cfc89aaba5f8a
-  - enabled: 0
-    path: Assets/Scenes/Game.unity
-    guid: c00df2047ab3bd845bf4dcde7237a63c
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 52bdfdb255b35bb458bdcf6928c98798
   - enabled: 1
     path: Assets/Scenes/Test Xander.unity
     guid: d7577b9370baa4a499a4e6b8d517e86b
+  - enabled: 0
+    path: Assets/Scenes/Game.unity
+    guid: c00df2047ab3bd845bf4dcde7237a63c
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 87c4b8a7f389e8a468210a31b05c77c7, type: 2}

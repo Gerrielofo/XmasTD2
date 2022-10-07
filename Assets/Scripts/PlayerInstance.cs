@@ -11,7 +11,8 @@ public class PlayerInstance : MonoBehaviour
     public Camera camera;
     public GameObject christmasShop;
     public GameObject halloweenShop;
-
+    public GameObject singlePlayerprefab;
+    public GameObject multiPlayerPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,8 +46,14 @@ public class PlayerInstance : MonoBehaviour
             gameObject.transform.GetComponent<ShopWheelController>().shopWheel = gameObject.transform.GetChild(0).GetChild(4).GetChild(1);
             playerMask = LayerMask.GetMask("Player1");
 
-            camera.rect = new Rect(0, 0, 0.5f, 1f);
-
+            if(inputManager.playerPrefab == multiPlayerPrefab)
+            {
+                camera.rect = new Rect(0, 0, 0.5f, 1f);
+            }
+            else
+            {
+                camera.rect = new Rect(0, 0, 1f, 1f);
+            }
         }
         else if(playerCount == 2)
         {

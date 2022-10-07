@@ -197,6 +197,8 @@ MonoBehaviour:
   camera: {fileID: 9074591358054219077}
   christmasShop: {fileID: 5167488927799285319, guid: 84f60b0bb29d1e742aa25d5ca63d8700, type: 3}
   halloweenShop: {fileID: 6557163615734311700, guid: 009bb10e2decbed4f858edef96c1d327, type: 3}
+  singlePlayerprefab: {fileID: 2678420398328647209, guid: 6879b95edb5edb443845ac8a3620f0fd, type: 3}
+  multiPlayerPrefab: {fileID: 2909229824023846862}
 --- !u!114 &2473000509410010585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,6 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopWheel: {fileID: 0}
   wantShopWheel: 0
+  playerCursor: {fileID: 0}
 --- !u!1 &663150820242643949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,7 +1615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5135503609028467902}
   m_Layer: 0
-  m_Name: Player
+  m_Name: MultiPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
