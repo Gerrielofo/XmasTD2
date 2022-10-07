@@ -47,7 +47,7 @@ public class TowerPlacement : MonoBehaviour
             return;
         }
         RaycastHit hit;
-        if (Physics.Raycast(playerCursor.transform.position,playerCursor.transform.forward, out hit, Mathf.Infinity))
+        if (Physics.Raycast(playerCursor.transform.position, playerCursor.transform.forward, out hit, Mathf.Infinity))
         {
             if (blueprintToUse.transform.GetChild(0).GetComponent<SkinnedMeshRenderer>())
             {

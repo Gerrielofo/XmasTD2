@@ -12,16 +12,28 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI roundTextP1;
     public TextMeshProUGUI roundTextP2;
     public PlayerInputManager playerInputManager;
+    public GameObject multiPlayerPrefab;
+    public GameObject singlePlayerPrefab;
 
     void Update()
     {
-        if(playerInputManager.playerCount == 2)
+        if(playerInputManager.playerPrefab == multiPlayerPrefab)
         {
-            livesTextP1.text = "Lives: " + PlayerStats.player1Lives;
-            livesTextP2.text = "Lives: " + PlayerStats.player2Lives;
-            //Debug.Log(PlayerStats.player1Lives + " lives left");
-            roundTextP1.text = "Round " + WaveManager.currentWave;
-            roundTextP2.text = "Round " + WaveManager.currentWave;
+            if (playerInputManager.playerCount == 2)
+            {
+                livesTextP1.text = "Lives: " + PlayerStats.player1Lives;
+                livesTextP2.text = "Lives: " + PlayerStats.player2Lives;
+                //Debug.Log(PlayerStats.player1Lives + " lives left");
+                roundTextP1.text = "Round " + WaveManager.currentWave;
+                roundTextP2.text = "Round " + WaveManager.currentWave;
+            }
         }
+        else if(playerInputManager.playerPrefab = singlePlayerPrefab)
+        {
+            if(playerInputManager.playerCount == 1)
+            livesTextP1.text = "Lives: " + PlayerStats.player1Lives;
+            roundTextP1.text = "Round " + WaveManager.currentWave;
+        }
+        
     }
 }
