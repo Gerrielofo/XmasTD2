@@ -13,7 +13,7 @@ public class GameInfo : MonoBehaviour
 
     bool wantTowerinfo = false;
     bool wantGameinfo = false;
-    public bool wantControls = false;
+    bool wantControls = false;
     bool wantCredits = false;
 
     [Header("Tower info")]

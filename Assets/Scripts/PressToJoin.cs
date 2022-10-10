@@ -8,22 +8,29 @@ public class PressToJoin : MonoBehaviour
     private PlayerInputManager inputManager;
     public GameObject player1JoinScreen;
     public GameObject player2JoinScreen;
-    // Start is called before the first frame update
+    public GameObject player1JoinedScreen;
+    public GameObject player2JoinedScreen;
+
+    public GameObject start;
+
+
     void Start()
     {
         inputManager = GameObject.Find("PlayerManager").GetComponent<PlayerInputManager>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (inputManager.playerCount == 1)
         {
             player1JoinScreen.SetActive(false);
+            player1JoinedScreen.SetActive(true);
         }
         else if (inputManager.playerCount == 2)
         {
             player2JoinScreen.SetActive(false);
+            player2JoinedScreen.SetActive(true);
+            start.SetActive(true);
         }
     }
 }
