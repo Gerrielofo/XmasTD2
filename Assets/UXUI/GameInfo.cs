@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerInfo : MonoBehaviour
+public class GameInfo : MonoBehaviour
 {
     [Header("General")]
     public GameObject selectPanel;
     public GameObject gameInfo;
     public GameObject towerInfo;
-    public GameObject controls;
-    public GameObject credits;
+    public GameObject controlsPanel;
+    public GameObject creditsPanel;
 
     bool wantTowerinfo = false;
     bool wantGameinfo = false;
-    bool wantControls = false;
+    public bool wantControls = false;
     bool wantCredits = false;
 
     [Header("Tower info")]
@@ -34,13 +34,60 @@ public class TowerInfo : MonoBehaviour
         selectPanel.SetActive(wantGameinfo);
 
         towerInfo.SetActive(false);
-        controls.SetActive(false);
-        credits.SetActive(false);
+        controlsPanel.SetActive(false);
+        creditsPanel.SetActive(false);
+
+        wantGameinfo = !wantGameinfo;
+        wantTowerinfo = false;
+        wantControls = false;
+        wantCredits = false;
+    }
+
+    public void ToggleTowerInfo()
+    {
+        towerInfo.SetActive(!wantTowerinfo);
+        selectPanel.SetActive(wantTowerinfo);
+
+        gameInfo.SetActive(false);
+        controlsPanel.SetActive(false);
+        creditsPanel.SetActive(false);
+
+        wantTowerinfo = !wantTowerinfo;
+        wantGameinfo = false;
+        wantControls = false;
+        wantCredits = false;
+    }
+
+    public void ToggleControls()
+    {
+        controlsPanel.SetActive(!wantControls);
+        selectPanel.SetActive(wantControls);
+
+        towerInfo.SetActive(false);
+        gameInfo.SetActive(false);
+        creditsPanel.SetActive(false);
+
+        wantControls = !wantControls;
+        wantTowerinfo = false;
+        wantGameinfo = false;
+        wantCredits = false;
+    }
+
+    public void ToggleCredits()
+    {
+        creditsPanel.SetActive(!wantCredits);
+        selectPanel.SetActive(wantCredits);
+
+        towerInfo.SetActive(false);
+        gameInfo.SetActive(false);
+        controlsPanel.SetActive(false);
+
+        wantCredits = !wantCredits;
+        wantTowerinfo = false;
+        wantGameinfo = false;
+        wantControls = false;
     }
     
-
-
-
 
     public void ToggleTower1()
     {
