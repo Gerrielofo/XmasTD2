@@ -7,12 +7,10 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementInput;
     private float clickInput;
     private float shopInput;
-    int enemyID;
     private Camera camera;
     public ShopWheelController shopWheelController;
     bool shopStatus;
     public PlayerInputManager inputManager;
-    Transform shopWheel;
 
     private void Awake()
     {
@@ -66,18 +64,16 @@ public class PlayerController : MonoBehaviour
                     }
                 }
             }
-            Transform shopWheel = gameObject.transform.GetComponentInParent<ShopWheelController>().shopWheel;
+            var shopWheel = gameObject.transform.GetComponentInParent<ShopWheelController>();
 
-            if (shopInput > 0.5f && shopStatus == true)
+            if (shopInput < 0.5f && shopStatus == true)
             {
-                print("shop true");
-                shopWheel.gameObject.SetActive(true);
+                shopWheel.ToggleShop(true);
                 shopStatus = false;
             }
-            else if (shopInput < 0.5f && shopStatus == false)
+            else if (shopInput > 0.5f && shopStatus == false)
             {
-                print("shop false");
-                shopWheel.gameObject.SetActive(false);
+                shopWheel.ToggleShop(false);
                 shopStatus = true;
             }
         }
