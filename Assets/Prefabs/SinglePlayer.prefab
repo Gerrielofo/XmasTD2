@@ -882,6 +882,7 @@ MonoBehaviour:
   cost: 250
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
+  playerCursor: {fileID: 2580844344903965300}
 --- !u!65 &7139868209817427197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1323,6 +1324,7 @@ MonoBehaviour:
   cost: 400
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
+  playerCursor: {fileID: 2580844344903965300}
 --- !u!65 &4200281326805008002
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1351,7 +1353,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8413796122500937770
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1413,7 +1415,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -867, y: -2}
+  m_AnchoredPosition: {x: -200, y: -2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2580844344903965295
@@ -1438,6 +1440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorSpeed: 50
   shopWheelController: {fileID: 3397364389284525118}
+  shopStatus: 1
   inputManager: {fileID: 0}
 --- !u!114 &754767300266950036
 MonoBehaviour:
@@ -1625,6 +1628,7 @@ MonoBehaviour:
   cost: 250
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
+  playerCursor: {fileID: 2580844344903965300}
 --- !u!65 &4725152981097799566
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3392,6 +3396,7 @@ MonoBehaviour:
   cost: 400
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
+  playerCursor: {fileID: 2580844344903965300}
 --- !u!65 &3401136427145399219
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3545,6 +3550,7 @@ MonoBehaviour:
   cost: 100
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
+  playerCursor: {fileID: 2580844344903965300}
 --- !u!65 &5346680753912954009
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4077,6 +4083,7 @@ MonoBehaviour:
   cost: 200
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
+  playerCursor: {fileID: 2580844344903965300}
 --- !u!65 &1636126769993898696
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4230,6 +4237,7 @@ MonoBehaviour:
   cost: 200
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
+  playerCursor: {fileID: 2580844344903965300}
 --- !u!65 &7276220896345791055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4653,6 +4661,7 @@ MonoBehaviour:
   cost: 100
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
+  playerCursor: {fileID: 2580844344903965300}
 --- !u!65 &8726393464415298829
 BoxCollider:
   m_ObjectHideFlags: 0

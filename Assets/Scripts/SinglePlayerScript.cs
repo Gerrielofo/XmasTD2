@@ -10,14 +10,14 @@ public class SinglePlayerScript : MonoBehaviour
     int enemyID;
     private Camera camera;
     public ShopWheelController shopWheelController;
-    bool shopStatus;
+    public bool shopStatus;
     public PlayerInputManager inputManager;
 
     
     private void Update()
     {
         //Debug.Log(movementInput);
-
+        //Debug.DrawRay(transform.position, transform.forward*1000, Color.red);
         transform.Translate(new Vector3(movementInput.x, movementInput.y, 0) * cursorSpeed * Time.deltaTime);
             if (clickInput > 0.5f)
             {
@@ -39,6 +39,7 @@ public class SinglePlayerScript : MonoBehaviour
                     }
                     else if (target.GetComponent<TowerID>())
                     {
+                        Debug.Log("Tower Button Found");
                         int _towerID = target.GetComponent<TowerID>().towerID;
                         int _towerCost = target.GetComponent<TowerID>().cost;
                         if (target.layer == 10)
@@ -50,6 +51,10 @@ public class SinglePlayerScript : MonoBehaviour
                         Debug.Log(_towerCost);
                         target.GetComponent<TowerID>().ChangeTower(_towerID, _towerCost, _playerID);
                     }
+                }
+                else
+                {
+                    Debug.Log("Nothing Found");
                 }
             }
             var shopWheel = gameObject.transform.GetComponentInParent<ShopWheelController>();
