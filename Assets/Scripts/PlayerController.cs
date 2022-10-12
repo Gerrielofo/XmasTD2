@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEngine.GraphicsBuffer;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,22 +8,46 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementInput;
     private float clickInput;
     private float shopInput;
-    private Camera camera;
+    public Camera camera;
     public ShopWheelController shopWheelController;
     bool shopStatus;
     public PlayerInputManager inputManager;
 
+
+    public float minX;
+    public float maxX;
+    public float minY;
+    public float maxY;
+
+    public Vector3 worldPos;
+
     private void Awake()
     {
         inputManager = GameObject.Find("PlayerManager").GetComponent<PlayerInputManager>();
+        transform.localPosition = new Vector3(0, 0, -55);
+        
     }
+
+
     private void Update()
     {
+        
         if(inputManager.playerCount == 2)
         {
-            //Debug.Log(movementInput);
-            //Debug.DrawRay(transform.position, transform.forward*1000, Color.red);
-            transform.Translate(new Vector3(movementInput.x, movementInput.y, 0) * cursorSpeed * Time.deltaTime);
+
+            float cursorX = movementInput.x;
+            float cursorY = movementInput.y;
+
+            Vector3 pos = transform.localPosition;
+
+            pos.x = Mathf.Clamp(pos.x, -940, 940);
+            pos.y = Mathf.Clamp(pos.y, -1065, 1065);
+            pos.z = -55;
+            transform.localPosition = pos;
+
+            transform.Translate(new Vector3(cursorX, cursorY, 0) * cursorSpeed * Time.deltaTime);
+
+
             if (clickInput > 0.5f)
             {
                 RaycastHit hit;                
@@ -30,6 +55,7 @@ public class PlayerController : MonoBehaviour
                 {
                     GameObject target = hit.transform.gameObject;
                     int _playerID = 0;
+                    
                     if (target.GetComponent<SendEnemies>())
                     {
                         int _enemyID = target.GetComponent<SendEnemies>().enemyID;
