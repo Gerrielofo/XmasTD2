@@ -7,13 +7,16 @@ public class SinglePlayerScript : MonoBehaviour
     private Vector2 movementInput;
     private float clickInput;
     private float shopInput;
-    int enemyID;
     private Camera camera;
     public ShopWheelController shopWheelController;
     public bool shopStatus;
     public PlayerInputManager inputManager;
 
-    
+
+    private void Awake()
+    {
+        inputManager = GameObject.Find("PlayerManager").GetComponent<PlayerInputManager>();
+    }
     private void Update()
     {
         //Debug.Log(movementInput);

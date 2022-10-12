@@ -28,7 +28,7 @@ public class UIManager : MonoBehaviour
                 roundTextP2.text = "Round " + WaveManager.currentWave;
             }
         }
-        else if(playerInputManager.playerPrefab = singlePlayerPrefab)
+        else if(playerInputManager.playerPrefab == singlePlayerPrefab)
         {
             if(playerInputManager.playerCount == 1)
             livesTextP1.text = "Lives: " + PlayerStats.player1Lives;
