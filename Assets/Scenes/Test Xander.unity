@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -189,6 +189,8 @@ MonoBehaviour:
   roundTextP1: {fileID: 0}
   roundTextP2: {fileID: 0}
   playerInputManager: {fileID: 615613443}
+  multiPlayerPrefab: {fileID: 0}
+  singlePlayerPrefab: {fileID: 0}
 --- !u!114 &92800724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,6 +205,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1JoinScreen: {fileID: 1868134147}
   player2JoinScreen: {fileID: 221242698}
+  player1JoinedScreen: {fileID: 0}
+  player2JoinedScreen: {fileID: 0}
+  start: {fileID: 0}
 --- !u!1 &201581822
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,7 +2108,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveManager: {fileID: 247916037}
-  inputManager: {fileID: 0}
+  inputManager: {fileID: 615613443}
+  multiPlayerPrefab: {fileID: 2909229824023846862, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
+  singlePlayerPrefab: {fileID: 2678420398328647209, guid: 6879b95edb5edb443845ac8a3620f0fd, type: 3}
   startingMoney: 250
   startingEco: 50
   ecoP1: 0

@@ -46,9 +46,9 @@ public class SinglePlayerScript : MonoBehaviour
                         {
                             _playerID = 1;
                         }
-                        Debug.Log(_playerID);
-                        Debug.Log(_towerID);
-                        Debug.Log(_towerCost);
+                        Debug.Log("PlayerID = " + _playerID);
+                        Debug.Log("TowerID = " + _towerID);
+                        Debug.Log("Towercost = " + _towerCost);
                         target.GetComponent<TowerID>().ChangeTower(_towerID, _towerCost, _playerID);
                     }
                 }
