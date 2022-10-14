@@ -215,6 +215,7 @@ MonoBehaviour:
   wantShopWheel: 1
   playerCursor: {fileID: 0}
   shopShown: 0
+  camera: {fileID: 0}
 --- !u!1 &663150820242643949
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +644,7 @@ MonoBehaviour:
   cost: 400
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
-  playerCursor: {fileID: 0}
+  playerCursor: {fileID: 3361093198774553491}
 --- !u!65 &3980730901453139813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -932,7 +933,7 @@ MonoBehaviour:
   cost: 250
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
-  playerCursor: {fileID: 0}
+  playerCursor: {fileID: 3361093198774553491}
 --- !u!65 &7953894035148918042
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1781,7 +1782,7 @@ MonoBehaviour:
   cost: 250
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
-  playerCursor: {fileID: 0}
+  playerCursor: {fileID: 3361093198774553491}
 --- !u!65 &5541430494645030505
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3266,7 +3267,7 @@ MonoBehaviour:
   cost: 400
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
-  playerCursor: {fileID: 0}
+  playerCursor: {fileID: 3361093198774553491}
 --- !u!65 &2470017388318775892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3825,7 +3826,7 @@ MonoBehaviour:
   cost: 100
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
-  playerCursor: {fileID: 0}
+  playerCursor: {fileID: 3361093198774553491}
 --- !u!65 &5136137553585761662
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3979,7 +3980,7 @@ MonoBehaviour:
   cost: 100
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
-  playerCursor: {fileID: 0}
+  playerCursor: {fileID: 3361093198774553491}
 --- !u!65 &8389749440165999850
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4133,7 +4134,7 @@ MonoBehaviour:
   cost: 200
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
-  playerCursor: {fileID: 0}
+  playerCursor: {fileID: 3361093198774553491}
 --- !u!65 &7606109658785565608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4557,7 +4558,7 @@ MonoBehaviour:
   cost: 200
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
-  playerCursor: {fileID: 0}
+  playerCursor: {fileID: 3361093198774553491}
 --- !u!65 &1999792392099433263
 BoxCollider:
   m_ObjectHideFlags: 0

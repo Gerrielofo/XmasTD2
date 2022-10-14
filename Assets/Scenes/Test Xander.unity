@@ -189,8 +189,8 @@ MonoBehaviour:
   roundTextP1: {fileID: 0}
   roundTextP2: {fileID: 0}
   playerInputManager: {fileID: 615613443}
-  multiPlayerPrefab: {fileID: 0}
-  singlePlayerPrefab: {fileID: 0}
+  multiPlayerPrefab: {fileID: 2909229824023846862, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
+  singlePlayerPrefab: {fileID: 2678420398328647209, guid: 6879b95edb5edb443845ac8a3620f0fd, type: 3}
 --- !u!114 &92800724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1407,9 +1407,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPrefabsXmas:
-  - {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
-  - {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
-  - {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
+  - {fileID: 5979195968113231561, guid: 398b7414585df4548b5c5eab79425dd5, type: 3}
+  - {fileID: 3652855448394473849, guid: d6a1d7d68d4899745ac1197d0f1768f4, type: 3}
+  - {fileID: 7047427801063784752, guid: f22cc6ddd5fb7ec4bac9cde6099faf43, type: 3}
   - {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
   towerBlueprintXmas:
   - {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
@@ -1420,7 +1420,7 @@ MonoBehaviour:
   - {fileID: 1126958948996055668, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
   - {fileID: 1126958948996055668, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
   - {fileID: 1126958948996055668, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
-  - {fileID: 1126958948996055668, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
+  - {fileID: 3423914977040887342, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
   towerBlueprintHalloween:
   - {fileID: 1126958948996055668, guid: 2d9c6a828db1b094baee8d54e8caa883, type: 3}
   - {fileID: 1126958948996055668, guid: 2d9c6a828db1b094baee8d54e8caa883, type: 3}

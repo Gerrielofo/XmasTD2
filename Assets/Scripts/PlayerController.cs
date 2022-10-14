@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviour
 
             pos.x = Mathf.Clamp(pos.x, -940, 940);
             pos.y = Mathf.Clamp(pos.y, -1065, 1065);
-            pos.z = -55;
             transform.localPosition = pos;
 
             transform.Translate(new Vector3(cursorX, cursorY, 0) * cursorSpeed * Time.deltaTime);
