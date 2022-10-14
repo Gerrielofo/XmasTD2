@@ -77,7 +77,6 @@ public class PlayerInstance : MonoBehaviour
 
             camera.rect = new Rect(0.5f, 0, 0.5f, 1f);
             this.transform.parent.gameObject.name = "player2";
-
         }
 
         LayerMask newMask = playerMask | previousMask;
