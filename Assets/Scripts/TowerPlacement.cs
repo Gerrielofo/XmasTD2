@@ -9,7 +9,7 @@ public class TowerPlacement : MonoBehaviour
     public Vector3 posOffset;
 
     private GameObject blueprintToUse;
-    private GameObject towerToBuild;
+    public GameObject towerToBuild;
     private int towerCost;
 
     bool canBuild = false;   
@@ -18,6 +18,9 @@ public class TowerPlacement : MonoBehaviour
     public Color blueprintMaterial;
     
     public GameObject buildEffect;
+
+    private float confrimInput;
+    private float cancelInput;
 
     void Update()
     {
@@ -37,15 +40,15 @@ public class TowerPlacement : MonoBehaviour
     void SpawnBlueprint(GameObject newBluePrintToUse)
     {
         Destroy(blueprintToUse);
-        blueprintToUse = Instantiate(newBluePrintToUse, transform.position, Quaternion.identity);
+        blueprintToUse = Instantiate(newBluePrintToUse, playerCursor.transform.position, Quaternion.identity);
     }
 
     void CheckIfCanBuild()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
+        //if (EventSystem.current.IsPointerOverGameObject())
+        //{
+        //    return;
+        //}
         RaycastHit hit;
         if (Physics.Raycast(playerCursor.transform.position, playerCursor.transform.forward, out hit, Mathf.Infinity))
         {
@@ -61,11 +64,15 @@ public class TowerPlacement : MonoBehaviour
                 }
             }
             BlueprintFollowMouse(hit.point + posOffset);
+            if(cancelInput > 0.5f)
+            {
+                Deselect();
+            }
             if (hit.transform.tag == "Buildable")
             {
                 blueprintMaterial = Color.white;
                 blueprintMaterial.a = 0.5f;
-                if (Input.GetButtonUp("Fire1"))
+                if (confrimInput >= 0.5f)
                 {
                     if(PlayerStats.player1Money > towerCost)
                     {
@@ -90,6 +97,15 @@ public class TowerPlacement : MonoBehaviour
         }
     }
 
+    void Deselect()
+    {
+        canBuild = false;
+        Destroy(blueprintToUse);
+        blueprintToUse = null;
+        towerToBuild = null;
+        Debug.Log("Deslected");
+    }
+
     void BlueprintFollowMouse(Vector3 pos)
     {
         blueprintToUse.transform.position = pos;
@@ -106,4 +122,8 @@ public class TowerPlacement : MonoBehaviour
         Destroy(placeEffect, 1f);
         canBuild = false;
     }
+
+    public void OnConfirmPlace(InputAction.CallbackContext ctx) => confrimInput = ctx.ReadValue<float>();
+    public void OnCancelPlace(InputAction.CallbackContext ctx) => cancelInput = ctx.ReadValue<float>();
+
 }

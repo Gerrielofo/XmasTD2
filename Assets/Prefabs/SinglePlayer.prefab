@@ -465,6 +465,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f6a92328-4981-4657-b541-7f1f939ad72d
     m_ActionName: CursorMovement/OpenShop[/DualShock4GamepadHID/leftTrigger,/XInputControllerWindows/leftTrigger,/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6670393027939329646}
+        m_TargetAssemblyTypeName: TowerPlacement, Assembly-CSharp
+        m_MethodName: OnConfirmPlace
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0c34dc43-800a-4d0f-a359-949d473ea167
+    m_ActionName: CursorMovement/ConfirmPlace[/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6670393027939329646}
+        m_TargetAssemblyTypeName: TowerPlacement, Assembly-CSharp
+        m_MethodName: OnCancelPlace
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a359b3ee-bebd-48f0-b790-80635ce606da
+    m_ActionName: CursorMovement/CancelPlace[/XInputControllerWindows/buttonWest]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: GamePad
   m_DefaultActionMap: CursorMovement
@@ -503,6 +535,7 @@ MonoBehaviour:
   wantShopWheel: 0
   playerCursor: {fileID: 2580844344903965300}
   shopShown: 0
+  camera: {fileID: 0}
 --- !u!1 &1491972263454920116
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,6 +916,7 @@ MonoBehaviour:
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
   playerCursor: {fileID: 2580844344903965300}
+  buildManager: {fileID: 0}
 --- !u!65 &7139868209817427197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1325,6 +1359,7 @@ MonoBehaviour:
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
   playerCursor: {fileID: 2580844344903965300}
+  buildManager: {fileID: 0}
 --- !u!65 &4200281326805008002
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1353,7 +1388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8413796122500937770
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1391,6 +1426,7 @@ GameObject:
   - component: {fileID: 6670393027939329641}
   - component: {fileID: 754767300266950036}
   - component: {fileID: 6670393027939329646}
+  - component: {fileID: 8820555823764920647}
   m_Layer: 5
   m_Name: PlayerCursor
   m_TagString: Untagged
@@ -1415,7 +1451,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: -2}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2580844344903965295
@@ -1455,14 +1491,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.031987935, g: 0.509434, b: 0.01153434, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6e8a033e924180a47b661525103cc8db, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b6661a52192d16248ad4c444760fa3f1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1485,9 +1521,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posOffset: {x: 0, y: 0, z: 0}
+  towerToBuild: {fileID: 0}
   playerCursor: {fileID: 2580844344903965300}
   blueprintMaterial: {r: 1, g: 1, b: 1, a: 1}
   buildEffect: {fileID: 1735020053299400289, guid: 70a9f419ea163a14885b6768daefca60, type: 3}
+--- !u!23 &8820555823764920647
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2580844344903965300}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &2603410027832308952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,6 +1708,7 @@ MonoBehaviour:
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
   playerCursor: {fileID: 2580844344903965300}
+  buildManager: {fileID: 0}
 --- !u!65 &4725152981097799566
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3397,6 +3477,7 @@ MonoBehaviour:
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
   playerCursor: {fileID: 2580844344903965300}
+  buildManager: {fileID: 0}
 --- !u!65 &3401136427145399219
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3551,6 +3632,7 @@ MonoBehaviour:
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
   playerCursor: {fileID: 2580844344903965300}
+  buildManager: {fileID: 0}
 --- !u!65 &5346680753912954009
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4084,6 +4166,7 @@ MonoBehaviour:
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
   playerCursor: {fileID: 2580844344903965300}
+  buildManager: {fileID: 0}
 --- !u!65 &1636126769993898696
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4238,6 +4321,7 @@ MonoBehaviour:
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
   playerCursor: {fileID: 2580844344903965300}
+  buildManager: {fileID: 0}
 --- !u!65 &7276220896345791055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4662,6 +4746,7 @@ MonoBehaviour:
   towerPrefab: {fileID: 0}
   towerBlueprint: {fileID: 0}
   playerCursor: {fileID: 2580844344903965300}
+  buildManager: {fileID: 0}
 --- !u!65 &8726393464415298829
 BoxCollider:
   m_ObjectHideFlags: 0

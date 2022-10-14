@@ -19,7 +19,7 @@ public class ShopWheelController : MonoBehaviour
     public void ToggleShop(bool _wantShopWheel)
     {
 
-        print("toggled shop" + _wantShopWheel);
+        print("toggled shop" + !_wantShopWheel);
 
         if (wantShopWheel && shopShown == false)
         {
