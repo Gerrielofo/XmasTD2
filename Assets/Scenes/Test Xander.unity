@@ -391,36 +391,44 @@ MonoBehaviour:
   economyManager: {fileID: 1035508201}
   cause: 0
   halloween:
-  - prefab: {fileID: 997083150613982144, guid: ea55caa13506dae4390f3d0383b3da42, type: 3}
+  - prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 997083150613982144, guid: ea55caa13506dae4390f3d0383b3da42, type: 3}
+  - prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 997083150613982144, guid: ea55caa13506dae4390f3d0383b3da42, type: 3}
+  - prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 997083150613982144, guid: ea55caa13506dae4390f3d0383b3da42, type: 3}
+  - prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
+  - prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
   christmas:
-  - prefab: {fileID: 2457911885554961528, guid: 5f3bdbcb71895cd4e96cdc6a81de07ff, type: 3}
+  - prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 2457911885554961528, guid: 5f3bdbcb71895cd4e96cdc6a81de07ff, type: 3}
+  - prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 2457911885554961528, guid: 5f3bdbcb71895cd4e96cdc6a81de07ff, type: 3}
+  - prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 2457911885554961528, guid: 5f3bdbcb71895cd4e96cdc6a81de07ff, type: 3}
+  - prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
+  - prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
@@ -2316,7 +2324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857437284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.98, y: 0, z: 29.4}
+  m_LocalPosition: {x: 12, y: 0, z: 27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2484,7 +2492,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 284491392852991619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.98, y: 0, z: 29.4}
+  m_LocalPosition: {x: 12, y: 0, z: 27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
