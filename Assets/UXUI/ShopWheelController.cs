@@ -23,9 +23,7 @@ public class ShopWheelController : MonoBehaviour
 
         if (wantShopWheel && shopShown == false)
         {
-            
-            Vector3 newPosistion = new Vector3(playerCursor.transform.position.x, shopWheel.transform.position.y, playerCursor.transform.position.z);
-            shopWheel.transform.position = newPosistion;
+            shopWheel.transform.position = playerCursor.transform.position;
             shopWheel.gameObject.SetActive(true);
             shopShown = true;
 
