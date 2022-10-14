@@ -31,6 +31,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ConfirmPlace",
+                    "type": "Button",
+                    "id": "0c34dc43-800a-4d0f-a359-949d473ea167",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CancelPlace",
+                    "type": "Button",
+                    "id": "a359b3ee-bebd-48f0-b790-80635ce606da",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -141,6 +159,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "OpenShop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "83e1da82-aaca-4a26-85c2-984d51f56b6a",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ConfirmPlace",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d65a48ce-d4ca-464f-9b3e-f0377640c5c6",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CancelPlace",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

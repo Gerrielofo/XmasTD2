@@ -9,8 +9,8 @@ public class EconomyManager : MonoBehaviour
     [Header("References")]
     public WaveManager waveManager;
     public PlayerInputManager inputManager;
-    public GameObject multiPlayerPrefab;
-    public GameObject singlePlayerPrefab;
+    public enum PlayerType { SinglePlayer, Multiplayer }
+    public PlayerType playerType;
     [Header("Starting Ammounts")]
     public int startingMoney;
     public int startingEco;
@@ -36,6 +36,7 @@ public class EconomyManager : MonoBehaviour
             {
                 PlayerStats.player1Money = startingMoney;
                 PlayerStats.player2Money = startingMoney;
+
                 ecoP1 = startingEco;
                 ecoP2 = startingEco;
 
