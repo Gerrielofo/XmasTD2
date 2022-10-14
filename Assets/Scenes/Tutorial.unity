@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &15690834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 15690835}
+  m_Layer: 0
+  m_Name: NaturalSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &15690835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15690834}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.03, y: 4.4549193, z: 27.95}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &21047643
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,6 +345,105 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1486983189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1486983190}
+  m_Layer: 0
+  m_Name: PlayerSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1486983190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486983189}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.25, y: 1.37, z: 27.91}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1643647274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1643647276}
+  - component: {fileID: 1643647275}
+  m_Layer: 0
+  m_Name: BuildManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1643647275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643647274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15119f7645be77e439b6d4adb3dda21c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefabsXmas:
+  - {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
+  - {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
+  - {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
+  - {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
+  towerBlueprintXmas:
+  - {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
+  - {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
+  - {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
+  - {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
+  towerPrefabsHalloween:
+  - {fileID: 1126958948996055668, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
+  - {fileID: 1126958948996055668, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
+  - {fileID: 1126958948996055668, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
+  - {fileID: 1126958948996055668, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
+  towerBlueprintHalloween:
+  - {fileID: 1126958948996055668, guid: 2d9c6a828db1b094baee8d54e8caa883, type: 3}
+  - {fileID: 1126958948996055668, guid: 2d9c6a828db1b094baee8d54e8caa883, type: 3}
+  - {fileID: 1126958948996055668, guid: 2d9c6a828db1b094baee8d54e8caa883, type: 3}
+  - {fileID: 1126958948996055668, guid: 2d9c6a828db1b094baee8d54e8caa883, type: 3}
+  tower1Cost: 100
+  tower2Cost: 200
+  tower3Cost: 250
+  tower4Cost: 400
+--- !u!4 &1643647276
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643647274}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -45.611286, y: 27.740112, z: 60.931923}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1672010858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -422,7 +552,7 @@ MonoBehaviour:
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 0}
+  - prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
@@ -430,7 +560,7 @@ MonoBehaviour:
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 0}
+  - prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
@@ -460,9 +590,9 @@ MonoBehaviour:
     spawnRate: 0
     damage: 0
   naturalSpawns:
-  - {fileID: 0}
+  - {fileID: 15690835}
   playerSpawns:
-  - {fileID: 0}
+  - {fileID: 1486983190}
   state: 2
   timeBetweenWaves: 5
   nextWaveCountdown: 0
@@ -511,18 +641,18 @@ MonoBehaviour:
     bossWave: 0
     bossAmmount: 0
     enemies:
+    - prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
+      ammount: 3
+      spawnRate: 1
+      damage: 2
     - prefab: {fileID: 0}
       ammount: 0
       spawnRate: 0
       damage: 0
-    - prefab: {fileID: 0}
-      ammount: 0
-      spawnRate: 0
-      damage: 0
-    - prefab: {fileID: 0}
-      ammount: 0
-      spawnRate: 0
-      damage: 0
+    - prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
+      ammount: 5
+      spawnRate: 1
+      damage: 4
     - prefab: {fileID: 0}
       ammount: 0
       spawnRate: 0

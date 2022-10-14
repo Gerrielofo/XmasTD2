@@ -54,6 +54,7 @@ public class PlayerInstance : MonoBehaviour
             {
                 camera.rect = new Rect(0, 0, 1f, 1f);
             }
+            this.transform.parent.gameObject.name = "player1";
         }
         else if(playerCount == 2)
         {
@@ -75,6 +76,8 @@ public class PlayerInstance : MonoBehaviour
             playerMask = LayerMask.GetMask("Player2");
 
             camera.rect = new Rect(0.5f, 0, 0.5f, 1f);
+            this.transform.parent.gameObject.name = "player2";
+
         }
 
         LayerMask newMask = playerMask | previousMask;

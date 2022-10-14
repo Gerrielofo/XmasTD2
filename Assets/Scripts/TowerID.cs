@@ -8,11 +8,13 @@ public class TowerID : MonoBehaviour
     public int cost;
     public GameObject towerPrefab;
     public GameObject towerBlueprint;
+    public GameObject playerCursor;
 
     public void ChangeTower(int _towerID, int _towerCost, int _playerID)
     {
+        Debug.Log("Changing Tower");
         BuildManager buildManager = GetComponent<BuildManager>();
-        TowerPlacement towerPlacement = GetComponent<TowerPlacement>();
+        TowerPlacement towerPlacement = playerCursor.GetComponent<TowerPlacement>();
         if (_playerID == 1)
         {
             switch (_towerID)
