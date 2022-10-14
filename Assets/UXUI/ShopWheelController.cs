@@ -10,6 +10,7 @@ public class ShopWheelController : MonoBehaviour
     public bool wantShopWheel;
     public GameObject playerCursor;
     public bool shopShown;
+    public Camera camera;
 
     public void Start()
     {
@@ -22,6 +23,7 @@ public class ShopWheelController : MonoBehaviour
 
         if (wantShopWheel && shopShown == false)
         {
+            
             Vector3 newPosistion = new Vector3(playerCursor.transform.position.x, shopWheel.transform.position.y, playerCursor.transform.position.z);
             shopWheel.transform.position = newPosistion;
             shopWheel.gameObject.SetActive(true);

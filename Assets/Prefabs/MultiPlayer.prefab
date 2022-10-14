@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopWheel: {fileID: 0}
-  wantShopWheel: 0
+  wantShopWheel: 1
   playerCursor: {fileID: 0}
   shopShown: 0
 --- !u!1 &663150820242643949
@@ -1998,6 +1998,7 @@ MonoBehaviour:
   maxX: -100
   minY: 0
   maxY: 100
+  worldPos: {x: 0, y: 0, z: 0}
 --- !u!114 &508195277016804467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2011,14 +2012,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.031987935, g: 0.509434, b: 0.01153434, a: 1}
+  m_Color: {r: 1, g: 0.10849059, b: 0.11695868, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6e8a033e924180a47b661525103cc8db, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b6661a52192d16248ad4c444760fa3f1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
