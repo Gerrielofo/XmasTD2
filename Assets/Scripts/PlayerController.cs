@@ -73,9 +73,9 @@ public class PlayerController : MonoBehaviour
                         {
                             int _ammount = target.GetComponent<SendEnemies>().ammount;
                             target.GetComponent<SendEnemies>().SendEnemy(_enemyID, _playerID, _ammount);
-                            Debug.Log("Spawning enemyID: " + _enemyID);
-                            Debug.Log("Send by player: " + _playerID);
-                            Debug.Log("with an ammount of :" + _ammount);
+                            //Debug.Log("Spawning enemyID: " + _enemyID);
+                            //Debug.Log("Send by player: " + _playerID);
+                            //Debug.Log("with an ammount of :" + _ammount);
                             buttonPressed = true;
                         }
                        
@@ -102,6 +102,10 @@ public class PlayerController : MonoBehaviour
                         Debug.Log("Nothing Found");
                     }
                 }
+            }
+            else if(clickInput < 0.5f)
+            {
+                buttonPressed = false;
             }
             var shopWheel = gameObject.transform.GetComponentInParent<ShopWheelController>();
 

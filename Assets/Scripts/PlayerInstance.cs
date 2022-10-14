@@ -8,6 +8,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerInstance : MonoBehaviour
 {
+    public enum PlayerType { SinglePlayer, Multiplayer }
+
+    public PlayerType playerType;
     public Camera camera;
     public GameObject christmasShop;
     public GameObject halloweenShop;
@@ -46,7 +49,7 @@ public class PlayerInstance : MonoBehaviour
             gameObject.transform.GetComponent<ShopWheelController>().shopWheel = gameObject.transform.GetChild(0).GetChild(4).GetChild(1);
             playerMask = LayerMask.GetMask("Player1");
 
-            if(inputManager.playerPrefab == multiPlayerPrefab)
+            if(playerType == PlayerType.Multiplayer)
             {
                 camera.rect = new Rect(0, 0, 0.5f, 1f);
             }
@@ -54,6 +57,7 @@ public class PlayerInstance : MonoBehaviour
             {
                 camera.rect = new Rect(0, 0, 1f, 1f);
             }
+
             this.transform.parent.gameObject.name = "player1";
         }
         else if(playerCount == 2)
@@ -76,6 +80,7 @@ public class PlayerInstance : MonoBehaviour
             playerMask = LayerMask.GetMask("Player2");
 
             camera.rect = new Rect(0.5f, 0, 0.5f, 1f);
+
             this.transform.parent.gameObject.name = "player2";
         }
 

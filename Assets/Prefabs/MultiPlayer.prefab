@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb6835b819dd7c46a0ff6a0d1abaae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerType: 1
   camera: {fileID: 9074591358054219077}
   christmasShop: {fileID: 5167488927799285319, guid: 84f60b0bb29d1e742aa25d5ca63d8700, type: 3}
   halloweenShop: {fileID: 6557163615734311700, guid: 009bb10e2decbed4f858edef96c1d327, type: 3}
@@ -1620,7 +1621,7 @@ GameObject:
   - component: {fileID: 5135503609028467902}
   m_Layer: 0
   m_Name: MultiPlayer
-  m_TagString: Untagged
+  m_TagString: Multiplayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

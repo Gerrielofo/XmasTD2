@@ -14,8 +14,8 @@ public class SendEnemies : MonoBehaviour
 
     public void SendEnemy(int _enemyID, int _playerID, int ammount)
     {
-        Debug.Log("spawning for player " + _playerID);
-        Debug.Log("spawning enemy with ID " + _enemyID);
+        //Debug.Log("spawning for player " + _playerID);
+        //Debug.Log("spawning enemy with ID " + _enemyID);
         if(_playerID == 1)
         {
             switch (_enemyID)
@@ -61,7 +61,7 @@ public class SendEnemies : MonoBehaviour
         }
         if (enemyPrefab != null)
         {
-            Debug.Log("Script prefab = " + enemyPrefab);
+            //Debug.Log("Script prefab = " + enemyPrefab);
             waveManager.cause = WaveManager.SendState.PLAYER;
             waveManager.GetComponent<WaveManager>().SpawnEnemy(enemyPrefab, ammount);
         }
