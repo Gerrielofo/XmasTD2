@@ -7,8 +7,8 @@ public class EnemyModelManager : MonoBehaviour
     public GameObject[] models;
     public int modelNo;
     public void SetModel(int model)
-     {
-        Debug.Log("modelID to load = " + model);
+    {
+        Debug.Log(model);
         modelNo = model;
         models[model].SetActive(true);
     }

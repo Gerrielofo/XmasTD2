@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   models:
-  - {fileID: 5627624509328603529}
+  - {fileID: 0}
   - {fileID: 5627624509328603529}
   modelNo: 0
 --- !u!114 &2378498561765931300
@@ -82,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3997850780105205319, guid: 8f0e531e1a3bdba4784df01a8cbd1d64, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -6.677021
       objectReference: {fileID: 0}
     - target: {fileID: 3997850780105205319, guid: 8f0e531e1a3bdba4784df01a8cbd1d64, type: 3}
       propertyPath: m_LocalPosition.y
@@ -90,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3997850780105205319, guid: 8f0e531e1a3bdba4784df01a8cbd1d64, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.463809
       objectReference: {fileID: 0}
     - target: {fileID: 3997850780105205319, guid: 8f0e531e1a3bdba4784df01a8cbd1d64, type: 3}
       propertyPath: m_LocalRotation.w
@@ -123,10 +123,6 @@ PrefabInstance:
     - target: {fileID: 4337222312886549757, guid: 8f0e531e1a3bdba4784df01a8cbd1d64, type: 3}
       propertyPath: m_Name
       value: SnowmanWalk
-      objectReference: {fileID: 0}
-    - target: {fileID: 4337222312886549757, guid: 8f0e531e1a3bdba4784df01a8cbd1d64, type: 3}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4337222312886549757, guid: 8f0e531e1a3bdba4784df01a8cbd1d64, type: 3}
       propertyPath: m_IsActive

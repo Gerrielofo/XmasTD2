@@ -129,8 +129,7 @@ public class WaveManager : MonoBehaviour
 
     public void SpawnEnemy(GameObject enemyPrefab, int _ammount)
     {
-        //Debug.Log("prefab to spwan = " + enemyPrefab);
-        //Debug.Log("ammount of enemies: " + _ammount);
+
         if(cause == SendState.NATURAL)
         {
             for (int s = 0; s < naturalSpawns.Length; s++)
