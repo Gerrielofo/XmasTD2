@@ -8,6 +8,9 @@ public class SendEnemies : MonoBehaviour
     public int enemyID;
     public int ammount;
     public int cost;
+    public int ecoBoost;
+    private float sendingCDp1;
+    private float sendingCDp2;
     private GameObject enemyPrefab;
 
     private void Awake()
@@ -22,7 +25,7 @@ public class SendEnemies : MonoBehaviour
 
         if(_playerID == 1)
         {
-            if (_cost <= PlayerStats.player1Money)
+            if (_cost <= PlayerStats.player1Money && sendingCDp1 <= 0)
             {
                 switch (_enemyID)
                 {
@@ -40,17 +43,19 @@ public class SendEnemies : MonoBehaviour
                         break;
                 }
                 PlayerStats.player1Money -= _cost;
+                economyManager.ecoP1 += ecoBoost;
+                sendingCDp1 = 1;
             }
             else
             {
-                Debug.Log("not enough money to but this tower for player: " + _playerID);
+                Debug.Log("not met requirements to but this tower for player: " + _playerID);
                 enemyPrefab = waveManager.errorEnemy.prefab;
                 
             }
         }
         else if(_playerID == 2)
         {
-            if (_cost <= PlayerStats.player2Money)
+            if (_cost <= PlayerStats.player2Money && sendingCDp2 <= 0)
             {
                 switch (_enemyID)
                 {
@@ -68,17 +73,31 @@ public class SendEnemies : MonoBehaviour
                         break;
                 }
                 PlayerStats.player2Money -= _cost;
+                economyManager.ecoP2 += ecoBoost;
+                sendingCDp2 = 1;
             }
             else
             {
-                Debug.Log("not enough money to but this tower for player: " + _playerID);
+                Debug.Log("not mer requirements to but this tower for player: " + _playerID);
                 enemyPrefab = waveManager.errorEnemy.prefab;
             }
         }
         int ammount = _ammount;
-        Debug.Log("Ammount of enemies being send: " + _ammount);
+        //Debug.Log("Ammount of enemies being send: " + _ammount);
         waveManager.cause = WaveManager.SendState.PLAYER;
         waveManager.GetComponent<WaveManager>().SpawnEnemy(enemyPrefab, ammount);
         
+    }
+
+    private void Update()
+    {
+        if(sendingCDp1 > 0)
+        {
+            sendingCDp1 -= Time.deltaTime;
+        }
+        if(sendingCDp2 > 0)
+        {
+            sendingCDp2 -= Time.deltaTime;
+        }
     }
 }
