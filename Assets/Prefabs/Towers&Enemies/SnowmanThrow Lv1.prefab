@@ -643,7 +643,7 @@ GameObject:
   - component: {fileID: 4177752766453087171}
   - component: {fileID: 4580253594425098341}
   m_Layer: 0
-  m_Name: SnowmanThrow
+  m_Name: SnowmanThrow Lv1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
