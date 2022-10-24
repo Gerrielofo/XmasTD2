@@ -49,7 +49,7 @@ public class Unit : MonoBehaviour
 
         while (true)
         {
-			if (Vector3.Distance(transform.position, target.position) <= 1f)
+			if (Vector3.Distance(transform.position, target.position) <= 3f)
 			{
 				EndPath();
 			}
