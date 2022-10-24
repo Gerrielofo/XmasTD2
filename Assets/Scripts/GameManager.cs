@@ -4,10 +4,13 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+public enum PlayerType { SinglePlayer, Multiplayer }
+
 public class GameManager : MonoBehaviour
 {
-    public PlayerInputManager inputManager = GameObject.Find("PlayerManager").GetComponent<PlayerInputManager>();
-
+    
+    public PlayerType playerType;
+    public PlayerInputManager inputManager;
     private bool gameEnded = false;
 
     public GameObject gameOverUI;
