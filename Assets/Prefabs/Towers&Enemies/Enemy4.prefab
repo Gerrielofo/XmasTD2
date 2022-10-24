@@ -81,6 +81,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4208811441784669313, guid: ae58b19220c9fff43bedda822be80f8c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.77
+      objectReference: {fileID: 0}
     - target: {fileID: 6930740796160962231, guid: ae58b19220c9fff43bedda822be80f8c, type: 3}
       propertyPath: m_RootOrder
       value: 0

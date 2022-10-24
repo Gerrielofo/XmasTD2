@@ -41,6 +41,11 @@ public class SendEnemies : MonoBehaviour
                 }
                 PlayerStats.player1Money -= _cost;
             }
+            else
+            {
+                enemyPrefab = waveManager.errorEnemy.prefab;
+                return;
+            }
         }
         else if(_playerID == 2)
         {
@@ -62,6 +67,11 @@ public class SendEnemies : MonoBehaviour
                         break;
                 }
                 PlayerStats.player2Money -= _cost;
+            }
+            else
+            {
+                enemyPrefab = waveManager.errorEnemy.prefab;
+                return;
             }
         }
      

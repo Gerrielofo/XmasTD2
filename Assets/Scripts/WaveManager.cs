@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,6 +17,7 @@ public class WaveManager : MonoBehaviour
     public SendState cause;
     public Enemy[] halloween;
     public Enemy[] christmas;
+    public Enemy errorEnemy;
     [Header("Spawn Locations")]
     public Transform[] naturalSpawns;
     public Transform[] playerSpawns;
