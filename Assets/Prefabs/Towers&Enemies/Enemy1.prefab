@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   models:
-  - {fileID: 0}
+  - {fileID: 3949477404664956142, guid: 03013f34c5fb84746965c657b4176ff1, type: 3}
   - {fileID: 3559629000547756261}
   modelNo: 0
 --- !u!114 &8886606724230464222

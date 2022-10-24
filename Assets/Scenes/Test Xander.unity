@@ -221,6 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5996c85a0d9149d4586e5224087744ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerType: 0
   inputManager: {fileID: 615613443}
   gameOverUI: {fileID: 0}
   victoryUI: {fileID: 0}
@@ -2093,8 +2094,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveManager: {fileID: 247916037}
   inputManager: {fileID: 615613443}
-  multiPlayerPrefab: {fileID: 2909229824023846862, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
-  singlePlayerPrefab: {fileID: 2678420398328647209, guid: 6879b95edb5edb443845ac8a3620f0fd, type: 3}
+  gameManager: {fileID: 0}
+  playerType: 0
   startingMoney: 250
   startingEco: 50
   ecoP1: 0
