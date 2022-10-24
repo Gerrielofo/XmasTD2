@@ -8,7 +8,7 @@ public class SendEnemies : MonoBehaviour
     public int enemyID;
     public int ammount;
     public int cost;
-    public GameObject enemyPrefab;
+    private GameObject enemyPrefab;
 
     private void Awake()
     {
@@ -16,13 +16,13 @@ public class SendEnemies : MonoBehaviour
         economyManager = GameObject.Find("EconomyManager").GetComponent<EconomyManager>();
         playerStats = GameObject.Find("GameManager").GetComponent<PlayerStats>();
     }
-    public void SendEnemy(int _enemyID, int _playerID, int ammount, int _cost)
+    public void SendEnemy(int _enemyID, int _playerID, int _ammount, int _cost)
     {
         _enemyID = gameObject.GetComponent<SendEnemies>().enemyID;
 
         if(_playerID == 1)
         {
-            if (_cost < PlayerStats.player1Money)
+            if (_cost <= PlayerStats.player1Money)
             {
                 switch (_enemyID)
                 {
@@ -41,10 +41,16 @@ public class SendEnemies : MonoBehaviour
                 }
                 PlayerStats.player1Money -= _cost;
             }
+            else
+            {
+                Debug.Log("not enough money to but this tower for player: " + _playerID);
+                enemyPrefab = waveManager.errorEnemy.prefab;
+                
+            }
         }
         else if(_playerID == 2)
         {
-            if (_cost < PlayerStats.player2Money)
+            if (_cost <= PlayerStats.player2Money)
             {
                 switch (_enemyID)
                 {
@@ -63,9 +69,16 @@ public class SendEnemies : MonoBehaviour
                 }
                 PlayerStats.player2Money -= _cost;
             }
+            else
+            {
+                Debug.Log("not enough money to but this tower for player: " + _playerID);
+                enemyPrefab = waveManager.errorEnemy.prefab;
+            }
         }
-     
+        int ammount = _ammount;
+        Debug.Log("Ammount of enemies being send: " + _ammount);
         waveManager.cause = WaveManager.SendState.PLAYER;
         waveManager.GetComponent<WaveManager>().SpawnEnemy(enemyPrefab, ammount);
+        
     }
 }

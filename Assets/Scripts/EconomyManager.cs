@@ -27,15 +27,15 @@ public class EconomyManager : MonoBehaviour
     public float timeBetweenEco;
     
     
-    private void Start()
+    public void PlayerStart()
     {
         inputManager = GameObject.Find("PlayerManager").GetComponent<PlayerInputManager>();
         if(playerType == PlayerType.Multiplayer)
         {
             if (inputManager.playerCount == 2)
             {
-                PlayerStats.player1Money = startingMoney;
-                PlayerStats.player2Money = startingMoney;
+                PlayerStats.player1Money += startingMoney;
+                PlayerStats.player2Money += startingMoney;
 
                 ecoP1 = startingEco;
                 ecoP2 = startingEco;
@@ -53,8 +53,8 @@ public class EconomyManager : MonoBehaviour
         {
             if (inputManager.playerCount == 1)
             {
-                PlayerStats.player1Money = startingMoney;
-                PlayerStats.player2Money = startingMoney;
+                PlayerStats.player1Money += startingMoney;
+                PlayerStats.player2Money += startingMoney;
                 ecoP1 = startingEco;
                 ecoP2 = startingEco;
 
