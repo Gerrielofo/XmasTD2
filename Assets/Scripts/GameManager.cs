@@ -6,7 +6,8 @@ using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
-    public PlayerInputManager inputManager;
+    public PlayerInputManager inputManager = GameObject.Find("PlayerManager").GetComponent<PlayerInputManager>();
+
     private bool gameEnded = false;
 
     public GameObject gameOverUI;

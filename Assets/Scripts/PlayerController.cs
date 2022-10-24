@@ -1,4 +1,3 @@
-using System.Web.UI.WebControls;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.GraphicsBuffer;
@@ -13,7 +12,6 @@ public class PlayerController : MonoBehaviour
     public ShopWheelController shopWheelController;
     bool shopStatus;
     public PlayerInputManager inputManager;
-    private bool buttonPressed;
 
 
     public float minX;
@@ -69,16 +67,8 @@ public class PlayerController : MonoBehaviour
                         {
                             _playerID = 2;
                         }
-                        if(!buttonPressed)
-                        {
-                            int _ammount = target.GetComponent<SendEnemies>().ammount;
-                            target.GetComponent<SendEnemies>().SendEnemy(_enemyID, _playerID, _ammount);
-                            //Debug.Log("Spawning enemyID: " + _enemyID);
-                            //Debug.Log("Send by player: " + _playerID);
-                            //Debug.Log("with an ammount of :" + _ammount);
-                            buttonPressed = true;
-                        }
-                       
+                        int _ammount = target.GetComponent<SendEnemies>().ammount;
+                        target.GetComponent<SendEnemies>().SendEnemy(_enemyID, _playerID, _ammount);
                     }
                     else if (target.GetComponent<TowerID>())
                     {
@@ -102,10 +92,6 @@ public class PlayerController : MonoBehaviour
                         Debug.Log("Nothing Found");
                     }
                 }
-            }
-            else if(clickInput < 0.5f)
-            {
-                buttonPressed = false;
             }
             var shopWheel = gameObject.transform.GetComponentInParent<ShopWheelController>();
 

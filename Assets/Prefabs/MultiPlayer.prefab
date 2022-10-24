@@ -194,7 +194,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb6835b819dd7c46a0ff6a0d1abaae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerType: 1
   camera: {fileID: 9074591358054219077}
   christmasShop: {fileID: 5167488927799285319, guid: 84f60b0bb29d1e742aa25d5ca63d8700, type: 3}
   halloweenShop: {fileID: 6557163615734311700, guid: 009bb10e2decbed4f858edef96c1d327, type: 3}
@@ -356,7 +355,7 @@ MonoBehaviour:
   waveManager: {fileID: 0}
   enemyID: 3
   ammount: 5
-  enemyPrefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
+  enemyPrefab: {fileID: 0}
 --- !u!65 &2712869589276969819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1087,7 +1086,7 @@ MonoBehaviour:
   waveManager: {fileID: 0}
   enemyID: 1
   ammount: 2
-  enemyPrefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
+  enemyPrefab: {fileID: 0}
 --- !u!65 &79483099777251566
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1326,7 +1325,7 @@ MonoBehaviour:
   waveManager: {fileID: 0}
   enemyID: 0
   ammount: 2
-  enemyPrefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+  enemyPrefab: {fileID: 0}
 --- !u!65 &4683993691323934455
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1621,7 +1620,7 @@ GameObject:
   - component: {fileID: 5135503609028467902}
   m_Layer: 0
   m_Name: MultiPlayer
-  m_TagString: Multiplayer
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3114,7 +3113,7 @@ MonoBehaviour:
   waveManager: {fileID: 0}
   enemyID: 2
   ammount: 1
-  enemyPrefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
+  enemyPrefab: {fileID: 0}
 --- !u!65 &4931015043392198338
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -5,24 +5,19 @@ public class SendEnemies : MonoBehaviour
     public WaveManager waveManager;
     public int enemyID;
     public int ammount;
-    [SerializeField]private GameObject enemyPrefab;
+    public GameObject enemyPrefab;
 
     private void Awake()
     {
         waveManager = GameObject.Find("WaveManager").GetComponent<WaveManager>();
     }
-
     public void SendEnemy(int _enemyID, int _playerID, int ammount)
     {
-        //Debug.Log("spawning for player " + _playerID);
-        //Debug.Log("spawning enemy with ID " + _enemyID);
+        _enemyID = gameObject.GetComponent<SendEnemies>().enemyID;
         if(_playerID == 1)
         {
             switch (_enemyID)
             {
-                default:
-                    enemyPrefab = waveManager.halloween[0].prefab;
-                    break;
                 case 0:
                     enemyPrefab = waveManager.halloween[_enemyID].prefab;
                     break;
@@ -42,9 +37,6 @@ public class SendEnemies : MonoBehaviour
         {
             switch (_enemyID)
             {
-                default:
-                    enemyPrefab = waveManager.christmas[0].prefab;
-                    break;
                 case 0:
                     enemyPrefab = waveManager.christmas[_enemyID].prefab;
                     break;
@@ -59,11 +51,8 @@ public class SendEnemies : MonoBehaviour
                     break;
             }
         }
-        if (enemyPrefab != null)
-        {
-            //Debug.Log("Script prefab = " + enemyPrefab);
-            waveManager.cause = WaveManager.SendState.PLAYER;
-            waveManager.GetComponent<WaveManager>().SpawnEnemy(enemyPrefab, ammount);
-        }
+     
+        waveManager.cause = WaveManager.SendState.PLAYER;
+        waveManager.GetComponent<WaveManager>().SpawnEnemy(enemyPrefab, ammount);
     }
 }
