@@ -9,6 +9,7 @@ public class EconomyManager : MonoBehaviour
     [Header("References")]
     public WaveManager waveManager;
     public PlayerInputManager inputManager;
+    public GameManager gameManager;
     public enum PlayerType { SinglePlayer, Multiplayer }
     public PlayerType playerType;
     [Header("Starting Ammounts")]
@@ -29,6 +30,7 @@ public class EconomyManager : MonoBehaviour
     
     private void Start()
     {
+        playerType = GameManager.playerType;
         inputManager = GameObject.Find("PlayerManager").GetComponent<PlayerInputManager>();
         if(inputManager.playerPrefab == multiPlayerPrefab)
         {

@@ -23,6 +23,7 @@ public class PlayerInstance : MonoBehaviour
         EconomyManager economyManager = GameObject.Find("EconomyManager").GetComponent<EconomyManager>();
         WaveManager waveManager = GameObject.Find("WaveManager").GetComponent<WaveManager>();
         UIManager uIManager = GameObject.Find("GameManager").GetComponent<UIManager>();
+        GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         int playerCount = inputManager.playerCount;
         Debug.Log(playerCount);
 
@@ -51,10 +52,12 @@ public class PlayerInstance : MonoBehaviour
 
             if(playerType == PlayerType.Multiplayer)
             {
+                gameManager.playerType = EconomyManager.PlayerType.Multiplayer;
                 camera.rect = new Rect(0, 0, 0.5f, 1f);
             }
             else
             {
+                gameManager.playerType = EconomyManager.PlayerType.SinglePlayer;
                 camera.rect = new Rect(0, 0, 1f, 1f);
             }
 

@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
+    public enum PlayerType { SinglePlayer, Multiplayer }
+    public PlayerType playerType;
     public PlayerInputManager inputManager;
     private bool gameEnded = false;
 
