@@ -4,11 +4,8 @@ ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
-      74: 6093225430303232669
-    second: Armature|ArmatureAction.002
-  - first:
-      74: 28217073957533329
-    second: Armature|Empty.003Action
+      74: 8349542763059015795
+    second: Armature|Walk
   externalObjects: {}
   materials:
     materialImportMode: 2
