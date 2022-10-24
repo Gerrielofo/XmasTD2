@@ -95,9 +95,9 @@ public class WaveManager : MonoBehaviour
     {
         timeBetweenWaves -= Time.deltaTime;
 
-        if (timeBetweenWaves <= 0)
+        if (nextWaveCountdown <= 0)
         {
-            timeBetweenWaves = 1f;
+            nextWaveCountdown = timeBetweenWaves;
             if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
             {
                 return false;

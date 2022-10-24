@@ -134,6 +134,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3682532001688918573, guid: ea55caa13506dae4390f3d0383b3da42, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682532001688918573, guid: ea55caa13506dae4390f3d0383b3da42, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -160,13 +164,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6878126678182381554}
     m_Modifications:
+    - target: {fileID: 707457123517566481, guid: 9d9907f04f9f8e24ebd6f6c1684e7ae4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611179568156805911, guid: 9d9907f04f9f8e24ebd6f6c1684e7ae4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854275081342281744, guid: 9d9907f04f9f8e24ebd6f6c1684e7ae4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3854275081386319332, guid: 9d9907f04f9f8e24ebd6f6c1684e7ae4, type: 3}
       propertyPath: m_Name
       value: Christmas spririt
       objectReference: {fileID: 0}
     - target: {fileID: 3854275081386319332, guid: 9d9907f04f9f8e24ebd6f6c1684e7ae4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854275081386319332, guid: 9d9907f04f9f8e24ebd6f6c1684e7ae4, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4160282713268250284, guid: 9d9907f04f9f8e24ebd6f6c1684e7ae4, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4483037010237032286, guid: 9d9907f04f9f8e24ebd6f6c1684e7ae4, type: 3}
       propertyPath: m_RootOrder
@@ -211,6 +235,22 @@ PrefabInstance:
     - target: {fileID: 4483037010237032286, guid: 9d9907f04f9f8e24ebd6f6c1684e7ae4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759445567128282570, guid: 9d9907f04f9f8e24ebd6f6c1684e7ae4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181556436640490319, guid: 9d9907f04f9f8e24ebd6f6c1684e7ae4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8298441800774699998, guid: 9d9907f04f9f8e24ebd6f6c1684e7ae4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711219218335886324, guid: 9d9907f04f9f8e24ebd6f6c1684e7ae4, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d9907f04f9f8e24ebd6f6c1684e7ae4, type: 3}

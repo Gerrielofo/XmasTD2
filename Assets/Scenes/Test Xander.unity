@@ -462,7 +462,7 @@ MonoBehaviour:
   - {fileID: 284491392852991618}
   - {fileID: 1857437285}
   state: 2
-  timeBetweenWaves: 5
+  timeBetweenWaves: 10
   nextWaveCountdown: 0
   waves:
   - waveNumber: 1
