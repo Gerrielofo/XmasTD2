@@ -8,11 +8,12 @@ TagManager:
   - Turret
   - Track
   - Buildable
+  - playerUI
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Spirit
   - Water
   - UI
   - Walkable

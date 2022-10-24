@@ -252,37 +252,6 @@ Transform:
   m_Father: {fileID: 447486174301552734}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1402520260991435232
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3195873635565612503}
-  m_Layer: 0
-  m_Name: FirePoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3195873635565612503
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1402520260991435232}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.46, y: 4.038, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4177752766453087171}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1410999456032227350
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,9 +641,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4177752766453087171}
-  - component: {fileID: 8720883489476641151}
   m_Layer: 0
-  m_Name: SnowmanThrow 1
+  m_Name: SnowmanThrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -694,30 +662,9 @@ Transform:
   m_Children:
   - {fileID: 8702623128619682777}
   - {fileID: 3429866766589245826}
-  - {fileID: 3195873635565612503}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8720883489476641151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3652855448394473849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a820c4c4089554bb5b2fbfd3e95396, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 10
-  fireRate: 1
-  fireCountdown: 0
-  enemyTag: Enemy
-  partToRotate: {fileID: 4177752766453087171}
-  turnSpeed: 10
-  bulletPrefab: {fileID: 3443571648171160816, guid: 68b52761733de05448bcde14086ce7b6, type: 3}
-  firePoint: {fileID: 3195873635565612503}
 --- !u!1 &3929581983416279047
 GameObject:
   m_ObjectHideFlags: 0

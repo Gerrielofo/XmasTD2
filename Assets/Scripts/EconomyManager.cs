@@ -9,8 +9,8 @@ public class EconomyManager : MonoBehaviour
     [Header("References")]
     public WaveManager waveManager;
     public PlayerInputManager inputManager;
-    public GameObject multiPlayerPrefab;
-    public GameObject singlePlayerPrefab;
+    public GameManager gameManager;
+    public PlayerType playerType;
     [Header("Starting Ammounts")]
     public int startingMoney;
     public int startingEco;
@@ -30,12 +30,13 @@ public class EconomyManager : MonoBehaviour
     private void Start()
     {
         inputManager = GameObject.Find("PlayerManager").GetComponent<PlayerInputManager>();
-        if(inputManager.playerPrefab == multiPlayerPrefab)
+        if(playerType == PlayerType.Multiplayer)
         {
             if (inputManager.playerCount == 2)
             {
                 PlayerStats.player1Money = startingMoney;
                 PlayerStats.player2Money = startingMoney;
+
                 ecoP1 = startingEco;
                 ecoP2 = startingEco;
 
