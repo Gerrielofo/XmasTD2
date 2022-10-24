@@ -11,14 +11,25 @@ public class GameManager : MonoBehaviour
     
     public PlayerType playerType;
     public PlayerInputManager inputManager;
+    public EconomyManager economyManager;
     private bool gameEnded = false;
+    public bool UIassinged;
 
     public GameObject gameOverUI;
     public GameObject victoryUI;
     public GameObject suddenDeathUI;
 
+
+
     public void Update()
     {
+        if (inputManager.playerCount == 2 && UIassinged == false)
+        {
+            UIassinged = true;
+            economyManager.GetComponent<EconomyManager>().PlayerStart();
+            Debug.Log("asssinged UI");
+            
+        }
         if (gameEnded)
             return;
         if(PlayerStats.player1Lives <= 0)

@@ -157,7 +157,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startLives: 50
   startMoney: 250
-  money: 0
 --- !u!4 &92800722
 Transform:
   m_ObjectHideFlags: 0
@@ -223,6 +222,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerType: 0
   inputManager: {fileID: 615613443}
+  economyManager: {fileID: 1035508201}
+  UIassinged: 0
   gameOverUI: {fileID: 0}
   victoryUI: {fileID: 0}
   suddenDeathUI: {fileID: 0}
@@ -2013,7 +2014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveManager: {fileID: 247916037}
   inputManager: {fileID: 615613443}
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 92800725}
   playerType: 0
   startingMoney: 250
   startingEco: 50
