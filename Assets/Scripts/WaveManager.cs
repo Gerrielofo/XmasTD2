@@ -119,7 +119,7 @@ public class WaveManager : MonoBehaviour
             {
                 //Debug.Log("ammount of enemies spawned: " + (ammountSpawned + 1));
                 cause = SendState.NATURAL;
-                SpawnEnemy(_wave.enemies[i].prefab, 1);
+                SpawnEnemy(_wave.enemies[i].prefab, 1, 0);
                 yield return new WaitForSeconds(1f / _wave.enemies[i].spawnRate);
             }
             
@@ -129,26 +129,23 @@ public class WaveManager : MonoBehaviour
         yield break;
     }
 
-    public void SpawnEnemy(GameObject enemyPrefab, int _ammount)
+    public void SpawnEnemy(GameObject enemyPrefab, int _ammount, int _playerID)
     {
-
         if(cause == SendState.NATURAL)
         {
             for (int s = 0; s < naturalSpawns.Length; s++)
             {
                 GameObject Obj = Instantiate(enemyPrefab, naturalSpawns[s].position, Quaternion.identity);
-                Obj.GetComponent<EnemyModelManager>().SetModel(s);
+                Obj.GetComponent<EnemyModelManager>().SetModel(s + 1);
             }   
         }
         if (cause == SendState.PLAYER)
         {
             for (int a = 0; a < _ammount; a++)
             {
-                for (int s = 0; s < playerSpawns.Length; s++)
-                {
-                    GameObject Obj = Instantiate(enemyPrefab, playerSpawns[s].position, Quaternion.identity);
-                    Obj.GetComponent<EnemyModelManager>().SetModel(s);
-                }
+                print(playerSpawns[_playerID]);
+                GameObject Obj = Instantiate(enemyPrefab, playerSpawns[_playerID].position, Quaternion.identity);
+                Obj.GetComponent<EnemyModelManager>().SetModel(_playerID);  
             }
         }
     }

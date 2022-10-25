@@ -76,18 +76,20 @@ public class SendEnemies : MonoBehaviour
                 PlayerStats.player2Money -= _cost;
                 economyManager.ecoP2 += ecoBoost;
                 economyManager.P2EcoDisplay.text = "Eco: " + economyManager.ecoP2;
-                sendingCDp2 = 1;
+                sendingCDp2++;
             }
             else
             {
                 Debug.Log("not mer requirements to buy this for player: " + _playerID);
                 enemyPrefab = waveManager.errorEnemy.prefab;
+                sendingCDp2++;
             }
         }
         int ammount = _ammount;
+        Debug.Log("ammount of enemies being send: " + ammount);
         //Debug.Log("Ammount of enemies being send: " + _ammount);
         waveManager.cause = WaveManager.SendState.PLAYER;
-        waveManager.GetComponent<WaveManager>().SpawnEnemy(enemyPrefab, ammount);
+        waveManager.GetComponent<WaveManager>().SpawnEnemy(enemyPrefab, ammount, _playerID);
         
     }
 
