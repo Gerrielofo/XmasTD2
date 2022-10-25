@@ -17,7 +17,7 @@ public class PlayerStats : MonoBehaviour
         set 
         {
             Player1Money = value;
-            Debug.Log("player 1 money: " + Player1Money);
+            //Debug.Log("player 1 money: " + Player1Money);
         } 
     }
     private static int Player2Money;
@@ -30,7 +30,7 @@ public class PlayerStats : MonoBehaviour
         set
         {
             Player2Money = value;
-            Debug.Log("player 2 money: " + Player2Money);
+            //Debug.Log("player 2 money: " + Player2Money);
         }
     }
 

@@ -156,7 +156,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startLives: 50
-  startMoney: 250
 --- !u!4 &92800722
 Transform:
   m_ObjectHideFlags: 0
@@ -2015,8 +2014,8 @@ MonoBehaviour:
   waveManager: {fileID: 247916037}
   inputManager: {fileID: 615613443}
   gameManager: {fileID: 92800725}
-  playerType: 0
-  startingMoney: 250
+  playerType: 1
+  startingMoney: 150
   startingEco: 50
   ecoP1: 0
   P1MoneyDisplay: {fileID: 0}
