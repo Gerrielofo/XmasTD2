@@ -6,6 +6,8 @@ public class Unit : MonoBehaviour
 	const float minPathUpdateTime = .2f;
 	const float pathUpdateMoveThreshold = .5f;
 
+
+    [Header("Unit Stats")]
 	public int health = 100;
 	public GameObject deathEffect;
 
@@ -49,7 +51,7 @@ public class Unit : MonoBehaviour
 
         while (true)
         {
-			if (Vector3.Distance(transform.position, target.position) <= 3f)
+			if (Vector3.Distance(transform.position, target.position) <= 5f)
 			{
 				EndPath();
 			}

@@ -15,6 +15,7 @@ public class TowerID : MonoBehaviour
         Debug.Log("Changing Tower");
         BuildManager buildManager = GetComponent<BuildManager>();
         TowerPlacement towerPlacement = playerCursor.GetComponent<TowerPlacement>();
+        ShopWheelController shopwheelController = GetComponent<ShopWheelController>();
         if (_playerID == 1)
         {
             switch (_towerID)
@@ -65,6 +66,6 @@ public class TowerID : MonoBehaviour
         }
 
         towerPlacement.InitTowerPlacement(towerPrefab, towerBlueprint, cost);
-
+        shopwheelController.ToggleShop(false);
     }
 }

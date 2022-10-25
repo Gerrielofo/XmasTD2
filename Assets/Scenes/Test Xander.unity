@@ -1448,22 +1448,22 @@ MonoBehaviour:
   - {fileID: 4193201204037091562, guid: c8995d67adaa6b54eb92272601efa8e1, type: 3}
   - {fileID: 3652855448394473849, guid: d6a1d7d68d4899745ac1197d0f1768f4, type: 3}
   - {fileID: 7047427801063784752, guid: f22cc6ddd5fb7ec4bac9cde6099faf43, type: 3}
-  - {fileID: 2142926878929858762, guid: 98e1ff2601b21354daf880ce8742c869, type: 3}
+  - {fileID: 7047427801063784752, guid: f22cc6ddd5fb7ec4bac9cde6099faf43, type: 3}
   towerBlueprintXmas:
-  - {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
-  - {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
-  - {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
-  - {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
+  - {fileID: 5979195968113231561, guid: f45f38000b8034b4d98935b1a4a3be58, type: 3}
+  - {fileID: 3652855448394473849, guid: e3e6a698e43bd3a4e80fab09e946bbc4, type: 3}
+  - {fileID: 7047427801063784752, guid: 575edb28b72e272429b686bf153daa9e, type: 3}
+  - {fileID: 7047427801063784752, guid: 575edb28b72e272429b686bf153daa9e, type: 3}
   towerPrefabsHalloween:
-  - {fileID: 1126958948996055668, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
-  - {fileID: 1126958948996055668, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
-  - {fileID: 1126958948996055668, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
+  - {fileID: 3423914977040887342, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
+  - {fileID: 3423914977040887342, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
+  - {fileID: 1673119785711519000, guid: e68ea574cd1aefd488c82fbe362119af, type: 3}
   - {fileID: 3423914977040887342, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
   towerBlueprintHalloween:
-  - {fileID: 1126958948996055668, guid: 2d9c6a828db1b094baee8d54e8caa883, type: 3}
-  - {fileID: 1126958948996055668, guid: 2d9c6a828db1b094baee8d54e8caa883, type: 3}
-  - {fileID: 1126958948996055668, guid: 2d9c6a828db1b094baee8d54e8caa883, type: 3}
-  - {fileID: 1126958948996055668, guid: 2d9c6a828db1b094baee8d54e8caa883, type: 3}
+  - {fileID: 3423914977040887342, guid: 3b33c1b1120b1504d93ab17e08fe2ce4, type: 3}
+  - {fileID: 3423914977040887342, guid: 3b33c1b1120b1504d93ab17e08fe2ce4, type: 3}
+  - {fileID: 1673119785711519000, guid: efec4966a5de34444a59d73606262050, type: 3}
+  - {fileID: 3423914977040887342, guid: 3b33c1b1120b1504d93ab17e08fe2ce4, type: 3}
   tower1Cost: 100
   tower2Cost: 200
   tower3Cost: 250

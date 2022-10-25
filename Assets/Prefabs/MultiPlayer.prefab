@@ -177,6 +177,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f6a92328-4981-4657-b541-7f1f939ad72d
     m_ActionName: CursorMovement/OpenShop[/DualShock4GamepadHID/leftTrigger,/XInputControllerWindows/leftTrigger,/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5901403447859820425}
+        m_TargetAssemblyTypeName: TowerPlacement, Assembly-CSharp
+        m_MethodName: onConfirmPlace
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3dd280ee-74c4-4f71-92e5-67d402d08b12
+    m_ActionName: CursorMovement/ConfrimPlace[/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5901403447859820425}
+        m_TargetAssemblyTypeName: TowerPlacement, Assembly-CSharp
+        m_MethodName: onCancelPlace
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3f81aa19-f78b-4559-87b9-1c0cc42a17ff
+    m_ActionName: CursorMovement/CancelPlace[/XInputControllerWindows/buttonEast]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: GamePad
   m_DefaultActionMap: CursorMovement
@@ -646,8 +678,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerID: 3
   cost: 400
-  towerPrefab: {fileID: 0}
-  towerBlueprint: {fileID: 0}
+  towerPrefab: {fileID: 7047427801063784752, guid: f22cc6ddd5fb7ec4bac9cde6099faf43, type: 3}
+  towerBlueprint: {fileID: 7047427801063784752, guid: 575edb28b72e272429b686bf153daa9e, type: 3}
   playerCursor: {fileID: 3361093198774553491}
 --- !u!65 &3980730901453139813
 BoxCollider:
@@ -1790,8 +1822,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerID: 2
   cost: 250
-  towerPrefab: {fileID: 0}
-  towerBlueprint: {fileID: 0}
+  towerPrefab: {fileID: 7047427801063784752, guid: f22cc6ddd5fb7ec4bac9cde6099faf43, type: 3}
+  towerBlueprint: {fileID: 7047427801063784752, guid: 575edb28b72e272429b686bf153daa9e, type: 3}
   playerCursor: {fileID: 3361093198774553491}
 --- !u!65 &5541430494645030505
 BoxCollider:
@@ -3837,8 +3869,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerID: 0
   cost: 100
-  towerPrefab: {fileID: 0}
-  towerBlueprint: {fileID: 0}
+  towerPrefab: {fileID: 7047427801063784752, guid: f22cc6ddd5fb7ec4bac9cde6099faf43, type: 3}
+  towerBlueprint: {fileID: 7047427801063784752, guid: 575edb28b72e272429b686bf153daa9e, type: 3}
   playerCursor: {fileID: 3361093198774553491}
 --- !u!65 &5136137553585761662
 BoxCollider:
@@ -4145,8 +4177,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerID: 1
   cost: 200
-  towerPrefab: {fileID: 0}
-  towerBlueprint: {fileID: 0}
+  towerPrefab: {fileID: 7047427801063784752, guid: f22cc6ddd5fb7ec4bac9cde6099faf43, type: 3}
+  towerBlueprint: {fileID: 7047427801063784752, guid: 575edb28b72e272429b686bf153daa9e, type: 3}
   playerCursor: {fileID: 3361093198774553491}
 --- !u!65 &7606109658785565608
 BoxCollider:

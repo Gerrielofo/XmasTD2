@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.InputSystem;
 
 public class ShopWheelController : MonoBehaviour
 {
@@ -18,22 +14,20 @@ public class ShopWheelController : MonoBehaviour
     }
     public void ToggleShop(bool _wantShopWheel)
     {
-
-        print("toggled shop" + _wantShopWheel);
-
-        if (wantShopWheel && shopShown == false)
+        if (wantShopWheel && !shopShown)
         {
             
             Vector3 newPosistion = new Vector3(playerCursor.transform.position.x, shopWheel.transform.position.y, playerCursor.transform.position.z);
             shopWheel.transform.position = newPosistion;
             shopWheel.gameObject.SetActive(true);
             shopShown = true;
-
+            print("toggled shop" + _wantShopWheel);
         }
-        else if (!wantShopWheel && shopShown == true)
+        else if (!wantShopWheel && shopShown)
         {
             shopWheel.gameObject.SetActive(false);
             shopShown = false;
+            print("toggled shop" + _wantShopWheel);
         }   
         wantShopWheel = _wantShopWheel;
     }
