@@ -33,8 +33,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        
-        if(inputManager.playerCount == 2)
+
+        if (inputManager.playerCount == 2)
         {
 
             float cursorX = movementInput.x;
@@ -48,83 +48,84 @@ public class PlayerController : MonoBehaviour
 
             transform.Translate(new Vector3(cursorX, cursorY, 0) * cursorSpeed * Time.deltaTime);
 
+        }
+    }
+    public void OnButtonClicked(GameObject target, int _playerID)
+    {
+        if (clicked)
+        {
 
-            public void OnButtonClicked(GameObject target, int _playerID)
+            if (target.GetComponent<SendEnemies>())
             {
-                if (clicked)
-                {
-
-                    if (target.GetComponent<SendEnemies>())
-                    {
-                        int _enemyID = target.GetComponent<SendEnemies>().enemyID;
+                int _enemyID = target.GetComponent<SendEnemies>().enemyID;
 
 
-                        int _ammount = target.GetComponent<SendEnemies>().ammount;
-                        int _cost = target.GetComponent<SendEnemies>().cost;
-                        target.GetComponent<SendEnemies>().SendEnemy(_enemyID, _playerID, _ammount, _cost);
-                    }
-                    else if (target.GetComponent<TowerID>())
-                    {
-                        int _towerID = target.GetComponent<TowerID>().towerID;
-                        int _towerCost = target.GetComponent<TowerID>().cost;
-                        if (target.layer == 10)
-                        {
-                            _playerID = 1;
-                        }
-                        else if (target.layer == 11)
-                        {
-                            _playerID = 2;
-                        }
-                        Debug.Log("PlayerID = " + _playerID);
-                        Debug.Log("TowerID = " + _towerID);
-                        Debug.Log("Towercost = " + _towerCost);
-                        target.GetComponent<TowerID>().ChangeTower(_towerID, _towerCost, _playerID);
-                    }
-                    else
-                    {
-                        Debug.Log("Nothing Found");
-                    }
-                }
+                int _ammount = target.GetComponent<SendEnemies>().ammount;
+                int _cost = target.GetComponent<SendEnemies>().cost;
+                target.GetComponent<SendEnemies>().SendEnemy(_enemyID, _playerID, _ammount, _cost);
             }
-
-            public void onMove(InputAction.CallbackContext ctx) => movementInput = ctx.ReadValue<Vector2>();
-
-            public void OnClick(InputAction.CallbackContext ctx)
+            else if (target.GetComponent<TowerID>())
             {
-                clickInput = ctx.ReadValue<float>();
-                if (clickInput > 0.5f)
+                int _towerID = target.GetComponent<TowerID>().towerID;
+                int _towerCost = target.GetComponent<TowerID>().cost;
+                if (target.layer == 10)
                 {
-                    RaycastHit hit;
-                    if (Physics.Raycast(transform.position, transform.forward, out hit, 1000f))
-                    {
-                        clicked = true;
-                        GameObject target = hit.transform.gameObject;
-                        if (target.layer == 10)
-                        {
-                            playerID = 1;
-                        }
-                        else if (target.layer == 11)
-                        {
-                            playerID = 2;
-                        }
-                        OnButtonClicked(target, playerID);
-                    }
+                    _playerID = 1;
                 }
+                else if (target.layer == 11)
+                {
+                    _playerID = 2;
+                }
+                Debug.Log("PlayerID = " + _playerID);
+                Debug.Log("TowerID = " + _towerID);
+                Debug.Log("Towercost = " + _towerCost);
+                target.GetComponent<TowerID>().ChangeTower(_towerID, _towerCost, _playerID);
             }
-            public void OnShop(InputAction.CallbackContext ctx)
+            else
             {
-                shopInput = ctx.ReadValue<float>();
-                var shopWheel = gameObject.transform.GetComponentInParent<ShopWheelController>();
-
-                if (shopInput < 0.5f && shopStatus == true)
-                {
-                    shopWheel.ToggleShop(true);
-                    shopStatus = false;
-                }
-                else if (shopInput > 0.5f && shopStatus == false)
-                {
-                    shopWheel.ToggleShop(false);
-                    shopStatus = true;
-                }
+                Debug.Log("Nothing Found");
             }
         }
+    }
+
+    public void onMove(InputAction.CallbackContext ctx) => movementInput = ctx.ReadValue<Vector2>();
+
+    public void OnClick(InputAction.CallbackContext ctx)
+    {
+        clickInput = ctx.ReadValue<float>();
+        if (clickInput > 0.5f)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 1000f))
+            {
+                clicked = true;
+                GameObject target = hit.transform.gameObject;
+                if (target.layer == 10)
+                {
+                    playerID = 1;
+                }
+                else if (target.layer == 11)
+                {
+                    playerID = 2;
+                }
+                OnButtonClicked(target, playerID);
+            }
+        }
+    }
+    public void OnShop(InputAction.CallbackContext ctx)
+    {
+        shopInput = ctx.ReadValue<float>();
+        var shopWheel = gameObject.transform.GetComponentInParent<ShopWheelController>();
+
+        if (shopInput < 0.5f && shopStatus == true)
+        {
+            shopWheel.ToggleShop(true);
+            shopStatus = false;
+        }
+        else if (shopInput > 0.5f && shopStatus == false)
+        {
+            shopWheel.ToggleShop(false);
+            shopStatus = true;
+        }
+    }
+}
