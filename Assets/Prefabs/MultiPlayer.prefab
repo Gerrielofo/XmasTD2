@@ -935,8 +935,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerID: 2
   cost: 250
-  towerPrefab: {fileID: 0}
-  towerBlueprint: {fileID: 0}
+  towerPrefab: {fileID: 7047427801063784752, guid: f22cc6ddd5fb7ec4bac9cde6099faf43, type: 3}
+  towerBlueprint: {fileID: 7047427801063784752, guid: 575edb28b72e272429b686bf153daa9e, type: 3}
   playerCursor: {fileID: 3361093198774553491}
 --- !u!65 &7953894035148918042
 BoxCollider:
@@ -3278,8 +3278,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerID: 3
   cost: 400
-  towerPrefab: {fileID: 0}
-  towerBlueprint: {fileID: 0}
+  towerPrefab: {fileID: 7047427801063784752, guid: f22cc6ddd5fb7ec4bac9cde6099faf43, type: 3}
+  towerBlueprint: {fileID: 7047427801063784752, guid: 575edb28b72e272429b686bf153daa9e, type: 3}
   playerCursor: {fileID: 3361093198774553491}
 --- !u!65 &2470017388318775892
 BoxCollider:
@@ -3991,8 +3991,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerID: 0
   cost: 100
-  towerPrefab: {fileID: 0}
-  towerBlueprint: {fileID: 0}
+  towerPrefab: {fileID: 7047427801063784752, guid: f22cc6ddd5fb7ec4bac9cde6099faf43, type: 3}
+  towerBlueprint: {fileID: 7047427801063784752, guid: 575edb28b72e272429b686bf153daa9e, type: 3}
   playerCursor: {fileID: 3361093198774553491}
 --- !u!65 &8389749440165999850
 BoxCollider:
@@ -4569,8 +4569,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerID: 1
   cost: 200
-  towerPrefab: {fileID: 0}
-  towerBlueprint: {fileID: 0}
+  towerPrefab: {fileID: 7047427801063784752, guid: f22cc6ddd5fb7ec4bac9cde6099faf43, type: 3}
+  towerBlueprint: {fileID: 7047427801063784752, guid: 575edb28b72e272429b686bf153daa9e, type: 3}
   playerCursor: {fileID: 3361093198774553491}
 --- !u!65 &1999792392099433263
 BoxCollider:

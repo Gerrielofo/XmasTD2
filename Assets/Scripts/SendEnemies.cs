@@ -48,7 +48,7 @@ public class SendEnemies : MonoBehaviour
             }
             else
             {
-                Debug.Log("not met requirements to but this tower for player: " + _playerID);
+                Debug.Log("not met requirements to buy this for player: " + _playerID);
                 enemyPrefab = waveManager.errorEnemy.prefab;
                 
             }
@@ -78,7 +78,7 @@ public class SendEnemies : MonoBehaviour
             }
             else
             {
-                Debug.Log("not mer requirements to but this tower for player: " + _playerID);
+                Debug.Log("not mer requirements to buy this for player: " + _playerID);
                 enemyPrefab = waveManager.errorEnemy.prefab;
             }
         }
