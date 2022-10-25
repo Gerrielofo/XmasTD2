@@ -44,6 +44,7 @@ public class SendEnemies : MonoBehaviour
                 }
                 PlayerStats.player1Money -= _cost;
                 economyManager.ecoP1 += ecoBoost;
+                economyManager.P1EcoDisplay.text = "Eco: " + economyManager.ecoP1;
                 sendingCDp1 = 1;
             }
             else
@@ -74,6 +75,7 @@ public class SendEnemies : MonoBehaviour
                 }
                 PlayerStats.player2Money -= _cost;
                 economyManager.ecoP2 += ecoBoost;
+                economyManager.P2EcoDisplay.text = "Eco: " + economyManager.ecoP2;
                 sendingCDp2 = 1;
             }
             else
