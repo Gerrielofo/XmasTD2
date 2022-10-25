@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb6835b819dd7c46a0ff6a0d1abaae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerType: 0
   camera: {fileID: 9074591358054219077}
   christmasShop: {fileID: 5167488927799285319, guid: 84f60b0bb29d1e742aa25d5ca63d8700, type: 3}
   halloweenShop: {fileID: 6557163615734311700, guid: 009bb10e2decbed4f858edef96c1d327, type: 3}
@@ -353,9 +354,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveManager: {fileID: 0}
+  economyManager: {fileID: 0}
+  playerStats: {fileID: 0}
   enemyID: 3
   ammount: 5
-  enemyPrefab: {fileID: 0}
+  cost: 400
+  ecoBoost: 150
 --- !u!65 &2712869589276969819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1084,9 +1088,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveManager: {fileID: 0}
+  economyManager: {fileID: 0}
+  playerStats: {fileID: 0}
   enemyID: 1
   ammount: 2
-  enemyPrefab: {fileID: 0}
+  cost: 0
+  ecoBoost: 50
 --- !u!65 &79483099777251566
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1323,9 +1330,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveManager: {fileID: 0}
+  economyManager: {fileID: 0}
+  playerStats: {fileID: 0}
   enemyID: 0
   ammount: 2
-  enemyPrefab: {fileID: 0}
+  cost: 100
+  ecoBoost: 25
 --- !u!65 &4683993691323934455
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3111,9 +3121,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveManager: {fileID: 0}
+  economyManager: {fileID: 0}
+  playerStats: {fileID: 0}
   enemyID: 2
   ammount: 1
-  enemyPrefab: {fileID: 0}
+  cost: 300
+  ecoBoost: 100
 --- !u!65 &4931015043392198338
 BoxCollider:
   m_ObjectHideFlags: 0
