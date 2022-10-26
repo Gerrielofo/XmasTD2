@@ -24,13 +24,13 @@ public class PressToJoin : MonoBehaviour
         if (inputManager.playerCount == 1)
         {
             player1JoinScreen.SetActive(false);
-            //player1JoinedScreen.SetActive(true);
+            player1JoinedScreen.SetActive(true);
         }
         else if (inputManager.playerCount == 2)
         {
             player2JoinScreen.SetActive(false);
-            //player2JoinedScreen.SetActive(true);
-            //start.SetActive(true);
+            player2JoinedScreen.SetActive(true);
+            start.SetActive(true);
         }
     }
 }
