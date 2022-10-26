@@ -11,12 +11,13 @@ public class WaveManager : MonoBehaviour
     
     public EconomyManager economyManager;
     PlayerInputManager inputManager;
-    public enum SpawnState { SPAWNING, WAITING, COUNTING, FINISHED };
+    public enum SpawnState { SPAWNING, WAITING, COUNTING, FINISHED, BOSS};
     public enum SendState { NATURAL, PLAYER};
     [Header("Enemy Arrays")]
     public SendState cause;
     public Enemy[] halloween;
     public Enemy[] christmas;
+    public Boss[] bosses;
     public Enemy errorEnemy;
     [Header("Spawn Locations")]
     public Transform[] naturalSpawns;
@@ -72,6 +73,12 @@ public class WaveManager : MonoBehaviour
     void WaveCompleted(Wave _wave)
     {
         //Debug.Log("Wave Completed");
+        if(_wave.bossWave)
+        {
+            state = SpawnState.BOSS;
+
+        }
+
 
         state = SpawnState.COUNTING;
         
@@ -126,6 +133,16 @@ public class WaveManager : MonoBehaviour
         }
 
         state = SpawnState.WAITING;
+        yield break;
+    }
+
+    IEnumerator SpawnBoss(Wave _wave)
+    {
+
+
+
+
+        
         yield break;
     }
 

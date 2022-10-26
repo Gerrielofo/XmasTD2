@@ -50,8 +50,9 @@ public class SendEnemies : MonoBehaviour
             }
             else
             {
-                Debug.Log("not met requirements to buy this for player: " + _playerID);
+                //Debug.Log("not met requirements to buy this for player: " + _playerID);
                 enemyPrefab = waveManager.errorEnemy.prefab;
+                sendingCDp1++;
 
             }
         }
@@ -81,7 +82,7 @@ public class SendEnemies : MonoBehaviour
             }
             else
             {
-                Debug.Log("not mer requirements to buy this for player: " + _playerID);
+                //Debug.Log("not met requirements to buy this for player: " + _playerID);
                 enemyPrefab = waveManager.errorEnemy.prefab;
                 sendingCDp2++;
             }
