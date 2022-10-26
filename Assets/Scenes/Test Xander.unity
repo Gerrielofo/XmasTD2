@@ -1426,7 +1426,7 @@ MonoBehaviour:
   towerPrefabsHalloween:
   - {fileID: 3423914977040887342, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
   - {fileID: 3423914977040887342, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
-  - {fileID: 1673119785711519000, guid: e68ea574cd1aefd488c82fbe362119af, type: 3}
+  - {fileID: 3423914977040887342, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
   - {fileID: 3423914977040887342, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
   towerBlueprintHalloween:
   - {fileID: 3423914977040887342, guid: 3b33c1b1120b1504d93ab17e08fe2ce4, type: 3}
@@ -1514,8 +1514,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1539,7 +1539,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 138.6
+  m_fontSize: 127.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1651,8 +1651,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1676,7 +1676,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 138.6
+  m_fontSize: 127.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
