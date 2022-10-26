@@ -76,7 +76,7 @@ public class WaveManager : MonoBehaviour
         if(_wave.bossWave)
         {
             state = SpawnState.BOSS;
-
+            StartCoroutine(SpawnBoss(waves[currentWave]));
         }
 
 
@@ -138,11 +138,12 @@ public class WaveManager : MonoBehaviour
 
     IEnumerator SpawnBoss(Wave _wave)
     {
-
-
-
-
-        
+        for (int ba = 0; ba < _wave.bossAmmount; ba++)
+        {
+            Instantiate(bosses[0].bossPrefab, naturalSpawns[0].position, Quaternion.identity);
+            Instantiate(bosses[1].bossPrefab, naturalSpawns[1].position, Quaternion.identity);
+        }
+        state = SpawnState.FINISHED;
         yield break;
     }
 
