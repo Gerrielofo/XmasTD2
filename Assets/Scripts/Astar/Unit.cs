@@ -9,9 +9,7 @@ public class Unit : MonoBehaviour
 	public int health = 100;
 	public GameObject deathEffect;
 
-    [Header("Stats")]
-	private Transform target;
-	public int damage;
+	public Transform target;
 	public float startSpeed = 5;
 	private float speed = 10;
 	public float turnSpeed = 5;
@@ -19,13 +17,11 @@ public class Unit : MonoBehaviour
 	public float stoppingDst = 1;
 
 	private Enemy enemy;
-	private EnemyModelManager modelManager;
 
 	Path path;
 
     private void Start()
     {
-		modelManager = gameObject.GetComponent<EnemyModelManager>();
 		target = GameObject.Find("Target").transform;
 		StartCoroutine(UpdatePath());
     }
@@ -53,7 +49,7 @@ public class Unit : MonoBehaviour
 
         while (true)
         {
-			if (Vector3.Distance(transform.position, target.position) <= 4.4f)
+			if (Vector3.Distance(transform.position, target.position) <= 3f)
 			{
 				EndPath();
 			}
@@ -142,14 +138,7 @@ public class Unit : MonoBehaviour
     }
 	void EndPath()
     {
-		//if(modelManager.modelNo == 0)
-  //      {
-		//	PlayerStats.player1Lives -= damage;
-  //      }
-		//if (modelManager.modelNo == 1)
-		//{
-		//	PlayerStats.player2Lives -= damage;
-		//}
+		enemy.EndPath();
 		Destroy(gameObject);
 	}
 

@@ -137,8 +137,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveManager: {fileID: 0}
+  economyManager: {fileID: 0}
+  playerStats: {fileID: 0}
   enemyID: 3
   ammount: 5
+  cost: 0
   enemyPrefab: {fileID: 0}
 --- !u!65 &2941427464090655420
 BoxCollider:
@@ -305,7 +308,7 @@ GameObject:
   - component: {fileID: 3397364389284525118}
   m_Layer: 5
   m_Name: PlayerCanvas
-  m_TagString: playerUI
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -465,6 +468,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f6a92328-4981-4657-b541-7f1f939ad72d
     m_ActionName: CursorMovement/OpenShop[/DualShock4GamepadHID/leftTrigger,/XInputControllerWindows/leftTrigger,/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6670393027939329646}
+        m_TargetAssemblyTypeName: TowerPlacement, Assembly-CSharp
+        m_MethodName: onConfirmPlace
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3dd280ee-74c4-4f71-92e5-67d402d08b12
+    m_ActionName: CursorMovement/ConfrimPlace[/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6670393027939329646}
+        m_TargetAssemblyTypeName: TowerPlacement, Assembly-CSharp
+        m_MethodName: onCancelPlace
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3f81aa19-f78b-4559-87b9-1c0cc42a17ff
+    m_ActionName: CursorMovement/CancelPlace[/XInputControllerWindows/buttonEast]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: GamePad
   m_DefaultActionMap: CursorMovement
@@ -482,6 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb6835b819dd7c46a0ff6a0d1abaae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerType: 0
   camera: {fileID: 8114198965739941026}
   christmasShop: {fileID: 5167488927799285319, guid: 84f60b0bb29d1e742aa25d5ca63d8700, type: 3}
   halloweenShop: {fileID: 6557163615734311700, guid: 009bb10e2decbed4f858edef96c1d327, type: 3}
@@ -503,6 +539,7 @@ MonoBehaviour:
   wantShopWheel: 0
   playerCursor: {fileID: 2580844344903965300}
   shopShown: 0
+  camera: {fileID: 0}
 --- !u!1 &1491972263454920116
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,8 +763,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveManager: {fileID: 0}
+  economyManager: {fileID: 0}
+  playerStats: {fileID: 0}
   enemyID: 0
   ammount: 2
+  cost: 0
   enemyPrefab: {fileID: 0}
 --- !u!65 &5509278138848999184
 BoxCollider:
@@ -1033,8 +1073,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveManager: {fileID: 0}
+  economyManager: {fileID: 0}
+  playerStats: {fileID: 0}
   enemyID: 1
   ammount: 2
+  cost: 0
   enemyPrefab: {fileID: 0}
 --- !u!65 &895760305022134537
 BoxCollider:
@@ -1322,8 +1365,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerID: 3
   cost: 400
-  towerPrefab: {fileID: 0}
-  towerBlueprint: {fileID: 0}
+  towerPrefab: {fileID: 7047427801063784752, guid: f22cc6ddd5fb7ec4bac9cde6099faf43, type: 3}
+  towerBlueprint: {fileID: 7047427801063784752, guid: 575edb28b72e272429b686bf153daa9e, type: 3}
   playerCursor: {fileID: 2580844344903965300}
 --- !u!65 &4200281326805008002
 BoxCollider:
@@ -1353,7 +1396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8413796122500937770
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1415,7 +1458,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: -2}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2580844344903965295
@@ -1626,8 +1669,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerID: 2
   cost: 250
-  towerPrefab: {fileID: 0}
-  towerBlueprint: {fileID: 0}
+  towerPrefab: {fileID: 7047427801063784752, guid: f22cc6ddd5fb7ec4bac9cde6099faf43, type: 3}
+  towerBlueprint: {fileID: 7047427801063784752, guid: 575edb28b72e272429b686bf153daa9e, type: 3}
   playerCursor: {fileID: 2580844344903965300}
 --- !u!65 &4725152981097799566
 BoxCollider:
@@ -2660,8 +2703,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveManager: {fileID: 0}
+  economyManager: {fileID: 0}
+  playerStats: {fileID: 0}
   enemyID: 2
   ammount: 1
+  cost: 0
   enemyPrefab: {fileID: 0}
 --- !u!65 &5267659308285036325
 BoxCollider:
@@ -3548,8 +3594,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerID: 0
   cost: 100
-  towerPrefab: {fileID: 0}
-  towerBlueprint: {fileID: 0}
+  towerPrefab: {fileID: 5979195968113231561, guid: 398b7414585df4548b5c5eab79425dd5, type: 3}
+  towerBlueprint: {fileID: 5979195968113231561, guid: f45f38000b8034b4d98935b1a4a3be58, type: 3}
   playerCursor: {fileID: 2580844344903965300}
 --- !u!65 &5346680753912954009
 BoxCollider:
@@ -4235,8 +4281,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerID: 1
   cost: 200
-  towerPrefab: {fileID: 0}
-  towerBlueprint: {fileID: 0}
+  towerPrefab: {fileID: 3652855448394473849, guid: d6a1d7d68d4899745ac1197d0f1768f4, type: 3}
+  towerBlueprint: {fileID: 3652855448394473849, guid: e3e6a698e43bd3a4e80fab09e946bbc4, type: 3}
   playerCursor: {fileID: 2580844344903965300}
 --- !u!65 &7276220896345791055
 BoxCollider:

@@ -12,6 +12,9 @@ public class TowerPlacement : MonoBehaviour
     private GameObject towerToBuild;
     private int towerCost;
 
+    float confrimPlace;
+    float cancelPlace;
+
     bool canBuild = false;   
     public GameObject playerCursor;
     
@@ -42,10 +45,10 @@ public class TowerPlacement : MonoBehaviour
 
     void CheckIfCanBuild()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
+        //if (EventSystem.current.IsPointerOverGameObject())
+        //{
+        //    return;
+        //}
         RaycastHit hit;
         if (Physics.Raycast(playerCursor.transform.position, playerCursor.transform.forward, out hit, Mathf.Infinity))
         {
@@ -59,13 +62,14 @@ public class TowerPlacement : MonoBehaviour
                 {
                     blueprintToUse.transform.GetChild(0).GetComponent<MeshRenderer>().material.color = blueprintMaterial;
                 }
+                else print("No Mesh Renderer Found!");
             }
             BlueprintFollowMouse(hit.point + posOffset);
             if (hit.transform.tag == "Buildable")
             {
                 blueprintMaterial = Color.white;
                 blueprintMaterial.a = 0.5f;
-                if (Input.GetButtonUp("Fire1"))
+                if (confrimPlace > 0.5f)
                 {
                     if(PlayerStats.player1Money > towerCost)
                     {
@@ -79,7 +83,11 @@ public class TowerPlacement : MonoBehaviour
                         blueprintMaterial.a = 0.5f;
                         Debug.Log("Not Enough Money!");
                     }
-                }                
+                } 
+                if(cancelPlace > 0.5f)
+                {
+                    Deselect();
+                }
             }
             else
             {
@@ -95,6 +103,12 @@ public class TowerPlacement : MonoBehaviour
         blueprintToUse.transform.position = pos;
     }
 
+    void Deselect()
+    {
+        Destroy(blueprintToUse);
+        canBuild = false;
+        towerToBuild = null;
+    }
     void PlaceTower(Vector3 pos)
     {
         PlayerStats.player1Money -= towerCost;
@@ -106,4 +120,7 @@ public class TowerPlacement : MonoBehaviour
         Destroy(placeEffect, 1f);
         canBuild = false;
     }
+
+    public void onConfirmPlace(InputAction.CallbackContext ctx) => confrimPlace = ctx.ReadValue<float>();
+    public void onCancelPlace(InputAction.CallbackContext ctx) => cancelPlace = ctx.ReadValue<float>();
 }
