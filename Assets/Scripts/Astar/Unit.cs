@@ -11,6 +11,8 @@ public class Unit : MonoBehaviour
 	public int health = 100;
 	public GameObject deathEffect;
 
+    [Header("Stats")]
+	public int damage;
 	public Transform target;
 	public float startSpeed = 5;
 	private float speed = 10;
@@ -19,11 +21,13 @@ public class Unit : MonoBehaviour
 	public float stoppingDst = 1;
 
 	private Enemy enemy;
+	private EnemyModelManager modelManager;
 
 	Path path;
 
     private void Start()
     {
+		modelManager = gameObject.GetComponent<EnemyModelManager>();
 		target = GameObject.Find("Target").transform;
 		StartCoroutine(UpdatePath());
     }
@@ -140,7 +144,15 @@ public class Unit : MonoBehaviour
     }
 	void EndPath()
     {
-		enemy.EndPath();
+		if(modelManager.modelNo == 0)
+        {
+			PlayerStats.player1Lives -= damage;
+        }
+		if (modelManager.modelNo == 1)
+		{
+			PlayerStats.player2Lives -= damage;
+		}
+
 		Destroy(gameObject);
 	}
 

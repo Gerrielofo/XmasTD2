@@ -8,8 +8,8 @@ public class PressToJoin : MonoBehaviour
     private PlayerInputManager inputManager;
     public GameObject player1JoinScreen;
     public GameObject player2JoinScreen;
-    public GameObject player1JoinedScreen;
-    public GameObject player2JoinedScreen;
+    //public GameObject player1JoinedScreen;
+    //public GameObject player2JoinedScreen;
 
     public GameObject start;
 
@@ -30,7 +30,7 @@ public class PressToJoin : MonoBehaviour
         {
             player2JoinScreen.SetActive(false);
             //player2JoinedScreen.SetActive(true);
-            //start.SetActive(true);
+            start.SetActive(true);
         }
     }
 }

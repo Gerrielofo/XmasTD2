@@ -641,7 +641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4177752766453087171}
-  - component: {fileID: 4580253594425098341}
+  - component: {fileID: 4916701536697919956}
   m_Layer: 0
   m_Name: SnowmanThrow Lv1
   m_TagString: Untagged
@@ -666,7 +666,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &4580253594425098341
+--- !u!95 &4916701536697919956
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -676,7 +676,7 @@ Animator:
   m_GameObject: {fileID: 3652855448394473849}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d7e7fc8708fbe7041aac2f88412a76a9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 28c047126594fe14e9b9c14cf9366327, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

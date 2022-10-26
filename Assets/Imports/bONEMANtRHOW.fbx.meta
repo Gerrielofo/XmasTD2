@@ -7,9 +7,6 @@ ModelImporter:
       74: 4781951162920444690
     second: Armature|ArmatureAction
   - first:
-      74: 5449073193131188545
-    second: Armature|CubeAction
-  - first:
       74: 8349542763059015795
     second: Armature|Walk
   externalObjects: {}
