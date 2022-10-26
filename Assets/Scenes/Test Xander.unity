@@ -409,48 +409,70 @@ MonoBehaviour:
   economyManager: {fileID: 1035508201}
   cause: 0
   halloween:
-  - prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+  - enemyName: 
+    prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
+  - enemyName: 
+    prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
+  - enemyName: 
+    prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
+  - enemyName: 
+    prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
+  - enemyName: 
+    prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
   christmas:
-  - prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+  - enemyName: 
+    prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
+  - enemyName: 
+    prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
+  - enemyName: 
+    prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
+  - enemyName: 
+    prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
-  - prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
+  - enemyName: 
+    prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
     ammount: 0
     spawnRate: 0
     damage: 0
+  bosses:
+  - bossType: Halloween
+    bossPrefab: {fileID: 0}
+    health: 0
+    damage: 0
+    speed: 0
+  - bossType: Christmas
+    bossPrefab: {fileID: 0}
+    health: 0
+    damage: 0
+    speed: 0
   errorEnemy:
+    enemyName: 
     prefab: {fileID: 0}
     ammount: 0
     spawnRate: 0
@@ -470,7 +492,8 @@ MonoBehaviour:
     bossWave: 0
     bossAmmount: 0
     enemies:
-    - prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+    - enemyName: Snowman & Zombie
+      prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
       ammount: 3
       spawnRate: 0.95
       damage: 1
@@ -479,11 +502,13 @@ MonoBehaviour:
     bossWave: 0
     bossAmmount: 0
     enemies:
-    - prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+    - enemyName: Gingerbread & Zombie
+      prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
       ammount: 3
       spawnRate: 0.95
       damage: 1
-    - prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
+    - enemyName: Snowman & Skeletons
+      prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
       ammount: 4
       spawnRate: 0.95
       damage: 1
@@ -492,15 +517,18 @@ MonoBehaviour:
     bossWave: 0
     bossAmmount: 0
     enemies:
-    - prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+    - enemyName: Gingerbread & Zombie
+      prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
       ammount: 3
       spawnRate: 0.95
       damage: 1
-    - prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
+    - enemyName: Snowman & Skeletons
+      prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
       ammount: 3
       spawnRate: 0.95
       damage: 1
-    - prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
+    - enemyName: Elves & Witches
+      prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
       ammount: 3
       spawnRate: 0.95
       damage: 1
@@ -509,7 +537,8 @@ MonoBehaviour:
     bossWave: 0
     bossAmmount: 0
     enemies:
-    - prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
+    - enemyName: Reindeer & Bats
+      prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
       ammount: 10
       spawnRate: 1
       damage: 1
@@ -518,23 +547,28 @@ MonoBehaviour:
     bossWave: 0
     bossAmmount: 0
     enemies:
-    - prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+    - enemyName: Gingerbread & Zombie
+      prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
       ammount: 3
       spawnRate: 0.95
       damage: 1
-    - prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
+    - enemyName: Snowman & Skeletons
+      prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
       ammount: 3
       spawnRate: 0.95
       damage: 1
-    - prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
+    - enemyName: Elves & Witches
+      prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
       ammount: 3
       spawnRate: 0.95
       damage: 1
-    - prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
+    - enemyName: Reindeer & Bats
+      prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
       ammount: 3
       spawnRate: 0.95
       damage: 1
-    - prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
+    - enemyName: Xmas Sprits & Ghosts
+      prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
       ammount: 3
       spawnRate: 0.95
       damage: 1
@@ -602,7 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   deathEffect: {fileID: 0}
-  damage: 0
+  target: {fileID: 808304309}
   startSpeed: 5
   turnSpeed: 5
   turnDst: 2
@@ -1046,7 +1080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4420851643926384831, guid: 254afa09492982d4b8b3ed4c726a5c1c, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4420851643926384831, guid: 254afa09492982d4b8b3ed4c726a5c1c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1165,6 +1199,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8797542517768139907}
     m_Modifications:
+    - target: {fileID: 1170243383, guid: 58456a175a38d8946bb6cd5ce3725f1f, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 448748074286068536, guid: 58456a175a38d8946bb6cd5ce3725f1f, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1227,82 +1265,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58456a175a38d8946bb6cd5ce3725f1f, type: 3}
---- !u!1 &615613442
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 615613444}
-  - component: {fileID: 615613443}
-  m_Layer: 0
-  m_Name: PlayerManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &615613443
+--- !u!114 &615613443 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8804295904083003430, guid: 78e22a5a6514da24789d3de03a5599e7, type: 3}
+  m_PrefabInstance: {fileID: 8804295904564268069}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 615613442}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NotificationBehavior: 2
-  m_MaxPlayerCount: 2
-  m_AllowJoining: 1
-  m_JoinBehavior: 0
-  m_PlayerJoinedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_PlayerLeftEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_JoinAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: 
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 2909229824023846862, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
-  m_SplitScreen: 1
-  m_MaintainAspectRatioInSplitScreen: 0
-  m_FixedNumberOfSplitScreens: 2
-  m_SplitScreenRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!4 &615613444
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 615613442}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &636330963
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,25 +1414,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPrefabsXmas:
-  - {fileID: 7047427801063784752, guid: f22cc6ddd5fb7ec4bac9cde6099faf43, type: 3}
+  - {fileID: 4193201204037091562, guid: c8995d67adaa6b54eb92272601efa8e1, type: 3}
   - {fileID: 3652855448394473849, guid: d6a1d7d68d4899745ac1197d0f1768f4, type: 3}
   - {fileID: 7047427801063784752, guid: f22cc6ddd5fb7ec4bac9cde6099faf43, type: 3}
   - {fileID: 7047427801063784752, guid: f22cc6ddd5fb7ec4bac9cde6099faf43, type: 3}
   towerBlueprintXmas:
-  - {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
-  - {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
-  - {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
-  - {fileID: 216489712998044241, guid: c1a8e94a20a7ca54c81ea1e1d5222283, type: 3}
+  - {fileID: 5979195968113231561, guid: f45f38000b8034b4d98935b1a4a3be58, type: 3}
+  - {fileID: 3652855448394473849, guid: e3e6a698e43bd3a4e80fab09e946bbc4, type: 3}
+  - {fileID: 7047427801063784752, guid: 575edb28b72e272429b686bf153daa9e, type: 3}
+  - {fileID: 7047427801063784752, guid: 575edb28b72e272429b686bf153daa9e, type: 3}
   towerPrefabsHalloween:
-  - {fileID: 1126958948996055668, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
-  - {fileID: 1126958948996055668, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
-  - {fileID: 1126958948996055668, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
+  - {fileID: 3423914977040887342, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
+  - {fileID: 3423914977040887342, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
+  - {fileID: 1673119785711519000, guid: e68ea574cd1aefd488c82fbe362119af, type: 3}
   - {fileID: 3423914977040887342, guid: 6b91dd1d6cb67004a84fd53a6a0565c9, type: 3}
   towerBlueprintHalloween:
-  - {fileID: 1126958948996055668, guid: 2d9c6a828db1b094baee8d54e8caa883, type: 3}
-  - {fileID: 1126958948996055668, guid: 2d9c6a828db1b094baee8d54e8caa883, type: 3}
-  - {fileID: 1126958948996055668, guid: 2d9c6a828db1b094baee8d54e8caa883, type: 3}
-  - {fileID: 1126958948996055668, guid: 2d9c6a828db1b094baee8d54e8caa883, type: 3}
+  - {fileID: 3423914977040887342, guid: 3b33c1b1120b1504d93ab17e08fe2ce4, type: 3}
+  - {fileID: 3423914977040887342, guid: 3b33c1b1120b1504d93ab17e08fe2ce4, type: 3}
+  - {fileID: 1673119785711519000, guid: efec4966a5de34444a59d73606262050, type: 3}
+  - {fileID: 3423914977040887342, guid: 3b33c1b1120b1504d93ab17e08fe2ce4, type: 3}
   tower1Cost: 100
   tower2Cost: 200
   tower3Cost: 250
@@ -1541,8 +1514,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1566,7 +1539,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 127.5
+  m_fontSize: 138.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1678,8 +1651,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1703,7 +1676,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 127.5
+  m_fontSize: 138.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2559,7 +2532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   deathEffect: {fileID: 0}
-  damage: 0
+  target: {fileID: 8797542516118751132}
   startSpeed: 5
   turnSpeed: 5
   turnDst: 2
@@ -2780,3 +2753,60 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &8804295904564268069
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8804295904083003425, guid: 78e22a5a6514da24789d3de03a5599e7, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8804295904083003425, guid: 78e22a5a6514da24789d3de03a5599e7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8804295904083003425, guid: 78e22a5a6514da24789d3de03a5599e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8804295904083003425, guid: 78e22a5a6514da24789d3de03a5599e7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8804295904083003425, guid: 78e22a5a6514da24789d3de03a5599e7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8804295904083003425, guid: 78e22a5a6514da24789d3de03a5599e7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8804295904083003425, guid: 78e22a5a6514da24789d3de03a5599e7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8804295904083003425, guid: 78e22a5a6514da24789d3de03a5599e7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8804295904083003425, guid: 78e22a5a6514da24789d3de03a5599e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8804295904083003425, guid: 78e22a5a6514da24789d3de03a5599e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8804295904083003425, guid: 78e22a5a6514da24789d3de03a5599e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8804295904083003431, guid: 78e22a5a6514da24789d3de03a5599e7, type: 3}
+      propertyPath: m_Name
+      value: PlayerManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 78e22a5a6514da24789d3de03a5599e7, type: 3}

@@ -7,8 +7,9 @@ using UnityEngine;
 public class Enemy
 {
     [Header("Enemy Info")]
+    [SerializeField]
+    private string enemyName;
     public GameObject prefab;
-    
     public int ammount;
     public float spawnRate;
     public int damage = 1;

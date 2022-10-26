@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public Camera camera;
     public ShopWheelController shopWheelController;
     bool shopStatus;
+    bool clicked;
+    int playerID;
     public PlayerInputManager inputManager;
 
 
@@ -31,8 +33,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        
-        if(inputManager.playerCount == 2)
+        if (inputManager.playerCount == 2)
         {
 
             float cursorX = movementInput.x;
@@ -46,66 +47,94 @@ public class PlayerController : MonoBehaviour
 
             transform.Translate(new Vector3(cursorX, cursorY, 0) * cursorSpeed * Time.deltaTime);
 
+        }
 
-            if (clickInput > 0.5f)
+        if (clickInput > 0.5f && clicked == false)
+        {
+            RaycastHit hit;
+            LayerMask previousMask = camera.cullingMask;
+            LayerMask layer_mask = LayerMask.GetMask("Default");
+            if (gameObject.layer == 10)
             {
-                RaycastHit hit;                
-                if (Physics.Raycast(transform.position, transform.forward, out hit, 1000f))
+                layer_mask = LayerMask.GetMask("Player1");
+            }
+            else if(gameObject.layer == 11)
+            {
+                layer_mask = LayerMask.GetMask("Player2");
+            }
+            LayerMask newMask = layer_mask | previousMask;
+
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 1000f, newMask))
+            {
+                var target = hit.transform.gameObject;
+                if (target.layer == 10)
                 {
-                    GameObject target = hit.transform.gameObject;
-                    int _playerID = 0;
-                    
-                    if (target.GetComponent<SendEnemies>())
-                    {
-                        int _enemyID = target.GetComponent<SendEnemies>().enemyID;
-
-                        if (target.layer == 10)
-                        {
-                            _playerID = 1;
-                        }
-                        else if (target.layer == 11)
-                        {
-                            _playerID = 2;
-                        }
-                        int _ammount = target.GetComponent<SendEnemies>().ammount;
-                        int _cost = target.GetComponent<SendEnemies>().cost;
-                        target.GetComponent<SendEnemies>().SendEnemy(_enemyID, _playerID, _ammount, _cost);
-                    }
-                    else if (target.GetComponent<TowerID>())
-                    {
-                        int _towerID = target.GetComponent<TowerID>().towerID;
-                        int _towerCost = target.GetComponent<TowerID>().cost;
-                        if (target.layer == 10)
-                        {
-                            _playerID = 1;
-                        }
-                        else if (target.layer == 11)
-                        {
-                            _playerID = 2;
-                        }
-                        Debug.Log("PlayerID = " + _playerID);
-                        Debug.Log("TowerID = " + _towerID);
-                        Debug.Log("Towercost = " + _towerCost);
-                        target.GetComponent<TowerID>().ChangeTower(_towerID, _towerCost, _playerID);
-                    }
-                    else
-                    {
-                        Debug.Log("Nothing Found");
-                    }
+                    playerID = 1;
                 }
+                else if (target.layer == 11)
+                {
+                    playerID = 2;
+                }
+                OnButtonClicked(target, playerID);
             }
-            var shopWheel = gameObject.transform.GetComponentInParent<ShopWheelController>();
+        }
+        if (clickInput < 0.5f && clicked == true)
+        {
+            clicked = false;
+        }
+        
+        
+        var shopWheel = gameObject.transform.GetComponentInParent<ShopWheelController>();
 
-            if (shopInput < 0.5f && shopStatus == true)
+        if (shopInput < 0.5f && shopStatus == true)
+        {
+            shopWheel.ToggleShop(true);
+            shopStatus = false;
+        }
+        else if (shopInput > 0.5f && shopStatus == false)
+        {
+            shopWheel.ToggleShop(false);
+            shopStatus = true;
+        }
+
+        
+    }
+    public void OnButtonClicked(GameObject target, int _playerID)
+    {
+        if (!clicked)
+        {
+
+            if (target.GetComponent<SendEnemies>())
             {
-                shopWheel.ToggleShop(true);
-                shopStatus = false;
+                int _enemyID = target.GetComponent<SendEnemies>().enemyID;
+
+
+                int _ammount = target.GetComponent<SendEnemies>().ammount;
+                int _cost = target.GetComponent<SendEnemies>().cost;
+                target.GetComponent<SendEnemies>().SendEnemy(_enemyID, _playerID, _ammount, _cost);
             }
-            else if (shopInput > 0.5f && shopStatus == false)
+            else if (target.GetComponent<TowerID>())
             {
-                shopWheel.ToggleShop(false);
-                shopStatus = true;
+                int _towerID = target.GetComponent<TowerID>().towerID;
+                int _towerCost = target.GetComponent<TowerID>().cost;
+                if (target.layer == 10)
+                {
+                    _playerID = 1;
+                }
+                else if (target.layer == 11)
+                {
+                    _playerID = 2;
+                }
+                Debug.Log("PlayerID = " + _playerID);
+                Debug.Log("TowerID = " + _towerID);
+                Debug.Log("Towercost = " + _towerCost);
+                target.GetComponent<TowerID>().ChangeTower(_towerID, _towerCost, _playerID);
             }
+            else
+            {
+                Debug.Log("Nothing Found");
+            }
+            clicked = true;
         }
     }
 

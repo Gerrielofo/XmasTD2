@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SendEnemies : MonoBehaviour
@@ -23,7 +24,7 @@ public class SendEnemies : MonoBehaviour
     {
         _enemyID = gameObject.GetComponent<SendEnemies>().enemyID;
 
-        if(_playerID == 1)
+        if (_playerID == 1)
         {
             if (_cost <= PlayerStats.player1Money && sendingCDp1 <= 0)
             {
@@ -44,16 +45,18 @@ public class SendEnemies : MonoBehaviour
                 }
                 PlayerStats.player1Money -= _cost;
                 economyManager.ecoP1 += ecoBoost;
+                economyManager.P1EcoDisplay.text = "Eco: " + economyManager.ecoP1;
                 sendingCDp1 = 1;
             }
             else
             {
-                Debug.Log("not met requirements to but this tower for player: " + _playerID);
+                //Debug.Log("not met requirements to buy this for player: " + _playerID);
                 enemyPrefab = waveManager.errorEnemy.prefab;
-                
+                sendingCDp1++;
+
             }
         }
-        else if(_playerID == 2)
+        else if (_playerID == 2)
         {
             if (_cost <= PlayerStats.player2Money && sendingCDp2 <= 0)
             {
@@ -74,28 +77,43 @@ public class SendEnemies : MonoBehaviour
                 }
                 PlayerStats.player2Money -= _cost;
                 economyManager.ecoP2 += ecoBoost;
-                sendingCDp2 = 1;
+                economyManager.P2EcoDisplay.text = "Eco: " + economyManager.ecoP2;
+                sendingCDp2++;
             }
             else
             {
-                Debug.Log("not mer requirements to but this tower for player: " + _playerID);
+                //Debug.Log("not met requirements to buy this for player: " + _playerID);
                 enemyPrefab = waveManager.errorEnemy.prefab;
+                sendingCDp2++;
             }
         }
         int ammount = _ammount;
+        Debug.Log("ammount of enemies being send: " + ammount);
         //Debug.Log("Ammount of enemies being send: " + _ammount);
-        waveManager.cause = WaveManager.SendState.PLAYER;
-        waveManager.GetComponent<WaveManager>().SpawnEnemy(enemyPrefab, ammount);
-        
+
+        StartCoroutine(Spawn(ammount, enemyPrefab, _playerID));
+
     }
 
+    
+    IEnumerator Spawn(int _a, GameObject _e, int _pID)
+    {
+        for (int a = 0; a < _a; a++)
+        {
+            waveManager.cause = WaveManager.SendState.PLAYER;
+            waveManager.GetComponent<WaveManager>().SpawnEnemy(_e, _a, _pID);
+            yield return new WaitForSeconds(0.5f);
+        }
+        StopCoroutine(Spawn(_a, _e, _pID));
+        yield break;
+    }
     private void Update()
     {
-        if(sendingCDp1 > 0)
+        if (sendingCDp1 > 0)
         {
             sendingCDp1 -= Time.deltaTime;
         }
-        if(sendingCDp2 > 0)
+        if (sendingCDp2 > 0)
         {
             sendingCDp2 -= Time.deltaTime;
         }

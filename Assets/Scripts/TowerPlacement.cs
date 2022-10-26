@@ -12,7 +12,7 @@ public class TowerPlacement : MonoBehaviour
     private GameObject towerToBuild;
     private int towerCost;
 
-    float confrimPlace;
+    float confirmPlace;
     float cancelPlace;
 
     bool canBuild = false;   
@@ -36,6 +36,7 @@ public class TowerPlacement : MonoBehaviour
         towerToBuild = newTowerToBuild;
         SpawnBlueprint(newBluePrintToUse);
         canBuild = true;
+        GetComponentInParent<ShopWheelController>().ToggleShop(false);
     }
     void SpawnBlueprint(GameObject newBluePrintToUse)
     {
@@ -45,10 +46,6 @@ public class TowerPlacement : MonoBehaviour
 
     void CheckIfCanBuild()
     {
-        //if (EventSystem.current.IsPointerOverGameObject())
-        //{
-        //    return;
-        //}
         RaycastHit hit;
         if (Physics.Raycast(playerCursor.transform.position, playerCursor.transform.forward, out hit, Mathf.Infinity))
         {
@@ -68,22 +65,23 @@ public class TowerPlacement : MonoBehaviour
             if (hit.transform.tag == "Buildable")
             {
                 blueprintMaterial = Color.white;
-                blueprintMaterial.a = 0.5f;
-                if (confrimPlace > 0.5f)
+                blueprintMaterial.a = 0.6f;
+                if (confirmPlace > 0.5f)
                 {
                     if(PlayerStats.player1Money > towerCost)
                     {
                         blueprintMaterial = Color.white;
-                        blueprintMaterial.a = 0.5f;
+                        blueprintMaterial.a = 0.6f;
                         PlaceTower(hit.point);
                     }
                     else
                     {
                         blueprintMaterial = Color.red;
-                        blueprintMaterial.a = 0.5f;
+                        blueprintMaterial.a = 0.6f;
                         Debug.Log("Not Enough Money!");
                     }
                 } 
+
                 if(cancelPlace > 0.5f)
                 {
                     Deselect();
@@ -91,8 +89,12 @@ public class TowerPlacement : MonoBehaviour
             }
             else
             {
+                if(confirmPlace > 0.5f)
+                {
+                    print("Can't build here!");
+                }
                 blueprintMaterial = Color.red;
-                blueprintMaterial.a = 0.5f;
+                blueprintMaterial.a = 0.6f;
                 return;
             }
         }
@@ -121,6 +123,6 @@ public class TowerPlacement : MonoBehaviour
         canBuild = false;
     }
 
-    public void onConfirmPlace(InputAction.CallbackContext ctx) => confrimPlace = ctx.ReadValue<float>();
+    public void onConfirmPlace(InputAction.CallbackContext ctx) => confirmPlace = ctx.ReadValue<float>();
     public void onCancelPlace(InputAction.CallbackContext ctx) => cancelPlace = ctx.ReadValue<float>();
 }
