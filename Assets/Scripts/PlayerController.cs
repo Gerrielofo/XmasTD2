@@ -52,7 +52,19 @@ public class PlayerController : MonoBehaviour
         if (clickInput > 0.5f && clicked == false)
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 1000f))
+            LayerMask previousMask = camera.cullingMask;
+            LayerMask layer_mask = LayerMask.GetMask("Default");
+            if (gameObject.layer == 10)
+            {
+                layer_mask = LayerMask.GetMask("Player1");
+            }
+            else if(gameObject.layer == 11)
+            {
+                layer_mask = LayerMask.GetMask("Player2");
+            }
+            LayerMask newMask = layer_mask | previousMask;
+
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 1000f, newMask))
             {
                 var target = hit.transform.gameObject;
                 if (target.layer == 10)

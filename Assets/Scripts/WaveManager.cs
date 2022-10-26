@@ -141,13 +141,11 @@ public class WaveManager : MonoBehaviour
         }
         if (cause == SendState.PLAYER)
         {
-            for (int a = 0; a < _ammount; a++)
-            {
-                int s = _playerID - 1;
-                print("spawning on" + s);
-                GameObject Obj = Instantiate(enemyPrefab, playerSpawns[s].position, Quaternion.identity);
-                Obj.GetComponent<EnemyModelManager>().SetModel(s);  
-            }
+
+            int s = _playerID - 1;
+            GameObject Obj = Instantiate(enemyPrefab, playerSpawns[s].position, Quaternion.identity);
+            Obj.GetComponent<EnemyModelManager>().SetModel(s);
+
         }
     }
 }
