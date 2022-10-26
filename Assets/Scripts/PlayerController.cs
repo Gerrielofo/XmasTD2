@@ -33,7 +33,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-
         if (inputManager.playerCount == 2)
         {
 
@@ -49,10 +48,48 @@ public class PlayerController : MonoBehaviour
             transform.Translate(new Vector3(cursorX, cursorY, 0) * cursorSpeed * Time.deltaTime);
 
         }
+
+        if (clickInput > 0.5f && clicked == false)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 1000f))
+            {
+                var target = hit.transform.gameObject;
+                if (target.layer == 10)
+                {
+                    playerID = 1;
+                }
+                else if (target.layer == 11)
+                {
+                    playerID = 2;
+                }
+                OnButtonClicked(target, playerID);
+            }
+        }
+        if (clickInput < 0.5f && clicked == true)
+        {
+            clicked = false;
+        }
+        
+        
+        var shopWheel = gameObject.transform.GetComponentInParent<ShopWheelController>();
+
+        if (shopInput < 0.5f && shopStatus == true)
+        {
+            shopWheel.ToggleShop(true);
+            shopStatus = false;
+        }
+        else if (shopInput > 0.5f && shopStatus == false)
+        {
+            shopWheel.ToggleShop(false);
+            shopStatus = true;
+        }
+
+        
     }
     public void OnButtonClicked(GameObject target, int _playerID)
     {
-        if (clicked)
+        if (!clicked)
         {
 
             if (target.GetComponent<SendEnemies>())
@@ -85,47 +122,12 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("Nothing Found");
             }
+            clicked = true;
         }
     }
 
     public void onMove(InputAction.CallbackContext ctx) => movementInput = ctx.ReadValue<Vector2>();
 
-    public void OnClick(InputAction.CallbackContext ctx)
-    {
-        clickInput = ctx.ReadValue<float>();
-        if (clickInput > 0.5f)
-        {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 1000f))
-            {
-                clicked = true;
-                GameObject target = hit.transform.gameObject;
-                if (target.layer == 10)
-                {
-                    playerID = 1;
-                }
-                else if (target.layer == 11)
-                {
-                    playerID = 2;
-                }
-                OnButtonClicked(target, playerID);
-            }
-        }
-    }
-    public void OnShop(InputAction.CallbackContext ctx)
-    {
-        shopInput = ctx.ReadValue<float>();
-        var shopWheel = gameObject.transform.GetComponentInParent<ShopWheelController>();
-
-        if (shopInput < 0.5f && shopStatus == true)
-        {
-            shopWheel.ToggleShop(true);
-            shopStatus = false;
-        }
-        else if (shopInput > 0.5f && shopStatus == false)
-        {
-            shopWheel.ToggleShop(false);
-            shopStatus = true;
-        }
-    }
+    public void OnClick(InputAction.CallbackContext ctx) => clickInput = ctx.ReadValue<float>();
+    public void OnShop(InputAction.CallbackContext ctx) => shopInput = ctx.ReadValue<float>();
 }

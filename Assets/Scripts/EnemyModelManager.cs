@@ -9,7 +9,7 @@ public class EnemyModelManager : MonoBehaviour
     public void SetModel(int model)
     {
         //Debug.Log(model);
-        modelNo = model - 1;
+        modelNo = model;
         models[model].SetActive(true);
     }
 }

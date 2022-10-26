@@ -136,16 +136,17 @@ public class WaveManager : MonoBehaviour
             for (int s = 0; s < naturalSpawns.Length; s++)
             {
                 GameObject Obj = Instantiate(enemyPrefab, naturalSpawns[s].position, Quaternion.identity);
-                Obj.GetComponent<EnemyModelManager>().SetModel(s + 1);
+                Obj.GetComponent<EnemyModelManager>().SetModel(s);
             }   
         }
         if (cause == SendState.PLAYER)
         {
             for (int a = 0; a < _ammount; a++)
             {
-                print(playerSpawns[_playerID]);
-                GameObject Obj = Instantiate(enemyPrefab, playerSpawns[_playerID].position, Quaternion.identity);
-                Obj.GetComponent<EnemyModelManager>().SetModel(_playerID);  
+                int s = _playerID - 1;
+                print("spawning on" + s);
+                GameObject Obj = Instantiate(enemyPrefab, playerSpawns[s].position, Quaternion.identity);
+                Obj.GetComponent<EnemyModelManager>().SetModel(s);  
             }
         }
     }
