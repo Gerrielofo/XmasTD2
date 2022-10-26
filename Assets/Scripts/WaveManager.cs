@@ -144,6 +144,8 @@ public class WaveManager : MonoBehaviour
             Instantiate(bosses[1].bossPrefab, naturalSpawns[1].position, Quaternion.identity);
         }
         state = SpawnState.FINISHED;
+
+        StopCoroutine(SpawnBoss(waves[currentWave]));
         yield break;
     }
 
