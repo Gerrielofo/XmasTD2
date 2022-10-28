@@ -1,0 +1,226 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1336218471946570067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1336218471946570065}
+  - component: {fileID: 1336218471946570066}
+  - component: {fileID: 1336218471946570064}
+  m_Layer: 0
+  m_Name: WaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1336218471946570065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336218471946570067}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1336218471946570066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336218471946570067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96cc74c4411d28a40a8971385b1081ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  economyManager: {fileID: 0}
+  halloween:
+  - enemyName: 
+    prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
+  - enemyName: 
+    prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
+  - enemyName: 
+    prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
+  - enemyName: 
+    prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
+  - enemyName: 
+    prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
+  christmas:
+  - enemyName: 
+    prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
+  - enemyName: 
+    prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
+  - enemyName: 
+    prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
+  - enemyName: 
+    prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
+  - enemyName: 
+    prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
+    ammount: 0
+    spawnRate: 0
+    damage: 0
+  bosses:
+  - bossType: Halloween
+    bossPrefab: {fileID: 0}
+    health: 0
+    damage: 0
+    speed: 0
+  - bossType: Christmas
+    bossPrefab: {fileID: 0}
+    health: 0
+    damage: 0
+    speed: 0
+  errorEnemy:
+    enemyName: 
+    prefab: {fileID: 0}
+    ammount: 0
+    spawnRate: 0
+    damage: 1
+  naturalSpawns:
+  - {fileID: 0}
+  - {fileID: 0}
+  state: 2
+  timeBetweenWaves: 10
+  nextWaveCountdown: 0
+  waves:
+  - waveNumber: 1
+    waveReward: 50
+    bossWave: 0
+    bossAmmount: 0
+    enemies:
+    - enemyName: Snowman & Zombie
+      prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+  - waveNumber: 1
+    waveReward: 50
+    bossWave: 0
+    bossAmmount: 0
+    enemies:
+    - enemyName: Gingerbread & Zombie
+      prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Snowman & Skeletons
+      prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
+      ammount: 4
+      spawnRate: 0.95
+      damage: 1
+  - waveNumber: 1
+    waveReward: 50
+    bossWave: 0
+    bossAmmount: 0
+    enemies:
+    - enemyName: Gingerbread & Zombie
+      prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Snowman & Skeletons
+      prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Elves & Witches
+      prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+  - waveNumber: 1
+    waveReward: 50
+    bossWave: 0
+    bossAmmount: 0
+    enemies:
+    - enemyName: Reindeer & Bats
+      prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
+      ammount: 10
+      spawnRate: 1
+      damage: 1
+  - waveNumber: 1
+    waveReward: 50
+    bossWave: 0
+    bossAmmount: 0
+    enemies:
+    - enemyName: Gingerbread & Zombie
+      prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Snowman & Skeletons
+      prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Elves & Witches
+      prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Reindeer & Bats
+      prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Xmas Sprits & Ghosts
+      prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+--- !u!114 &1336218471946570064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336218471946570067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8604b10778ac10c48b56e9ff800d311a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawns:
+  - {fileID: 0}
+  - {fileID: 0}
+  sendingCdP1: 0
+  sendingCdP2: 0
