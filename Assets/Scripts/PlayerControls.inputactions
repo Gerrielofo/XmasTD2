@@ -49,15 +49,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Options",
-                    "type": "Button",
-                    "id": "95ab7fb5-dfa4-4154-9d5a-82c3a10e599f",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -190,17 +181,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "CancelPlace",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "fc68587b-f572-439f-b16e-c6bb5c84aa29",
-                    "path": "<Gamepad>/start",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Options",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
