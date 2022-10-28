@@ -113,6 +113,7 @@ public class PlayerController : MonoBehaviour
                 int _cost = target.GetComponent<SendEnemies>().cost;
                 target.GetComponent<SendEnemies>().SendEnemy(_enemyID, _playerID, _ammount, _cost);
             }
+            
             else if (target.GetComponent<TowerID>())
             {
                 int _towerID = target.GetComponent<TowerID>().towerID;

@@ -30,7 +30,7 @@ public class PressToJoin : MonoBehaviour
         {
             player2JoinScreen.SetActive(false);
             //player2JoinedScreen.SetActive(true);
-            start.SetActive(true);
+            //start.SetActive(true);
         }
     }
 }

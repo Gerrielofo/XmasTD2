@@ -17,7 +17,7 @@ public class PlayerInstance : MonoBehaviour
     public GameObject singlePlayerprefab;
     public GameObject multiPlayerPrefab;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         PlayerInputManager inputManager = GameObject.Find("PlayerManager").GetComponent<PlayerInputManager>();
         EconomyManager economyManager = GameObject.Find("EconomyManager").GetComponent<EconomyManager>();

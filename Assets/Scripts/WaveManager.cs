@@ -8,20 +8,17 @@ using UnityEngine.InputSystem;
 public class WaveManager : MonoBehaviour
 {
     [Header("References")]
-    
+
     public EconomyManager economyManager;
     PlayerInputManager inputManager;
-    public enum SpawnState { SPAWNING, WAITING, COUNTING, FINISHED, BOSS};
-    public enum SendState { NATURAL, PLAYER};
+    public enum SpawnState { SPAWNING, WAITING, COUNTING, FINISHED, BOSS };
     [Header("Enemy Arrays")]
-    public SendState cause;
     public Enemy[] halloween;
     public Enemy[] christmas;
     public Boss[] bosses;
     public Enemy errorEnemy;
     [Header("Spawn Locations")]
     public Transform[] naturalSpawns;
-    public Transform[] playerSpawns;
     [Header("Wave Info")]
     public SpawnState state = SpawnState.COUNTING;
     public static int currentWave = 0;
@@ -39,7 +36,7 @@ public class WaveManager : MonoBehaviour
     }
     private void Update()
     {
-        if(inputManager.playerCount == 2)
+        if (inputManager.playerCount == 2)
         {
             if (state == SpawnState.WAITING)
             {
@@ -67,13 +64,13 @@ public class WaveManager : MonoBehaviour
                 }
             }
         }
-       
+
     }
 
     void WaveCompleted(Wave _wave)
     {
         //Debug.Log("Wave Completed");
-        if(_wave.bossWave)
+        if (_wave.bossWave)
         {
             state = SpawnState.BOSS;
 
@@ -81,7 +78,7 @@ public class WaveManager : MonoBehaviour
 
 
         state = SpawnState.COUNTING;
-        
+
         if (nextWave + 1 == waves.Length)
         {
             //Debug.Log("No more Waves to Spawn");
@@ -122,14 +119,13 @@ public class WaveManager : MonoBehaviour
         {
             int ammountSpawned = 0;
             //Debug.Log("Enemy number: " + (i + 1));
-            for( ammountSpawned = 0; ammountSpawned < _wave.enemies[i].ammount; ammountSpawned++)
+            for (ammountSpawned = 0; ammountSpawned < _wave.enemies[i].ammount; ammountSpawned++)
             {
                 //Debug.Log("ammount of enemies spawned: " + (ammountSpawned + 1));
-                cause = SendState.NATURAL;
                 SpawnEnemy(_wave.enemies[i].prefab, 1, 0);
                 yield return new WaitForSeconds(1f / _wave.enemies[i].spawnRate);
             }
-            
+
         }
 
         state = SpawnState.WAITING;
@@ -142,27 +138,16 @@ public class WaveManager : MonoBehaviour
 
 
 
-        
+
         yield break;
     }
 
     public void SpawnEnemy(GameObject enemyPrefab, int _ammount, int _playerID)
     {
-        if(cause == SendState.NATURAL)
+        for (int s = 0; s < naturalSpawns.Length; s++)
         {
-            for (int s = 0; s < naturalSpawns.Length; s++)
-            {
-                GameObject Obj = Instantiate(enemyPrefab, naturalSpawns[s].position, Quaternion.identity);
-                Obj.GetComponent<EnemyModelManager>().SetModel(s);
-            }   
-        }
-        if (cause == SendState.PLAYER)
-        {
-
-            int s = _playerID - 1;
-            GameObject Obj = Instantiate(enemyPrefab, playerSpawns[s].position, Quaternion.identity);
+            GameObject Obj = Instantiate(enemyPrefab, naturalSpawns[s].position, Quaternion.identity);
             Obj.GetComponent<EnemyModelManager>().SetModel(s);
-
         }
     }
 }

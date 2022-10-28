@@ -204,8 +204,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1JoinScreen: {fileID: 1868134147}
   player2JoinScreen: {fileID: 221242698}
-  player1JoinedScreen: {fileID: 0}
-  player2JoinedScreen: {fileID: 0}
   start: {fileID: 0}
 --- !u!114 &92800725
 MonoBehaviour:
@@ -387,6 +385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 247916038}
   - component: {fileID: 247916037}
+  - component: {fileID: 247916039}
   m_Layer: 0
   m_Name: WaveManager
   m_TagString: Untagged
@@ -407,7 +406,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   economyManager: {fileID: 1035508201}
-  cause: 0
   halloween:
   - enemyName: 
     prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
@@ -480,9 +478,6 @@ MonoBehaviour:
   naturalSpawns:
   - {fileID: 284491393605902172}
   - {fileID: 859039001}
-  playerSpawns:
-  - {fileID: 284491392852991618}
-  - {fileID: 1857437285}
   state: 2
   timeBetweenWaves: 10
   nextWaveCountdown: 0
@@ -587,6 +582,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &247916039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247916036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8604b10778ac10c48b56e9ff800d311a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawns:
+  - {fileID: 284491392852991618}
+  - {fileID: 1857437285}
+  sendingCdP1: 0
+  sendingCdP2: 0
 --- !u!1 &308509720
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,6 +648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   deathEffect: {fileID: 0}
+  damage: 0
   target: {fileID: 808304309}
   startSpeed: 5
   turnSpeed: 5
@@ -2532,6 +2545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   deathEffect: {fileID: 0}
+  damage: 0
   target: {fileID: 8797542516118751132}
   startSpeed: 5
   turnSpeed: 5

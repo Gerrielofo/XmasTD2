@@ -6,12 +6,12 @@ public class SendEnemies : MonoBehaviour
     public WaveManager waveManager;
     public EconomyManager economyManager;
     public PlayerStats playerStats;
+    public PlayerWaveManager playerWaveManager;
     public int enemyID;
     public int ammount;
     public int cost;
     public int ecoBoost;
-    private float sendingCDp1;
-    private float sendingCDp2;
+
     private GameObject enemyPrefab;
 
     private void Awake()
@@ -19,103 +19,60 @@ public class SendEnemies : MonoBehaviour
         waveManager = GameObject.Find("WaveManager").GetComponent<WaveManager>();
         economyManager = GameObject.Find("EconomyManager").GetComponent<EconomyManager>();
         playerStats = GameObject.Find("GameManager").GetComponent<PlayerStats>();
+        playerWaveManager = gameObject.GetComponent<PlayerWaveManager>();
     }
     public void SendEnemy(int _enemyID, int _playerID, int _ammount, int _cost)
     {
-        _enemyID = gameObject.GetComponent<SendEnemies>().enemyID;
-
         if (_playerID == 1)
         {
-            if (_cost <= PlayerStats.player1Money && sendingCDp1 <= 0)
+            if (_cost <= PlayerStats.player1Money && playerWaveManager.sendingCdP1 <= 0)
             {
-                switch (_enemyID)
-                {
-                    case 0:
-                        enemyPrefab = waveManager.halloween[_enemyID].prefab;
-                        break;
-                    case 1:
-                        enemyPrefab = waveManager.halloween[_enemyID].prefab;
-                        break;
-                    case 2:
-                        enemyPrefab = waveManager.halloween[_enemyID].prefab;
-                        break;
-                    case 3:
-                        enemyPrefab = waveManager.halloween[_enemyID].prefab;
-                        break;
-                }
+
+                enemyPrefab = waveManager.halloween[_enemyID].prefab;
+
                 PlayerStats.player1Money -= _cost;
                 economyManager.ecoP1 += ecoBoost;
                 economyManager.P1EcoDisplay.text = "Eco: " + economyManager.ecoP1;
-                sendingCDp1 = 1;
+                playerWaveManager.sendingCdP1 = 1;
+                StartCoroutine(Spawn(_ammount, enemyPrefab, _playerID));
+
             }
             else
             {
                 //Debug.Log("not met requirements to buy this for player: " + _playerID);
                 enemyPrefab = waveManager.errorEnemy.prefab;
-                sendingCDp1++;
 
             }
+            playerWaveManager.sendingCdP1++;
         }
         else if (_playerID == 2)
         {
-            if (_cost <= PlayerStats.player2Money && sendingCDp2 <= 0)
+            if (_cost <= PlayerStats.player2Money && playerWaveManager.sendingCdP2 <= 0)
             {
-                switch (_enemyID)
-                {
-                    case 0:
-                        enemyPrefab = waveManager.christmas[_enemyID].prefab;
-                        break;
-                    case 1:
-                        enemyPrefab = waveManager.christmas[_enemyID].prefab;
-                        break;
-                    case 2:
-                        enemyPrefab = waveManager.christmas[_enemyID].prefab;
-                        break;
-                    case 3:
-                        enemyPrefab = waveManager.christmas[_enemyID].prefab;
-                        break;
-                }
+                enemyPrefab = waveManager.christmas[_enemyID].prefab;
+                StartCoroutine(Spawn(_ammount, enemyPrefab, _playerID));
                 PlayerStats.player2Money -= _cost;
                 economyManager.ecoP2 += ecoBoost;
                 economyManager.P2EcoDisplay.text = "Eco: " + economyManager.ecoP2;
-                sendingCDp2++;
             }
             else
             {
                 //Debug.Log("not met requirements to buy this for player: " + _playerID);
                 enemyPrefab = waveManager.errorEnemy.prefab;
-                sendingCDp2++;
             }
+            playerWaveManager.sendingCdP2++;
         }
-        int ammount = _ammount;
-        Debug.Log("ammount of enemies being send: " + ammount);
-        //Debug.Log("Ammount of enemies being send: " + _ammount);
-
-        StartCoroutine(Spawn(ammount, enemyPrefab, _playerID));
-
     }
 
-    
-    IEnumerator Spawn(int _a, GameObject _e, int _pID)
+
+    IEnumerator Spawn(int _amount, GameObject _enemyPrefab, int _playerID)
     {
-        for (int a = 0; a < _a; a++)
+        for (int a = 0; a < _amount; a++)
         {
-            waveManager.cause = WaveManager.SendState.PLAYER;
-            waveManager.GetComponent<WaveManager>().SpawnEnemy(_e, _a, _pID);
+            waveManager.GetComponent<PlayerWaveManager>().PlayerSend(_enemyPrefab, _amount, _playerID);
             yield return new WaitForSeconds(0.5f);
         }
-        StopCoroutine(Spawn(_a, _e, _pID));
+        StopCoroutine(Spawn(_amount, _enemyPrefab, _playerID));
         yield break;
-    }
-    private void Update()
-    {
-        if (sendingCDp1 > 0)
-        {
-            sendingCDp1 -= Time.deltaTime;
-        }
-        if (sendingCDp2 > 0)
-        {
-            sendingCDp2 -= Time.deltaTime;
-        }
     }
 }
