@@ -1,13 +1,13 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
     public GameObject backgroundBlur;
+
+    public GameObject inGameUI;
 
     public GameObject menuButtons;
     public GameObject settings;
@@ -25,6 +25,9 @@ public class MainMenuManager : MonoBehaviour
     private bool wantPlay = false;
     private bool wantConnect = false;
     private bool wantTuturial = false;
+    private bool wantIngameUI;
+
+    private float options;
 
     public void StartGame()
     {
@@ -36,6 +39,17 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.LoadScene(tutorialName);
     }
 
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void ToggleInGameUI()
+    {
+        inGameUI.SetActive(!wantIngameUI);
+        wantIngameUI = !wantIngameUI;
+        
+    }
     public void TogglePlay()
     {
         modeSelect.SetActive(!wantPlay);
@@ -101,4 +115,6 @@ public class MainMenuManager : MonoBehaviour
     {
         Screen.fullScreen = _fullscreen;
     }
+
+    
 }
