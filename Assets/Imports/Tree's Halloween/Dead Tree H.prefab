@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2252142873061370896}
   - component: {fileID: 1765503878170973715}
   - component: {fileID: 5274384685286107902}
+  - component: {fileID: 8184192687865967763}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -83,6 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &8184192687865967763
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4998597874182100318}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.31594074
+  m_Height: 2.9980185
+  m_Direction: 1
+  m_Center: {x: 0.054490205, y: 1.4199998, z: -0.009999986}
 --- !u!1 &6336394768236541301
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,7 +107,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6675660473294237647}
-  - component: {fileID: 8961301200312335380}
   m_Layer: 0
   m_Name: Dead Tree H
   m_TagString: Untagged
@@ -116,17 +130,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &8961301200312335380
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6336394768236541301}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.1948538
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.49, z: 0}
