@@ -460,12 +460,12 @@ MonoBehaviour:
     damage: 0
   bosses:
   - bossType: Halloween
-    bossPrefab: {fileID: 0}
+    bossPrefab: {fileID: 3832107673450319975, guid: 87883a07eb5931748afdfd35a2e4d0f4, type: 3}
     health: 0
     damage: 0
     speed: 0
   - bossType: Christmas
-    bossPrefab: {fileID: 0}
+    bossPrefab: {fileID: 6465678917242411287, guid: 5f03cfb0f4bba4841afcb8e1d56f5b0b, type: 3}
     health: 0
     damage: 0
     speed: 0
