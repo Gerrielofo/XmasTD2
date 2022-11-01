@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class SendEnemies : MonoBehaviour
 {
+    public GameManager gameManager;
     public WaveManager waveManager;
     public EconomyManager economyManager;
     public PlayerStats playerStats;
@@ -16,8 +17,9 @@ public class SendEnemies : MonoBehaviour
 
     private void Awake()
     {
-        waveManager = GameObject.Find("WaveManager").GetComponent<WaveManager>();
-        economyManager = GameObject.Find("EconomyManager").GetComponent<EconomyManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        waveManager = gameManager.waveManager;
+        economyManager = gameManager.economyManager;
         playerStats = GameObject.Find("GameManager").GetComponent<PlayerStats>();
         playerWaveManager = waveManager.GetComponent<PlayerWaveManager>();
     }

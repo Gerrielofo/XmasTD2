@@ -209,6 +209,70 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3f81aa19-f78b-4559-87b9-1c0cc42a17ff
     m_ActionName: CursorMovement/CancelPlace[/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4187688629545648037}
+        m_TargetAssemblyTypeName: DevTools, Assembly-CSharp
+        m_MethodName: HealthUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f4d1b009-f8ea-4285-8128-b29f23fd2ac0
+    m_ActionName: CursorMovement/DevtoolHPUp[/XInputControllerWindows/dpad/up]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4187688629545648037}
+        m_TargetAssemblyTypeName: DevTools, Assembly-CSharp
+        m_MethodName: HealthDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4611179d-f85e-40b5-999e-e869ff45891a
+    m_ActionName: CursorMovement/DevToolHpDown[/XInputControllerWindows/dpad/down]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4187688629545648037}
+        m_TargetAssemblyTypeName: DevTools, Assembly-CSharp
+        m_MethodName: MoneyUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7c7b59fb-41f3-4b1e-9359-715d21bd2832
+    m_ActionName: CursorMovement/DevToolMoney[/XInputControllerWindows/dpad/left]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4187688629545648037}
+        m_TargetAssemblyTypeName: DevTools, Assembly-CSharp
+        m_MethodName: RoundSkip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b6a63088-1157-4356-af17-2a67707a8594
+    m_ActionName: CursorMovement/DevToolRound[/XInputControllerWindows/dpad/right]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: GamePad
   m_DefaultActionMap: CursorMovement
@@ -1989,6 +2053,7 @@ GameObject:
   - component: {fileID: 7000852761404752118}
   - component: {fileID: 508195277016804467}
   - component: {fileID: 5901403447859820425}
+  - component: {fileID: 4187688629545648037}
   m_Layer: 5
   m_Name: PlayerCursor
   m_TagString: Untagged
@@ -2091,6 +2156,18 @@ MonoBehaviour:
   playerCursor: {fileID: 3361093198774553491}
   blueprintMaterial: {r: 1, g: 0, b: 0, a: 0.6862745}
   buildEffect: {fileID: 1735020053299400289, guid: 70a9f419ea163a14885b6768daefca60, type: 3}
+--- !u!114 &4187688629545648037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3361093198774553491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb358ea91ea092043a763dc13cb61db4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3430439529296802120
 GameObject:
   m_ObjectHideFlags: 0

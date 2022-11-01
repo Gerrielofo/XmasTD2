@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public PlayerType playerType;
     public PlayerInputManager inputManager;
     public EconomyManager economyManager;
+    public WaveManager waveManager;
+    public PlayerWaveManager playerWaveManager;
     private bool gameEnded = false;
     public bool UIassinged;
 
