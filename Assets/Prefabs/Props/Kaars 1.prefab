@@ -82,7 +82,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1535
+    m_Bits: 2147483647
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -126,7 +126,6 @@ GameObject:
   - component: {fileID: 8077475763246585200}
   - component: {fileID: 5167650758508468949}
   - component: {fileID: 6941130824842227231}
-  - component: {fileID: 3644784023537355650}
   m_Layer: 0
   m_Name: Kaars 1
   m_TagString: Untagged
@@ -200,16 +199,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3644784023537355650
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8886488020263604170}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8243417, y: 1.9107515, z: 0.8243417}
-  m_Center: {x: -0.004348755, y: 0.9564304, z: 0.0000004172325}
