@@ -18,7 +18,7 @@ public class DevTools : MonoBehaviour
     }
     public void HealthUp()
     {
-        gameManager.
+
     }
 
     public void HealthDown()
