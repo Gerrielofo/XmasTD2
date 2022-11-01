@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
                 {
                     playerID = 2;
                 }
-                OnButtonClicked(target, playerID);
+                OnButtonClicked(target, playerID);  
             }
         }
         if (clickInput < 0.5f && clicked == true)

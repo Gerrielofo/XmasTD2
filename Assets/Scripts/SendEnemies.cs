@@ -19,10 +19,11 @@ public class SendEnemies : MonoBehaviour
         waveManager = GameObject.Find("WaveManager").GetComponent<WaveManager>();
         economyManager = GameObject.Find("EconomyManager").GetComponent<EconomyManager>();
         playerStats = GameObject.Find("GameManager").GetComponent<PlayerStats>();
-        playerWaveManager = gameObject.GetComponent<PlayerWaveManager>();
+        playerWaveManager = waveManager.GetComponent<PlayerWaveManager>();
     }
     public void SendEnemy(int _enemyID, int _playerID, int _ammount, int _cost)
     {
+        Debug.Log("send enemies - " + _enemyID);
         if (_playerID == 1)
         {
             if (_cost <= PlayerStats.player1Money && playerWaveManager.sendingCdP1 <= 0)
@@ -69,6 +70,8 @@ public class SendEnemies : MonoBehaviour
     {
         for (int a = 0; a < _amount; a++)
         {
+            Debug.Log(waveManager);
+            Debug.Log(waveManager.GetComponent<PlayerWaveManager>());
             waveManager.GetComponent<PlayerWaveManager>().PlayerSend(_enemyPrefab, _amount, _playerID);
             yield return new WaitForSeconds(0.5f);
         }

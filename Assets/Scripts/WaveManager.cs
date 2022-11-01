@@ -73,7 +73,7 @@ public class WaveManager : MonoBehaviour
         if (_wave.bossWave)
         {
             state = SpawnState.BOSS;
-
+            SpawnBoss(_wave);
         }
 
 
@@ -134,11 +134,11 @@ public class WaveManager : MonoBehaviour
 
     IEnumerator SpawnBoss(Wave _wave)
     {
-
-
-
-
-
+        for (int s = 0; s < naturalSpawns.Length; s++)
+        {
+            GameObject Obj = Instantiate(bosses[s].bossPrefab, naturalSpawns[s].position, Quaternion.identity);
+            Obj.GetComponent<EnemyModelManager>().SetModel(s);
+        }
         yield break;
     }
 
