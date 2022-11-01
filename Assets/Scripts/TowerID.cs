@@ -13,9 +13,9 @@ public class TowerID : MonoBehaviour
     public void ChangeTower(int _towerID, int _towerCost, int _playerID)
     {
         Debug.Log("Changing Tower");
-        BuildManager buildManager = GetComponent<BuildManager>();
+        BuildManager buildManager = BuildManager.instance;
         TowerPlacement towerPlacement = playerCursor.GetComponent<TowerPlacement>();
-        ShopWheelController shopwheelController = GetComponent<ShopWheelController>();
+        ShopWheelController shopwheelController = GetComponentInParent<ShopWheelController>();
         if (_playerID == 1)
         {
             switch (_towerID)
@@ -42,27 +42,10 @@ public class TowerID : MonoBehaviour
         }
         else if (_playerID == 2)
         {
-            switch (_towerID)
-            {
-                case 0:
-                    towerPrefab = buildManager.towerPrefabsXmas[_towerID];
-                    towerBlueprint = buildManager.towerBlueprintXmas[_towerID];
-                    break;
-                case 1:
-                    towerPrefab = buildManager.towerPrefabsXmas[_towerID];
-                    towerBlueprint = buildManager.towerBlueprintXmas[_towerID];
-                    break;
-                case 2:
-                    towerPrefab = buildManager.towerPrefabsXmas[_towerID];
-                    towerBlueprint = buildManager.towerBlueprintXmas[_towerID];
-                    break;
-                case 3:
-                    towerPrefab = buildManager.towerPrefabsXmas[_towerID];
-                    towerBlueprint = buildManager.towerBlueprintXmas[_towerID];
-                    break;
-
-
-            }
+/*            Debug.Log(buildManager);
+            Debug.Log(buildManager.towerPrefabsXmas);*/
+            towerPrefab = buildManager.towerPrefabsXmas[_towerID];
+            towerBlueprint = buildManager.towerBlueprintXmas[_towerID];
         }
 
         towerPlacement.InitTowerPlacement(towerPrefab, towerBlueprint, cost);
