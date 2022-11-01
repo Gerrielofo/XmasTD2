@@ -220,6 +220,8 @@ MonoBehaviour:
   playerType: 0
   inputManager: {fileID: 615613443}
   economyManager: {fileID: 1035508201}
+  waveManager: {fileID: 247916037}
+  playerWaveManager: {fileID: 247916039}
   UIassinged: 0
   gameOverUI: {fileID: 0}
   victoryUI: {fileID: 0}
@@ -248,7 +250,6 @@ GameObject:
   m_Component:
   - component: {fileID: 201581823}
   - component: {fileID: 201581826}
-  - component: {fileID: 201581825}
   - component: {fileID: 201581824}
   m_Layer: 0
   m_Name: Camera
@@ -305,14 +306,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!81 &201581825
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201581822}
-  m_Enabled: 0
 --- !u!20 &201581826
 Camera:
   m_ObjectHideFlags: 0
@@ -419,6 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96cc74c4411d28a40a8971385b1081ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 92800725}
   economyManager: {fileID: 1035508201}
   halloween:
   - enemyName: 
@@ -493,7 +487,7 @@ MonoBehaviour:
   - {fileID: 284491393605902172}
   - {fileID: 859039001}
   state: 2
-  timeBetweenWaves: 10
+  timeBetweenWaves: 1000000
   nextWaveCountdown: 0
   waves:
   - waveNumber: 1
@@ -581,6 +575,7 @@ MonoBehaviour:
       ammount: 3
       spawnRate: 0.95
       damage: 1
+  nextWave: 0
 --- !u!4 &247916038
 Transform:
   m_ObjectHideFlags: 0
@@ -818,7 +813,6 @@ GameObject:
   m_Component:
   - component: {fileID: 497992778}
   - component: {fileID: 497992781}
-  - component: {fileID: 497992780}
   - component: {fileID: 497992779}
   m_Layer: 0
   m_Name: Camera
@@ -875,14 +869,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!81 &497992780
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497992777}
-  m_Enabled: 0
 --- !u!20 &497992781
 Camera:
   m_ObjectHideFlags: 0
@@ -1645,7 +1631,7 @@ MonoBehaviour:
   inputManager: {fileID: 615613443}
   gameManager: {fileID: 92800725}
   playerType: 1
-  startingMoney: 150
+  startingMoney: 1000000
   startingEco: 50
   ecoP1: 0
   P1MoneyDisplay: {fileID: 0}
