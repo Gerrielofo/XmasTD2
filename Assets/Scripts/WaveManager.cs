@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 public class WaveManager : MonoBehaviour
 {
     [Header("References")]
-
+    public GameManager gameManager;
     public EconomyManager economyManager;
     PlayerInputManager inputManager;
     public enum SpawnState { SPAWNING, WAITING, COUNTING, FINISHED, BOSS };
@@ -132,14 +132,13 @@ public class WaveManager : MonoBehaviour
         yield break;
     }
 
-    IEnumerator SpawnBoss(Wave _wave)
+    public void SpawnBoss(Wave _wave)
     {
         for (int s = 0; s < naturalSpawns.Length; s++)
         {
             GameObject Obj = Instantiate(bosses[s].bossPrefab, naturalSpawns[s].position, Quaternion.identity);
             Obj.GetComponent<EnemyModelManager>().SetModel(s);
         }
-        yield break;
     }
 
     public void SpawnEnemy(GameObject enemyPrefab, int _ammount, int _playerID)
