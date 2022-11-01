@@ -1196,9 +1196,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5855778643660991706}
   - component: {fileID: 1331560703118154609}
+  - component: {fileID: 7450019838494884287}
   m_Layer: 0
   m_Name: Snowman Walk
-  m_TagString: Untagged
+  m_TagString: Christmas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1240,6 +1241,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &7450019838494884287
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6487495779988223584}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.617078
+  m_Height: 6.7544775
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.8772388, z: 0}
 --- !u!1 &6789695949741134698
 GameObject:
   m_ObjectHideFlags: 0

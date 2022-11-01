@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 2945586251542580657}
   m_Layer: 0
   m_Name: O_Dear Walk
-  m_TagString: Untagged
+  m_TagString: Christmas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

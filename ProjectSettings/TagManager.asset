@@ -9,6 +9,8 @@ TagManager:
   - Track
   - Buildable
   - playerUI
+  - Halloween
+  - Christmas
   layers:
   - Default
   - TransparentFX
