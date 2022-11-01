@@ -81,21 +81,20 @@ public class TowerPlacement : MonoBehaviour
                         Debug.Log("Not Enough Money!");
                     }
                 } 
-
-                if(cancelPlace > 0.5f)
-                {
-                    Deselect();
-                }
             }
             else
             {
+                blueprintMaterial = Color.red;
+                blueprintMaterial.a = 0.6f;
+
                 if(confirmPlace > 0.5f)
                 {
                     print("Can't build here!");
-                }
-                blueprintMaterial = Color.red;
-                blueprintMaterial.a = 0.6f;
-                return;
+                }               
+            }
+            if (cancelPlace > 0.5f)
+            {
+                Deselect();
             }
         }
     }

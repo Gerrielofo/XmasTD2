@@ -388,6 +388,7 @@ MonoBehaviour:
   waveManager: {fileID: 0}
   economyManager: {fileID: 0}
   playerStats: {fileID: 0}
+  playerWaveManager: {fileID: 0}
   enemyID: 3
   ammount: 5
   cost: 400
@@ -1122,6 +1123,7 @@ MonoBehaviour:
   waveManager: {fileID: 0}
   economyManager: {fileID: 0}
   playerStats: {fileID: 0}
+  playerWaveManager: {fileID: 0}
   enemyID: 1
   ammount: 2
   cost: 0
@@ -1364,6 +1366,7 @@ MonoBehaviour:
   waveManager: {fileID: 0}
   economyManager: {fileID: 0}
   playerStats: {fileID: 0}
+  playerWaveManager: {fileID: 0}
   enemyID: 0
   ammount: 2
   cost: 100
@@ -1449,8 +1452,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Money:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1906,8 +1909,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Lives:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2086,7 +2089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posOffset: {x: 0, y: 0, z: 0}
   playerCursor: {fileID: 3361093198774553491}
-  blueprintMaterial: {r: 1, g: 1, b: 1, a: 1}
+  blueprintMaterial: {r: 1, g: 0, b: 0, a: 0.6862745}
   buildEffect: {fileID: 1735020053299400289, guid: 70a9f419ea163a14885b6768daefca60, type: 3}
 --- !u!1 &3430439529296802120
 GameObject:
@@ -2504,8 +2507,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Rounds:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3155,6 +3158,7 @@ MonoBehaviour:
   waveManager: {fileID: 0}
   economyManager: {fileID: 0}
   playerStats: {fileID: 0}
+  playerWaveManager: {fileID: 0}
   enemyID: 2
   ammount: 1
   cost: 300
@@ -4396,8 +4400,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Eco:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
