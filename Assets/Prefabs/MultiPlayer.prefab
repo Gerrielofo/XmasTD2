@@ -341,8 +341,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663150820242643949}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00027125943}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -352,7 +352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -870, y: -190}
+  m_AnchoredPosition: {x: -869.99927, y: -189.99982}
   m_SizeDelta: {x: 190, y: 190}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7114371745216569825
@@ -449,10 +449,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380d953adb296fa4d9c975d5a5d066c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   waveManager: {fileID: 0}
   economyManager: {fileID: 0}
   playerStats: {fileID: 0}
   playerWaveManager: {fileID: 0}
+  playerID: 0
   enemyID: 3
   ammount: 5
   cost: 400
@@ -1076,8 +1078,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643526709159255988}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.00027125943}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1087,7 +1089,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -870, y: 190}
+  m_AnchoredPosition: {x: -869.99927, y: 189.99985}
   m_SizeDelta: {x: 190, y: 190}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2271673791297247101
@@ -1184,10 +1186,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380d953adb296fa4d9c975d5a5d066c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   waveManager: {fileID: 0}
   economyManager: {fileID: 0}
   playerStats: {fileID: 0}
   playerWaveManager: {fileID: 0}
+  playerID: 0
   enemyID: 1
   ammount: 2
   cost: 0
@@ -1319,8 +1323,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001310221379719480}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.00054251886}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1330,7 +1334,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -870, y: 380}
+  m_AnchoredPosition: {x: -869.99927, y: 379.99973}
   m_SizeDelta: {x: 190, y: 190}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4027711742069105192
@@ -1427,10 +1431,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380d953adb296fa4d9c975d5a5d066c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   waveManager: {fileID: 0}
   economyManager: {fileID: 0}
   playerStats: {fileID: 0}
   playerWaveManager: {fileID: 0}
+  playerID: 0
   enemyID: 0
   ammount: 2
   cost: 100
@@ -2105,6 +2111,7 @@ MonoBehaviour:
   camera: {fileID: 9074591358054219077}
   shopWheelController: {fileID: 2473000509410010585}
   inputManager: {fileID: 0}
+  gameManager: {fileID: 0}
   minX: 100
   maxX: -100
   minY: 0
@@ -2168,6 +2175,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb358ea91ea092043a763dc13cb61db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveManager: {fileID: 0}
+  gameManager: {fileID: 0}
+  economyManager: {fileID: 0}
+  playerStats: {fileID: 0}
 --- !u!1 &3430439529296802120
 GameObject:
   m_ObjectHideFlags: 0
@@ -3124,7 +3135,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5700289952229838677}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3135,7 +3146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -870, y: 0}
+  m_AnchoredPosition: {x: -869.99927, y: 0.000011444092}
   m_SizeDelta: {x: 190, y: 190}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6970565115299532463
@@ -3232,10 +3243,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380d953adb296fa4d9c975d5a5d066c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   waveManager: {fileID: 0}
   economyManager: {fileID: 0}
   playerStats: {fileID: 0}
   playerWaveManager: {fileID: 0}
+  playerID: 0
   enemyID: 2
   ammount: 1
   cost: 300

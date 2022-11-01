@@ -39,6 +39,10 @@ public class PlayerInstance : MonoBehaviour
             {
                 //Debug.Log(child.name);
                 child.gameObject.layer = 10;
+                if(child.GetComponent<SendEnemies>())
+                {
+                    child.GetComponent<SendEnemies>().playerID = 1;
+                }
             }
 
             economyManager.P1MoneyDisplay = gameObject.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
@@ -71,6 +75,10 @@ public class PlayerInstance : MonoBehaviour
             {
                 //Debug.Log(child.name);
                 child.gameObject.layer = 11;
+                if (child.GetComponent<SendEnemies>())
+                {
+                    child.GetComponent<SendEnemies>().playerID = 2;
+                }
             }
 
             economyManager.P2MoneyDisplay = gameObject.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();

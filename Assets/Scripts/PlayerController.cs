@@ -104,12 +104,10 @@ public class PlayerController : MonoBehaviour
     {
         if (!clicked)
         {
-
             if (target.GetComponent<SendEnemies>())
             {
                 int _enemyID = target.GetComponent<SendEnemies>().enemyID;
-
-
+                _playerID = target.GetComponent<SendEnemies>().playerID;
                 int _ammount = target.GetComponent<SendEnemies>().ammount;
                 int _cost = target.GetComponent<SendEnemies>().cost;
                 target.GetComponent<SendEnemies>().SendEnemy(_enemyID, _playerID, _ammount, _cost);
@@ -127,9 +125,9 @@ public class PlayerController : MonoBehaviour
                 {
                     _playerID = 2;
                 }
-                Debug.Log("PlayerID = " + _playerID);
-                Debug.Log("TowerID = " + _towerID);
-                Debug.Log("Towercost = " + _towerCost);
+                //Debug.Log("PlayerID = " + _playerID);
+                //Debug.Log("TowerID = " + _towerID);
+                //Debug.Log("Towercost = " + _towerCost);
                 target.GetComponent<TowerID>().ChangeTower(_towerID, _towerCost, _playerID);
             }
             else

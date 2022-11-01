@@ -8,6 +8,7 @@ public class SendEnemies : MonoBehaviour
     public EconomyManager economyManager;
     public PlayerStats playerStats;
     public PlayerWaveManager playerWaveManager;
+    public int playerID;
     public int enemyID;
     public int ammount;
     public int cost;
