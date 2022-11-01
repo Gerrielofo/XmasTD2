@@ -18,21 +18,30 @@ public class DevTools : MonoBehaviour
     }
     public void HealthUp()
     {
-
+        PlayerStats.Player1Lives += 10;
+        PlayerStats.Player2Lives += 10;
     }
 
     public void HealthDown()
     {
-
+        PlayerStats.Player1Lives -= 10;
+        PlayerStats.Player2Lives -= 10;
     }
 
     public void RoundSkip()
     {
-
+        waveManager.StopSpawnWave();
+        
+        waveManager.nextWaveCountdown = waveManager.timeBetweenWaves;
+        waveManager.nextWave++;
     }
 
     public void MoneyUp()
     {
+        PlayerStats.player1Money += 1000;
+        PlayerStats.player2Money += 1000;
 
+        economyManager.P1MoneyDisplay.text = "Money: " + PlayerStats.player1Money;
+        economyManager.P2MoneyDisplay.text = "Money: " + PlayerStats.player2Money;
     }
 }

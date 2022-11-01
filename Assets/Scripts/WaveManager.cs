@@ -25,7 +25,7 @@ public class WaveManager : MonoBehaviour
     public float timeBetweenWaves = 5f;
     public float nextWaveCountdown;
     public Wave[] waves;
-    private int nextWave = 0;
+    public int nextWave = 0;
 
 
 
@@ -130,6 +130,11 @@ public class WaveManager : MonoBehaviour
 
         state = SpawnState.WAITING;
         yield break;
+    }
+
+    public void StopSpawnWave()
+    {
+        StopCoroutine(SpawnWave(waves[nextWave]));
     }
 
     public void SpawnBoss(Wave _wave)
