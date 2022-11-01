@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     bool clicked;
     int playerID;
     public PlayerInputManager inputManager;
-    public GameManager gameManager;
 
 
     public float minX;

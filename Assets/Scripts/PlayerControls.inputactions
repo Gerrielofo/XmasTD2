@@ -49,42 +49,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "DevtoolHPUp",
-                    "type": "Button",
-                    "id": "f4d1b009-f8ea-4285-8128-b29f23fd2ac0",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "DevToolHpDown",
-                    "type": "Button",
-                    "id": "4611179d-f85e-40b5-999e-e869ff45891a",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "DevToolMoney",
-                    "type": "Button",
-                    "id": "7c7b59fb-41f3-4b1e-9359-715d21bd2832",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "DevToolRound",
-                    "type": "Button",
-                    "id": "b6a63088-1157-4356-af17-2a67707a8594",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -217,50 +181,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "CancelPlace",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9f35e83b-3fc9-4fba-82ec-e54c0d8f6b1f",
-                    "path": "<Gamepad>/dpad/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "DevToolMoney",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4a1e2d75-2298-43c7-ad64-c4ee5aa4b889",
-                    "path": "<Gamepad>/dpad/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "DevToolRound",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "36ba8652-1454-409d-9a11-7ac273cad0e7",
-                    "path": "<Gamepad>/dpad/down",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "DevToolHpDown",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "24312ae1-4eb9-45d5-8d48-0d2ca2f4a16c",
-                    "path": "<Gamepad>/dpad/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "DevtoolHPUp",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
