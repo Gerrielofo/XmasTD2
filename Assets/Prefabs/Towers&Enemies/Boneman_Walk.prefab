@@ -1374,10 +1374,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8941048747953595273}
   - component: {fileID: 8907633029905613169}
-  - component: {fileID: 4272815521251260953}
   m_Layer: 0
   m_Name: Boneman_Walk
-  m_TagString: Halloween
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1419,20 +1418,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!136 &4272815521251260953
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8601643130120960307}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1.2940631
-  m_Height: 6.4127235
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.7063618, z: 0}
 --- !u!1 &8636642315611309983
 GameObject:
   m_ObjectHideFlags: 0
