@@ -9,6 +9,9 @@ public class DevTools : MonoBehaviour
     public EconomyManager economyManager;
     public PlayerStats playerStats;
 
+    private bool DevToolCooldown;
+    private float DTC_Timer;
+
     public void Awake()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -18,30 +21,64 @@ public class DevTools : MonoBehaviour
     }
     public void HealthUp()
     {
-        PlayerStats.Player1Lives += 10;
-        PlayerStats.Player2Lives += 10;
+        if (!DevToolCooldown)
+        {
+            PlayerStats.Player1Lives += 10;
+            PlayerStats.Player2Lives += 10;
+
+            DevToolCooldown = true;
+            DTC_Timer = 1;
+        }
     }
 
     public void HealthDown()
     {
-        PlayerStats.Player1Lives -= 10;
-        PlayerStats.Player2Lives -= 10;
+        if (!DevToolCooldown)
+        {
+            PlayerStats.Player1Lives -= 10;
+            PlayerStats.Player2Lives -= 10;
+
+            DevToolCooldown = true;
+            DTC_Timer = 1;
+        }
     }
 
     public void RoundSkip()
     {
-        waveManager.StopSpawnWave();
-        
-        waveManager.nextWaveCountdown = waveManager.timeBetweenWaves;
-        waveManager.nextWave++;
+        if (!DevToolCooldown)
+        {
+            waveManager.StopSpawnWave();
+
+            waveManager.nextWaveCountdown = waveManager.timeBetweenWaves;
+            waveManager.nextWave++;
+
+            DevToolCooldown = true;
+            DTC_Timer = 1;
+        }
+       
     }
 
     public void MoneyUp()
     {
-        PlayerStats.player1Money += 1000;
-        PlayerStats.player2Money += 1000;
+        if (!DevToolCooldown)
+        {
+            PlayerStats.player1Money += 1000;
+            PlayerStats.player2Money += 1000;
 
-        economyManager.P1MoneyDisplay.text = "Money: " + PlayerStats.player1Money;
-        economyManager.P2MoneyDisplay.text = "Money: " + PlayerStats.player2Money;
+            economyManager.P1MoneyDisplay.text = "Money: " + PlayerStats.player1Money;
+            economyManager.P2MoneyDisplay.text = "Money: " + PlayerStats.player2Money;
+
+            DevToolCooldown = true;
+            DTC_Timer = 1;
+        }
+    }
+
+
+    public void Update()
+    {
+        if(DTC_Timer > 0)
+        {
+            DTC_Timer -= Time.deltaTime;
+        }
     }
 }
