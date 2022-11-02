@@ -39,6 +39,16 @@ public class MainMenuManager : MonoBehaviour
         if (toggleInGameMenu)
         {
             Time.timeScale = 0;
+            if (Input.GetKeyDown(KeyCode.Y))
+            {
+                SceneManager.LoadScene("MainMenu");
+            }
+            if (Input.GetKeyDown(KeyCode.N))
+            {
+                SceneManager.LoadScene("MainMenu");
+                inGameMenu.SetActive(!toggleInGameMenu);
+                toggleInGameMenu = !toggleInGameMenu;
+            }
         }
         if (!toggleInGameMenu)
         {
