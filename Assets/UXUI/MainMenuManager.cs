@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    public GameObject inGameMenu;
+
     public GameObject backgroundBlur;
 
     public GameObject menuButtons;
@@ -25,7 +27,24 @@ public class MainMenuManager : MonoBehaviour
     private bool wantPlay = false;
     private bool wantConnect = false;
     private bool wantTuturial = false;
+    public bool toggleInGameMenu;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            inGameMenu.SetActive(!toggleInGameMenu);
+            toggleInGameMenu = !toggleInGameMenu;
+        }
+        if (toggleInGameMenu)
+        {
+            Time.timeScale = 0;
+        }
+        if (!toggleInGameMenu)
+        {
+            Time.timeScale = 1;
+        }
+    }
     public void StartGame()
     {
         SceneManager.LoadScene(gameName);
@@ -81,6 +100,10 @@ public class MainMenuManager : MonoBehaviour
         wantGameinfo = !wantGameinfo;
     }
 
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     public void ExitGame()
     {
         Application.Quit();
