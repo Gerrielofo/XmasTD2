@@ -69,16 +69,16 @@ public class SendEnemies : MonoBehaviour
     }
 
 
-    IEnumerator Spawn(int _amount, GameObject _enemyPrefab, int _playerID)
-    {
+    IEnumerator Spawn(int _amount, GameObject _enemyPrefab, int p) { 
+        int test = p;
+
+        Debug.Log("SpawnFunction: " + _enemyPrefab + " PlayerID: " + p);
         for (int a = 0; a < _amount; a++)
         {
-            Debug.Log(waveManager);
-            Debug.Log(waveManager.GetComponent<PlayerWaveManager>());
-            waveManager.GetComponent<PlayerWaveManager>().PlayerSend(_enemyPrefab, _amount, _playerID);
+            waveManager.GetComponent<PlayerWaveManager>().PlayerSend(_enemyPrefab, _amount, p, test);
             yield return new WaitForSeconds(0.5f);
         }
-        StopCoroutine(Spawn(_amount, _enemyPrefab, _playerID));
+        StopCoroutine(Spawn(_amount, _enemyPrefab, p));
         yield break;
     }
 }

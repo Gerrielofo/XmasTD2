@@ -28,14 +28,18 @@ public class PlayerWaveManager : MonoBehaviour
         }
     }
 
-
-    public void PlayerSend(GameObject _enemyPrefab, int _playerID, int _amount)
+    public void PlayerSend(GameObject _enemyPrefab, int _amount, int p, int test)
     {
+        //Debug.Log("PlayerSend: " + _enemyPrefab + " PlayerID: " + _playerID);
+        //Debug.Log("Test: " + test);
+        Debug.Log("this is smol pp " + p);
+
+        int s = p - 1;
 
 
-        for(int a = 0; a < _amount; a++)
+        for (int a = 0; a < _amount; a++)
         {
-            int s = _playerID - 1;
+           // Debug.Log("Tim's Bullshit: " + s);
             GameObject Obj = Instantiate(_enemyPrefab, playerSpawns[s].position, Quaternion.identity);
             Obj.GetComponent<EnemyModelManager>().SetModel(s);
         }

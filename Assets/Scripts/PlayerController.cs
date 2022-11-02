@@ -111,6 +111,7 @@ public class PlayerController : MonoBehaviour
                 int _ammount = target.GetComponent<SendEnemies>().ammount;
                 int _cost = target.GetComponent<SendEnemies>().cost;
                 target.GetComponent<SendEnemies>().SendEnemy(_enemyID, _playerID, _ammount, _cost);
+                Debug.Log("OnButtonClicked: " + _enemyID + " PlayerID: " + _playerID);
             }
             
             else if (target.GetComponent<TowerID>())
