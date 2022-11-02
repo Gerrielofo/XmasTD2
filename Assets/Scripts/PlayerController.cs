@@ -49,7 +49,6 @@ public class PlayerController : MonoBehaviour
             transform.Translate(new Vector3(cursorX, cursorY, 0) * cursorSpeed * Time.deltaTime);
 
         }
-
         if (clickInput > 0.5f && clicked == false)
         {
             RaycastHit hit;
@@ -59,6 +58,7 @@ public class PlayerController : MonoBehaviour
             {
                 layer_mask = LayerMask.GetMask("Player1");
             }
+
             else if(gameObject.layer == 11)
             {
                 layer_mask = LayerMask.GetMask("Player2");
@@ -67,6 +67,7 @@ public class PlayerController : MonoBehaviour
 
             if (Physics.Raycast(transform.position, transform.forward, out hit, 1000f, newMask))
             {
+                
                 var target = hit.transform.gameObject;
                 if (target.layer == 10)
                 {
