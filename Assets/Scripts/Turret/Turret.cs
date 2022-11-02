@@ -26,7 +26,7 @@ public class Turret : MonoBehaviour
 
     void Start()
     {
-        //anim = transform.GetComponent<Animator>();
+        anim = transform.GetComponent<Animator>();
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
 

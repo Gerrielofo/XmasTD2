@@ -20,7 +20,6 @@ public class Unit : MonoBehaviour
 	public float turnDst = 0;
 	public float stoppingDst = 1;
 
-	private Enemy enemy;
 	private EnemyModelManager modelManager;
 
 	Path path;
@@ -30,7 +29,15 @@ public class Unit : MonoBehaviour
 		modelManager = gameObject.GetComponent<EnemyModelManager>();
 		target = GameObject.Find("Target").transform;
 		StartCoroutine(UpdatePath());
-    }
+		if (modelManager.modelNo == 0)
+		{
+			gameObject.tag = "Halloween";
+		}
+		if (modelManager.modelNo == 1)
+		{
+			gameObject.tag = "Christmas";
+		}
+	}
 
     public void OnPathFound(Vector3[] waypoints, bool pathSuccessful)
 	{

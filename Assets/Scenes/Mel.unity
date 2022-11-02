@@ -1280,26 +1280,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 404060106444036489, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 404060106444036489, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 791307478930585054, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1.9604492
-      objectReference: {fileID: 0}
-    - target: {fileID: 1243436130905530410, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 1243436130905530410, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 2909229824023846862, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
       propertyPath: m_Name
       value: MultiPlayer
@@ -1347,42 +1327,6 @@ PrefabInstance:
     - target: {fileID: 5135503609028467902, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7175179631337650418, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 7175179631337650418, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 8219336631779407002, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 8219336631779407002, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 9074591358054219075, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
-      propertyPath: m_CameraType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9074591358054219076, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -59.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9074591358054219077, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
-      propertyPath: field of view
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 9074591358054219077, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
-      propertyPath: m_FocalLength
-      value: 40.51132
-      objectReference: {fileID: 0}
-    - target: {fileID: 9074591358054219077, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
-      propertyPath: m_projectionMatrixMode
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c9254b905336034ab72c39867c8c117, type: 3}
