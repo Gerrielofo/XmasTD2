@@ -29,16 +29,30 @@ public class MainMenuManager : MonoBehaviour
     private bool wantTuturial = false;
     public bool toggleInGameMenu;
 
+
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             inGameMenu.SetActive(!toggleInGameMenu);
             toggleInGameMenu = !toggleInGameMenu;
+
+            if (!toggleInGameMenu)
+            {
+                Time.timeScale = 1;
+            }
+            else if (toggleInGameMenu)
+            {
+                Time.timeScale = 0;
+            }
         }
         
         
-        Time.timeScale = 0;
+        
         if (Input.GetKeyDown(KeyCode.Y))
         {
             SceneManager.LoadScene("MainMenu");
@@ -49,10 +63,6 @@ public class MainMenuManager : MonoBehaviour
             toggleInGameMenu = !toggleInGameMenu;
         }
         
-        if (!toggleInGameMenu)
-        {
-            Time.timeScale = 1;
-        }
     }
     public void StartGame()
     {
