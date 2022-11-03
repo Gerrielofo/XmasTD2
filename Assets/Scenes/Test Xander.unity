@@ -2675,7 +2675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209949214ad0a03458fcf147118dfa70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLives: 100
+  startLives: 2147483647
 --- !u!4 &92800722
 Transform:
   m_ObjectHideFlags: 0
@@ -2742,7 +2742,6 @@ MonoBehaviour:
   economyManager: {fileID: 1035508201}
   waveManager: {fileID: 247916037}
   playerWaveManager: {fileID: 247916039}
-  gameEnded: 0
   UIassinged: 0
   gameOverUI: {fileID: 986895013}
   victoryUI: {fileID: 986895013}
@@ -5651,12 +5650,62 @@ MonoBehaviour:
     waveReward: 50
     bossWave: 1
     bossAmmount: 1
-    enemies: []
+    enemies:
+    - enemyName: Gingerbread & Zombie
+      prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Snowman & Skeletons
+      prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Elves & Witches
+      prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Reindeer & Bats
+      prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Xmas Sprits & Ghosts
+      prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
   - waveNumber: 7
     waveReward: 50
     bossWave: 1
     bossAmmount: 2
-    enemies: []
+    enemies:
+    - enemyName: Gingerbread & Zombie
+      prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Snowman & Skeletons
+      prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Elves & Witches
+      prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Reindeer & Bats
+      prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Xmas Sprits & Ghosts
+      prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
   - waveNumber: 8
     waveReward: 50
     bossWave: 1
@@ -27242,14 +27291,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7284711822884237925, guid: 7c832fb692899074bb6c1bdf4769fda9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 7284711822884237925, guid: 7c832fb692899074bb6c1bdf4769fda9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.51
-      objectReference: {fileID: 0}
     - target: {fileID: 7627152867615918944, guid: 7c832fb692899074bb6c1bdf4769fda9, type: 3}
       propertyPath: m_Name
       value: HalloweenMap
@@ -27257,22 +27298,6 @@ PrefabInstance:
     - target: {fileID: 8436263496140274257, guid: 7c832fb692899074bb6c1bdf4769fda9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 8816155587613849920, guid: 7c832fb692899074bb6c1bdf4769fda9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 8816155587613849920, guid: 7c832fb692899074bb6c1bdf4769fda9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 8816155587753841316, guid: 7c832fb692899074bb6c1bdf4769fda9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 8816155587753841316, guid: 7c832fb692899074bb6c1bdf4769fda9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.19
       objectReference: {fileID: 0}
     - target: {fileID: 8816155588240093469, guid: 7c832fb692899074bb6c1bdf4769fda9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27297,14 +27322,6 @@ PrefabInstance:
     - target: {fileID: 8816155588240093469, guid: 7c832fb692899074bb6c1bdf4769fda9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -11.283
-      objectReference: {fileID: 0}
-    - target: {fileID: 8816155588540097219, guid: 7c832fb692899074bb6c1bdf4769fda9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 8816155588540097219, guid: 7c832fb692899074bb6c1bdf4769fda9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.24
       objectReference: {fileID: 0}
     - target: {fileID: 8913515161073266472, guid: 7c832fb692899074bb6c1bdf4769fda9, type: 3}
       propertyPath: m_Layer
@@ -32514,19 +32531,7 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
-    - target: {fileID: 5408620374004453359, guid: 86908a25eaed5864585b2142e0e18766, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7216789153543027789, guid: 86908a25eaed5864585b2142e0e18766, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5408620374004453359, guid: 86908a25eaed5864585b2142e0e18766, type: 3}
-    - {fileID: 5268706900475373614, guid: 86908a25eaed5864585b2142e0e18766, type: 3}
-    - {fileID: 8203749760626787909, guid: 86908a25eaed5864585b2142e0e18766, type: 3}
-    - {fileID: 2622121187715114881, guid: 86908a25eaed5864585b2142e0e18766, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86908a25eaed5864585b2142e0e18766, type: 3}
 --- !u!4 &1857652244 stripped
 Transform:

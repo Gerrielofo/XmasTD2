@@ -458,7 +458,7 @@ MonoBehaviour:
   enemyID: 3
   ammount: 5
   cost: 400
-  ecoBoost: 50
+  ecoBoost: 150
 --- !u!65 &2712869589276969819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1195,7 +1195,7 @@ MonoBehaviour:
   enemyID: 1
   ammount: 2
   cost: 0
-  ecoBoost: 30
+  ecoBoost: 50
 --- !u!65 &79483099777251566
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1440,7 +1440,7 @@ MonoBehaviour:
   enemyID: 0
   ammount: 2
   cost: 100
-  ecoBoost: 20
+  ecoBoost: 25
 --- !u!65 &4683993691323934455
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3268,7 +3268,7 @@ MonoBehaviour:
   enemyID: 2
   ammount: 1
   cost: 300
-  ecoBoost: 40
+  ecoBoost: 100
 --- !u!65 &4931015043392198338
 BoxCollider:
   m_ObjectHideFlags: 0
