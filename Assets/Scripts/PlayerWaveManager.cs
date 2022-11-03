@@ -32,7 +32,6 @@ public class PlayerWaveManager : MonoBehaviour
     {
         //Debug.Log("PlayerSend: " + _enemyPrefab + " PlayerID: " + _playerID);
         //Debug.Log("Test: " + test);
-        Debug.Log("this is smol pp " + p);
 
         int s = p - 1;
 
