@@ -47,15 +47,26 @@ public class DevTools : MonoBehaviour
     {
         if (!DevToolCooldown)
         {
-            waveManager.StopSpawnWave();
+            //waveManager.StopSpawnWave();
 
-            waveManager.nextWaveCountdown = waveManager.timeBetweenWaves;
-            waveManager.nextWave++;
+            //waveManager.nextWaveCountdown = waveManager.timeBetweenWaves;
+            //waveManager.nextWave++;
+
+            //waveManager.StartSpawnWave();
+            waveManager.state = WaveManager.SpawnState.COUNTING;
 
             DevToolCooldown = true;
             DTC_Timer = 1;
         }
        
+    }
+
+    public void KillAll()
+    {
+        if(GameObject.FindGameObjectsWithTag("Halloween").Length > 0)
+        {
+
+        }
     }
 
     public void MoneyUp()

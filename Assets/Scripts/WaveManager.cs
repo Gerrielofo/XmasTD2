@@ -12,7 +12,7 @@ public class WaveManager : MonoBehaviour
     [Header("Enemy Arrays")]
     public Enemy[] halloween;
     public Enemy[] christmas;
-    public Boss[] bosses;
+    public Boss boss;
     public Enemy errorEnemy;
     [Header("Spawn Locations")]
     public Transform[] naturalSpawns;
@@ -70,7 +70,8 @@ public class WaveManager : MonoBehaviour
         if (_wave.bossWave)
         {
             state = SpawnState.BOSS;
-            SpawnBoss(_wave);
+            int amount = _wave.bossAmmount;
+            SpawnBoss(_wave, amount);
         }
 
 
@@ -134,13 +135,21 @@ public class WaveManager : MonoBehaviour
         StopCoroutine(SpawnWave(waves[nextWave]));
     }
 
-    public void SpawnBoss(Wave _wave)
+    public void StartSpawnWave()
     {
-        for (int s = 0; s < naturalSpawns.Length; s++)
+        StartCoroutine(SpawnWave(waves[nextWave]));
+    }
+
+    public void SpawnBoss(Wave _wave, int _amount)
+    {
+        for(int a = 0; a < _amount; a++)
         {
-            GameObject Obj = Instantiate(bosses[s].bossPrefab, naturalSpawns[s].position, Quaternion.identity);
-            Obj.GetComponent<EnemyModelManager>().SetModel(s);
-        }
+            for (int s = 0; s < naturalSpawns.Length; s++)
+            {
+                GameObject Obj = Instantiate(boss.bossPrefab, naturalSpawns[s].position, Quaternion.identity);
+                Obj.GetComponent<EnemyModelManager>().SetModel(s);
+            }
+        }        
     }
 
     public void SpawnEnemy(GameObject enemyPrefab, int _ammount, int _playerID)
