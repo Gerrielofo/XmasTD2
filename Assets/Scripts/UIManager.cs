@@ -34,6 +34,10 @@ public class UIManager : MonoBehaviour
             livesTextP1.text = "Lives: " + PlayerStats.player1Lives;
             roundTextP1.text = "Round " + WaveManager.currentWave;
         }
-        
+
+        livesTextP1.text = "Lives: " + PlayerStats.player1Lives;
+        livesTextP2.text = "Lives: " + PlayerStats.player2Lives;
+        roundTextP1.text = "Round " + WaveManager.currentWave;
+        roundTextP2.text = "Round " + WaveManager.currentWave;
     }
 }

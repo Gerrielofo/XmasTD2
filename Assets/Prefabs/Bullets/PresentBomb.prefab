@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6250123344525344206}
   - component: {fileID: 5885567958611520225}
   - component: {fileID: 1920084319}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PresentBomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,13 +97,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead486a478a0d2d49af7314b0bb496a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 40
+  damage: 75
   speed: 40
   explosionRadius: 6
   impactEffect: {fileID: 7343391143492694926, guid: 959f97640e251924e80f72d5c1228c7f, type: 3}
   doSlow: 0
   slowPct: 0.7
   slowTime: 2
+  enemyTag: Halloween
 --- !u!65 &1920084319
 BoxCollider:
   m_ObjectHideFlags: 0

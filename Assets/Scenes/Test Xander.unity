@@ -2655,6 +2655,7 @@ GameObject:
   - component: {fileID: 92800726}
   - component: {fileID: 92800727}
   - component: {fileID: 92800728}
+  - component: {fileID: 92800729}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2742,8 +2743,8 @@ MonoBehaviour:
   waveManager: {fileID: 247916037}
   playerWaveManager: {fileID: 247916039}
   UIassinged: 0
-  gameOverUI: {fileID: 0}
-  victoryUI: {fileID: 0}
+  gameOverUI: {fileID: 986895013}
+  victoryUI: {fileID: 986895013}
   suddenDeathUI: {fileID: 0}
 --- !u!82 &92800726
 AudioSource:
@@ -2759,7 +2760,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2873,6 +2874,22 @@ MonoBehaviour:
   gameName: 
   tutorialName: 
   toggleInGameMenu: 0
+--- !u!114 &92800729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92800720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb358ea91ea092043a763dc13cb61db4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveManager: {fileID: 247916037}
+  gameManager: {fileID: 92800725}
+  economyManager: {fileID: 1035508201}
+  playerStats: {fileID: 92800721}
 --- !u!1 &92906155
 GameObject:
   m_ObjectHideFlags: 0
@@ -5559,7 +5576,7 @@ MonoBehaviour:
       ammount: 3
       spawnRate: 0.95
       damage: 1
-  - waveNumber: 1
+  - waveNumber: 2
     waveReward: 50
     bossWave: 0
     bossAmmount: 0
@@ -5574,7 +5591,7 @@ MonoBehaviour:
       ammount: 4
       spawnRate: 0.95
       damage: 1
-  - waveNumber: 1
+  - waveNumber: 3
     waveReward: 50
     bossWave: 0
     bossAmmount: 0
@@ -5594,7 +5611,7 @@ MonoBehaviour:
       ammount: 3
       spawnRate: 0.95
       damage: 1
-  - waveNumber: 1
+  - waveNumber: 4
     waveReward: 50
     bossWave: 0
     bossAmmount: 0
@@ -5604,10 +5621,160 @@ MonoBehaviour:
       ammount: 10
       spawnRate: 1
       damage: 1
-  - waveNumber: 1
+  - waveNumber: 5
     waveReward: 50
     bossWave: 0
     bossAmmount: 0
+    enemies:
+    - enemyName: Gingerbread & Zombie
+      prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Snowman & Skeletons
+      prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Elves & Witches
+      prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Reindeer & Bats
+      prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Xmas Sprits & Ghosts
+      prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+  - waveNumber: 6
+    waveReward: 50
+    bossWave: 1
+    bossAmmount: 1
+    enemies:
+    - enemyName: Gingerbread & Zombie
+      prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Snowman & Skeletons
+      prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Elves & Witches
+      prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Reindeer & Bats
+      prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Xmas Sprits & Ghosts
+      prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+  - waveNumber: 7
+    waveReward: 50
+    bossWave: 1
+    bossAmmount: 2
+    enemies:
+    - enemyName: Gingerbread & Zombie
+      prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Snowman & Skeletons
+      prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Elves & Witches
+      prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Reindeer & Bats
+      prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Xmas Sprits & Ghosts
+      prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+  - waveNumber: 8
+    waveReward: 50
+    bossWave: 1
+    bossAmmount: 3
+    enemies:
+    - enemyName: Gingerbread & Zombie
+      prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Snowman & Skeletons
+      prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Elves & Witches
+      prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Reindeer & Bats
+      prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Xmas Sprits & Ghosts
+      prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+  - waveNumber: 9
+    waveReward: 50
+    bossWave: 1
+    bossAmmount: 4
+    enemies:
+    - enemyName: Gingerbread & Zombie
+      prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Snowman & Skeletons
+      prefab: {fileID: 175450927762926272, guid: 99dee59b384179c46ac0a66ecd970275, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Elves & Witches
+      prefab: {fileID: 3193075337868751912, guid: fac134a2a8251c142ad26728bcc6ba82, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Reindeer & Bats
+      prefab: {fileID: 6359405330603564842, guid: 479e65014ab339b48ab5eff8a56af394, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+    - enemyName: Xmas Sprits & Ghosts
+      prefab: {fileID: 7908740394994131628, guid: 0c6a673d7fa0f4849849b2a33736fc40, type: 3}
+      ammount: 3
+      spawnRate: 0.95
+      damage: 1
+  - waveNumber: 10
+    waveReward: 50
+    bossWave: 1
+    bossAmmount: 5
     enemies:
     - enemyName: Gingerbread & Zombie
       prefab: {fileID: 7822088802003691223, guid: 97836c75daefe62488ca97bb984018fb, type: 3}
@@ -17624,7 +17791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &986895014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18130,7 +18297,7 @@ MonoBehaviour:
   inputManager: {fileID: 615613443}
   gameManager: {fileID: 92800725}
   playerType: 1
-  startingMoney: 1000000
+  startingMoney: 1000
   startingEco: 50
   ecoP1: 0
   P1MoneyDisplay: {fileID: 0}
@@ -29439,7 +29606,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679507994}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8ebc30077ac04ec4c939302309227016, type: 3}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2798921831595657956}
   - component: {fileID: 2798921831595657954}
   - component: {fileID: 2798921831595657957}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Orb_PS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4881,7 +4881,7 @@ GameObject:
   - component: {fileID: 2798921832484579650}
   - component: {fileID: 2798921832484579653}
   - component: {fileID: 2798921832484579652}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Droplets_PS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9753,7 +9753,7 @@ GameObject:
   - component: {fileID: 9109412106074088363}
   - component: {fileID: 3292395974628342556}
   - component: {fileID: 5258488687412439062}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Splash_PS
   m_TagString: Untagged
   m_Icon: {fileID: 0}

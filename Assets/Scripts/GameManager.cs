@@ -14,14 +14,17 @@ public class GameManager : MonoBehaviour
     public EconomyManager economyManager;
     public WaveManager waveManager;
     public PlayerWaveManager playerWaveManager;
-    private bool gameEnded = false;
+    public static bool gameEnded = false;
     public bool UIassinged;
 
     public GameObject gameOverUI;
     public GameObject victoryUI;
     public GameObject suddenDeathUI;
 
-
+    private void Awake()
+    {
+        gameEnded = false;
+    }
 
     public void Update()
     {
@@ -38,11 +41,16 @@ public class GameManager : MonoBehaviour
         {
             EndGame();
         }
+        if(PlayerStats.player2Lives <= 0)
+        {
+            EndGame();
+        }
     }
 
     void EndGame()
     {
         gameEnded = true;
         gameOverUI.SetActive(true);
+        Time.timeScale = 0;
     }
 }

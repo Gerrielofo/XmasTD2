@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3531313772573325479}
   - component: {fileID: 1649804430532250733}
   - component: {fileID: 5227614571254498960}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bOMB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,10 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead486a478a0d2d49af7314b0bb496a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 40
+  damage: 75
   speed: 60
   explosionRadius: 6
   impactEffect: {fileID: 1579171072165696158, guid: 2a1669a959f4b36418fee3051d1f354f, type: 3}
   doSlow: 0
   slowPct: 0.7
   slowTime: 2
+  enemyTag: Christmas

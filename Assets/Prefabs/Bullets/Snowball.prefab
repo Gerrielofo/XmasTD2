@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1378559480179554475}
   - component: {fileID: 5026405603839563614}
   - component: {fileID: -7759740478205014505}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Snowball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,10 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead486a478a0d2d49af7314b0bb496a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 40
-  speed: 70
+  damage: 25
+  speed: 60
   explosionRadius: 0
   impactEffect: {fileID: 3570846434621796738, guid: e931deb423afe574b89628b1e4a949cc, type: 3}
   doSlow: 1
-  slowPct: 0.7
-  slowTime: 3
+  slowPct: 0.9
+  slowTime: 2
+  enemyTag: 

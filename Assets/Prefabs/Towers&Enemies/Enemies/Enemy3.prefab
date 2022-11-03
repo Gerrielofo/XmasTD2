@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8882938053394477718}
   - component: {fileID: 5584360010066008720}
   - component: {fileID: 7296569379923809897}
+  - component: {fileID: 4001004356782702134}
   m_Layer: 0
   m_Name: Enemy3
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3193075337868751912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1303892, y: -14.953873, z: 7.3412933}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -63,14 +64,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aabd478c61d04db468afce63649776d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 300
   deathEffect: {fileID: 7343391143492694926, guid: 959f97640e251924e80f72d5c1228c7f, type: 3}
-  damage: 0
+  damage: 10
   target: {fileID: 0}
-  startSpeed: 5
+  startSpeed: 4
   turnSpeed: 5
   turnDst: 0
   stoppingDst: 1
+--- !u!136 &4001004356782702134
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3193075337868751912}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.3061323
+  m_Height: 6.8455205
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.9227602, z: 0}
 --- !u!1001 &609378698841493141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -461,6 +476,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2035511835966348457, guid: 21a0c49aafff7154ca2270d9f8c6d01e, type: 3}
   m_PrefabInstance: {fileID: 609378698841493141}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &7625813992035280116
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462374139888374332}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  m_Radius: 1.3061323
+  m_Height: 6.8455205
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.9227602, z: 0}
 --- !u!4 &2233984585064237190 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1690054471692895763, guid: 21a0c49aafff7154ca2270d9f8c6d01e, type: 3}
@@ -757,3 +786,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7558237039506565802, guid: a2e2c204a6f4f32438f9ca0095ff83e2, type: 3}
   m_PrefabInstance: {fileID: 1671720008449531796}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &7940020706660643389
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9211942576313152830}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  m_Radius: 1.3061323
+  m_Height: 6.8455205
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.9227602, z: 0}

@@ -17,6 +17,8 @@ public class Bullet : MonoBehaviour
     public float slowPct = .7f;
     public float slowTime = 2f;
 
+    public string enemyTag;
+
     public void Seek(Transform _target)
     {
         target = _target;
@@ -63,7 +65,7 @@ public class Bullet : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
         foreach (Collider collider in colliders)
         {
-            if (collider.tag == "Enemy")
+            if (collider.tag == enemyTag)
             {
                 Damage(collider.transform);
             }

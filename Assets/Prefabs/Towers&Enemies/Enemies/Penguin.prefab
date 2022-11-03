@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7907555709017561133}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shoulder R.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2526499228242701834}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shoulder L.003_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 795438905749608150}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Belly.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5676235483655468791}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Belly.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4527481368776214261}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Belly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2325584261635193269}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shoulder L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5354204081596269956}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2499748820674802336}
   - component: {fileID: 3180554397269105811}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1780214569872641565}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shoulder L.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9172391643040368508}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shoulder R.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,7 +402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8350763767095786158}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Belly.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -434,7 +434,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3398775400176575960}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Belly.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -466,7 +466,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3333140128904041267}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2679354241607325795}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shoulder L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6426168266913645201}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Head_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,7 +562,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 171406205078612934}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Belly.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,7 +594,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7382601410932100880}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,7 +626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 425491891738492459}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shoulder R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -658,7 +658,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4224546442447548829}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shoulder R.003_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -689,7 +689,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 381353674855178208}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Belly.010_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -720,7 +720,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6796073996079522866}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shoulder R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -752,7 +752,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1984310468644328542}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Belly.007_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -783,7 +783,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1117774963559390779}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shoulder L.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -816,7 +816,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5976668249491178413}
   - component: {fileID: 8726664394093834194}
-  m_Layer: 0
+  - component: {fileID: 2693202460948663997}
+  m_Layer: 10
   m_Name: Penguin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -860,6 +861,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2693202460948663997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6465678917242411287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aabd478c61d04db468afce63649776d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1500
+  deathEffect: {fileID: 1579171072165696158, guid: 2a1669a959f4b36418fee3051d1f354f, type: 3}
+  damage: 6000
+  target: {fileID: 0}
+  startSpeed: 1
+  turnSpeed: 5
+  turnDst: 0
+  stoppingDst: 1
 --- !u!1 &6694185315836841631
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,7 +890,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5843951463785432049}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -903,7 +924,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6506008812874608801}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Belly.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}

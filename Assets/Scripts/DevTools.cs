@@ -80,5 +80,10 @@ public class DevTools : MonoBehaviour
         {
             DTC_Timer -= Time.deltaTime;
         }
+        else if(DTC_Timer <= 0)
+        {
+            DevToolCooldown = false;
+        }
+        
     }
 }

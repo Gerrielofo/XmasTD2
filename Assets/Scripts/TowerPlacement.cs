@@ -15,11 +15,11 @@ public class TowerPlacement : MonoBehaviour
     float confirmPlace;
     float cancelPlace;
 
-    bool canBuild = false;   
+    bool canBuild = false;
     public GameObject playerCursor;
-    
+
     public Color blueprintMaterial;
-    
+
     public GameObject buildEffect;
 
     void Update()
@@ -68,29 +68,53 @@ public class TowerPlacement : MonoBehaviour
                 blueprintMaterial.a = 0.6f;
                 if (confirmPlace > 0.5f)
                 {
-                    if(PlayerStats.player1Money > towerCost)
+                    if (playerCursor.layer == 10)
                     {
-                        blueprintMaterial = Color.white;
-                        blueprintMaterial.a = 0.6f;
-                        PlaceTower(hit.point);
+                        if (PlayerStats.player1Money > towerCost)
+                        {
+                            blueprintMaterial = Color.white;
+                            blueprintMaterial.a = 0.6f;
+                            PlaceTower(hit.point);
+                            PlayerStats.player1Money -= towerCost;
+                        }
+                        else
+                        {
+                            blueprintMaterial = Color.red;
+                            blueprintMaterial.a = 0.6f;
+                            Debug.Log("Not Enough Money!");
+                        }
                     }
-                    else
+                    else if (playerCursor.layer == 11)
                     {
-                        blueprintMaterial = Color.red;
-                        blueprintMaterial.a = 0.6f;
-                        Debug.Log("Not Enough Money!");
+                        if (PlayerStats.player2Money > towerCost)
+                        {
+                            blueprintMaterial = Color.white;
+                            blueprintMaterial.a = 0.6f;
+                            PlaceTower(hit.point);
+                            PlayerStats.player2Money -= towerCost;
+                        }
+                        else
+                        {
+                            blueprintMaterial = Color.red;
+                            blueprintMaterial.a = 0.6f;
+                            Debug.Log("Not Enough Money!");
+                        }
                     }
-                } 
+
+
+                }
             }
             else
             {
                 blueprintMaterial = Color.red;
                 blueprintMaterial.a = 0.6f;
 
-                if(confirmPlace > 0.5f)
+                if (confirmPlace > 0.5f)
                 {
+                    blueprintMaterial = Color.red;
+                    blueprintMaterial.a = 0.6f;
                     print("Can't build here!");
-                }               
+                }
             }
             if (cancelPlace > 0.5f)
             {
@@ -112,12 +136,10 @@ public class TowerPlacement : MonoBehaviour
     }
     void PlaceTower(Vector3 pos)
     {
-        PlayerStats.player1Money -= towerCost;
-        PlayerStats.player2Money -= towerCost;
-        Debug.Log(PlayerStats.player1Money + " money left.");
         Destroy(blueprintToUse);
         Instantiate(towerToBuild, pos + posOffset, Quaternion.identity);
         GameObject placeEffect = (GameObject)Instantiate(buildEffect, pos + posOffset, Quaternion.identity);
+        placeEffect.layer = playerCursor.layer;
         Destroy(placeEffect, 1f);
         canBuild = false;
     }

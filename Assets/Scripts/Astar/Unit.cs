@@ -153,11 +153,11 @@ public class Unit : MonoBehaviour
     {
 		if(modelManager.modelNo == 0)
         {
-			PlayerStats.Player1Lives -= damage;
+			PlayerStats.Player2Lives -= damage;
         }
 		if (modelManager.modelNo == 1)
 		{
-			PlayerStats.Player2Lives -= damage;
+			PlayerStats.Player1Lives -= damage;
 		}
 
 		Destroy(gameObject);

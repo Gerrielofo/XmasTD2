@@ -10,15 +10,6 @@ public class Explosive : MonoBehaviour
     
     public float explosionRadius;
 
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-        
-    }
 
     private void OnCollisionEnter(Collision collision)
     {

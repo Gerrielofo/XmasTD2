@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 375292948279040152}
   - component: {fileID: 2508990681824980050}
   - component: {fileID: 5635591897505142410}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Potion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,10 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead486a478a0d2d49af7314b0bb496a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 40
+  damage: 25
   speed: 60
   explosionRadius: 0
   impactEffect: {fileID: 2798921832484579655, guid: ac1bc372a1a6e6b4480f49dded6614f7, type: 3}
   doSlow: 1
-  slowPct: 0.7
+  slowPct: 0.9
   slowTime: 2
+  enemyTag: 

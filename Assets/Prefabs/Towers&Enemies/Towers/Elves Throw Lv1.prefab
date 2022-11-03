@@ -1314,7 +1314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 10
-  fireRate: 1
+  fireRate: 0.5
   fireCountdown: 0
   enemyTag: Halloween
   partToRotate: {fileID: 7676014563903331210}
