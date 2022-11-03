@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.115967445, g: 0.01783517, b: 0.00002149106, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 87fdb24d05ce602499ad71941983f6bd, type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 3a07d097bdd9bfd459d184f04fa9d6f5, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -32514,6 +32514,18 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 1818516556854082110, guid: 86908a25eaed5864585b2142e0e18766, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.734037
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818516556854082110, guid: 86908a25eaed5864585b2142e0e18766, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6791096
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818516556854082110, guid: 86908a25eaed5864585b2142e0e18766, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 274.452
+      objectReference: {fileID: 0}
     - target: {fileID: 5408620374004453359, guid: 86908a25eaed5864585b2142e0e18766, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -34639,7 +34651,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.6
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
