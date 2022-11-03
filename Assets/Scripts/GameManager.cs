@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public EconomyManager economyManager;
     public WaveManager waveManager;
     public PlayerWaveManager playerWaveManager;
-    public static bool gameEnded = false;
+    public bool gameEnded = false;
     public bool UIassinged;
 
     public GameObject gameOverUI;
@@ -49,8 +49,8 @@ public class GameManager : MonoBehaviour
 
     void EndGame()
     {
+        Time.timeScale = 0;
         gameEnded = true;
         gameOverUI.SetActive(true);
-        Time.timeScale = 0;
     }
 }
