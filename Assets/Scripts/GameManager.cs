@@ -14,12 +14,10 @@ public class GameManager : MonoBehaviour
     public EconomyManager economyManager;
     public WaveManager waveManager;
     public PlayerWaveManager playerWaveManager;
+    public EndGame endGame;
     public bool gameEnded = false;
     public bool UIassinged;
 
-    public GameObject gameOverUI;
-    public GameObject victoryUI;
-    public GameObject suddenDeathUI;
 
     private void Awake()
     {
@@ -33,24 +31,23 @@ public class GameManager : MonoBehaviour
             UIassinged = true;
             economyManager.GetComponent<EconomyManager>().PlayerStart();
             Debug.Log("asssinged UI");
-            
+            //endGame = GameObject.Find("PlayerCanvas").GetComponent<EndGame>();
         }
         if (gameEnded)
             return;
         if(PlayerStats.player1Lives <= 0)
         {
-            EndGame();
+            GameEnd();
         }
         if(PlayerStats.player2Lives <= 0)
         {
-            EndGame();
+            GameEnd();
         }
     }
 
-    void EndGame()
+    void GameEnd()
     {
-        Time.timeScale = 0;
         gameEnded = true;
-        gameOverUI.SetActive(true);
+        Time.timeScale = 0;
     }
 }
